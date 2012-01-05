@@ -1,16 +1,7 @@
-# About Base
+# About Finding Simple Theme
 
-Base is a starter theme for WordPress maintained by FindingSimple. Acts as a great baseline, you just have to add your own toppings.
+Theme for http://findingsimple.com/. Based on Finding Simple Base.
 
 # Installation
 
-Copy base theme folder (renamed as desired) to the WordPress theme directory as per any other theme.
-
-# Usage
-
-* Global find and replace "base" in php files in root directory.
-* Edit functions.php comments to suit your needs
-
-
-
-
+Copy Finding Simple theme folder to the WordPress theme directory as per any other theme.
