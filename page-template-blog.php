@@ -6,7 +6,7 @@
  * to the each category's RSS feed and post count.
  * @link http://themehybrid.com/themes/hybrid/page-templates/categories
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 

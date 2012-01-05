@@ -2,11 +2,11 @@
 /**
  * Template Name: Sitemap
  *
- * The Sitemap template is a page template that creates and HTML-based sitemap of your
+ * The Sitemap template is a page template that creates and HTML-fsd sitemap of your
  * site, listing nearly every page of your site. It lists your feeds, pages, archives, and posts.
  * @link http://themehybrid.com/themes/hybrid/page-templates/sitemap
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 

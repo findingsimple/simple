@@ -6,7 +6,7 @@
  * Should make it easy to create an about page or biography for single-author blogs.
  * @link http://themehybrid.com/themes/hybrid/page-templates/biography
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 

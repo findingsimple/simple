@@ -5,7 +5,7 @@
  * A template to use on pages that disables widgets in all widget areas.
  * @link http://themehybrid.com/themes/hybrid/page-templates/no-widgets
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 

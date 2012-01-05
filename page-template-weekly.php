@@ -5,7 +5,7 @@
  * The Weekly page template is used to show a list of your post archives by week. For each week
  * a post has been made, the week is listed along with the number of posts for that particular week.
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 

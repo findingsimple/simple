@@ -5,7 +5,7 @@
  * The Daily page template is used to show a list of your post archives by day. Each day a
  * post has been made is listed along with the number of posts for that particular day.
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 

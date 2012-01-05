@@ -4,7 +4,7 @@
  *
  * Displays the Primary Menu if it has active menu items.
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 

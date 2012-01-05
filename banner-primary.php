@@ -4,7 +4,7 @@
  *
  * Displays the Banner area after the theme navigation.
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 

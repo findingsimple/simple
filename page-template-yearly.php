@@ -5,7 +5,7 @@
  * The Yearly page template is used to show a list of your post archives by year. For each year a 
  * post has been made, the year is listed along with the number of posts for that particular year.
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 

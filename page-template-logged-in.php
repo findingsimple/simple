@@ -8,7 +8,7 @@
  * also be displayed.
  * @link http://themehybrid.com/themes/hybrid/page-templates/logged-in
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 

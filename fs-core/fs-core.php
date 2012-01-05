@@ -1,6 +1,6 @@
 <?php 
 
-class SimpleCore {
+class FSCore {
 
 	/**
 	 * PHP4 constructor method.  This simply provides backwards compatibility for users with setups
@@ -8,7 +8,7 @@ class SimpleCore {
 	 *
 	 * @since 0.9.0
 	 */
-	function SimpleCore() {
+	function FSCore() {
 		$this->__construct();
 	}
 
@@ -21,25 +21,25 @@ class SimpleCore {
 	 */
 	function __construct() {
 
-		/* Define SimpleCore constants. */
-		add_action( 'after_setup_theme', array( &$this, 'simple_constants' ), 14 );
+		/* Define FSCore constants. */
+		add_action( 'after_setup_theme', array( &$this, 'fs_constants' ), 14 );
 
-		/* Load the SimpleCore extensions. */
-		add_action( 'after_setup_theme', array( &$this, 'simple_extensions' ), 15 );
-
-	}
-
-	function simple_constants() {
-
-	/* Sets the path to the simple core directory. */
-	define( 'SIMPLE_DIR', trailingslashit( get_template_directory() ) . basename( dirname( __FILE__ ) ) );
-
-	/* Sets the url to the simple core directory. */
-	define( 'SIMPLE_URL', trailingslashit( get_template_directory_uri() ) . basename( dirname( __FILE__ ) ) );
+		/* Load the FSCore extensions. */
+		add_action( 'after_setup_theme', array( &$this, 'fs_extensions' ), 15 );
 
 	}
 
-	function simple_extensions() {
+	function fs_constants() {
+
+	/* Sets the path to the fs core directory. */
+	define( 'FS_DIR', trailingslashit( get_template_directory() ) . basename( dirname( __FILE__ ) ) );
+
+	/* Sets the url to the fs core directory. */
+	define( 'fS_URL', trailingslashit( get_template_directory_uri() ) . basename( dirname( __FILE__ ) ) );
+
+	}
+
+	function fs_extensions() {
 
 	/* Load facebook open graph meta fields in header. */
 	require_if_theme_supports( 'facebook-meta', SIMPLE_DIR . '/extensions/facebook-meta.php' );
@@ -58,7 +58,7 @@ class SimpleCore {
 
 	}
 	
-	function simple_shortcodes() {
+	function fs_shortcodes() {
 	
 	// Replace WP autop formatting
 	if (!function_exists( "simple_remove_wpautop")) {

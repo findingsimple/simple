@@ -4,7 +4,7 @@
  *
  * A custom page template for displaying the site's bookmarks/links.
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 

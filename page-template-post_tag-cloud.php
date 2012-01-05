@@ -6,7 +6,7 @@
  * terms, linking to each term's archive.
  * @link http://themehybrid.com/themes/hybrid/page-templates/tags
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 

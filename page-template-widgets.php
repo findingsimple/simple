@@ -5,7 +5,7 @@
  * The Widgets template is a page template that is completely widgetized. It houses the 
  * 'Widgets Template' widget area. Customizations to this page should be done through widgets.
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 

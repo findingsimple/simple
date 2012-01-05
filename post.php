@@ -5,7 +5,7 @@
  * This is the default post template.  It is used when a more specific template can't be found to display
  * singular views of the 'post' post type.
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 

@@ -4,7 +4,7 @@
  *
  * Displays an error message when no posts are found.
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 ?>

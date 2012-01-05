@@ -5,7 +5,7 @@
  * The search template is loaded when a visitor uses the search form to search for something
  * on the site.
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 

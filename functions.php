@@ -18,12 +18,12 @@
  * You should have received a copy of the GNU General Public License along with this program; if not, write 
  * to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  *
- * @package base
+ * @package fs
  * @subpackage Functions
  * @version 0.2.0
  * @author Jason Conroy <jason@findingsimple.com>
  * @copyright Copyright (c) 2010 - 2011, Jason Conroy
- * @link http://base.findingsimple.com/
+ * @link http://findingsimple.com/
  * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -31,9 +31,9 @@
 require_once( trailingslashit( TEMPLATEPATH ) . 'hybrid-core/hybrid.php' );
 $theme = new Hybrid();
 
-/* Load the simple core. */
-require_once( trailingslashit( TEMPLATEPATH ) . 'simple-core/simple-core.php' );
-$theme_simple = new SimpleCore();
+/* Load the fs core. */
+require_once( trailingslashit( TEMPLATEPATH ) . 'fs-core/fs-core.php' );
+$theme_fs = new FSCore();
 
 /* Do theme setup on the 'after_setup_theme' hook. */
 add_action( 'after_setup_theme', 'fs_theme_setup' );

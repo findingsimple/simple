@@ -5,7 +5,7 @@
  * This is the default page template.  It is used when a more specific template can't be found to display 
  * singular views of pages.
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 

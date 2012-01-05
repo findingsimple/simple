@@ -6,7 +6,7 @@
  * to the comment type (comment.php, comment-{$comment_type}.php, comment-pingback.php, 
  * comment-trackback.php) in a child theme.
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 

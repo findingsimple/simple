@@ -6,7 +6,7 @@
  * biographical information and avatar while linking the author's archive page.
  * @link http://themehybrid.com/themes/hybrid/page-templates/authors
  *
- * @package base
+ * @package fs
  * @subpackage Template
  */
 
