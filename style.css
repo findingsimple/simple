@@ -58,7 +58,7 @@ body {
 	padding: 0;
 	color: #111;
 	background: #fff;
-	font-family: Helvetica, Arial, Verdana, sans-serif;
+    font: 12px Arial,sans-serif;
 	line-height:22px;
 	}
 
@@ -125,6 +125,7 @@ body {
 	width: 50%;
 	padding: 0;
 	margin-bottom: 6.25%; /* 20 / 320 */
+	font-size:14px;
 	} 
 #menu-primary div.wrap {
 	width: 100%;
@@ -223,7 +224,7 @@ h5 { }
 h6 { }
 
 .entry-content h1, .entry-content h2  {
-	font:19px;
+	font-size:19px;
 	font-weight: bold;
 	padding:14px 0;
 }
@@ -232,16 +233,18 @@ h6 { }
 	color: #444;
 	}
 .hfeed h1 { }
-.hfeed h2 { }
+.hfeed h2 { font-size:19px;}
 .hfeed h3 { }
 .hfeed h4 { }
 .hfeed h5 { }
 .hfeed h6 { }
 
 p {
-	margin-bottom: 1em;
+	margin-bottom: 18px;
 }
-
+p, ul, ol, dd, pre {
+	margin-bottom:15px;
+}
 /* Horizontal rule */
 hr {
 	height: 1px;
