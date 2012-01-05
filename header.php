@@ -40,25 +40,27 @@
 
 	<div id="container">
 
-		<?php get_template_part( 'menu', 'secondary' ); // Loads the menu-secondary.php template. ?>
-
 		<?php do_atomic( 'before_header' ); // fs_before_header ?>
-
+		
 		<header id="header">
 
 			<?php do_atomic( 'open_header' ); // fs_open_header ?>
 
 			<div class="wrap">
-
+			
+				<?php get_template_part( 'menu', 'secondary' ); // Loads the menu-secondary.php template. ?>
+				
 				<div id="branding">
 					<?php hybrid_site_title(); ?>
 					<?php hybrid_site_description(); ?>
 				</div><!-- #branding -->
-
+				
 				<?php get_sidebar( 'header' ); // Loads the sidebar-header.php template. ?>
 
 				<?php do_atomic( 'header' ); // fs_header ?>
-
+				
+				<?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>
+				
 			</div><!-- .wrap -->
 
 			<?php do_atomic( 'close_header' ); // fs_close_header ?>
@@ -67,7 +69,6 @@
 
 		<?php do_atomic( 'after_header' ); // fs_after_header ?>
 
-		<?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>
 
 		<?php do_atomic( 'before_main' ); // fs_before_main ?>
 

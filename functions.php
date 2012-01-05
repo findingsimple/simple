@@ -62,7 +62,7 @@ function fs_theme_setup() {
 	add_theme_support( 'hybrid-core-template-hierarchy' );
 
 	/* Add theme support for framework extensions. */
-	add_theme_support( 'theme-layouts', array( '1c', '2c-l', '2c-r', '3c-l', '3c-r', '3c-c' ) );
+	add_theme_support( 'theme-layouts', array( '2c-l', '2c-r', '3c-l', '3c-r', '3c-c' ) );
 	add_theme_support( 'post-stylesheets' );
 	add_theme_support( 'loop-pagination' );
 	add_theme_support( 'get-the-image' );

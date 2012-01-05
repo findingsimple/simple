@@ -38,7 +38,8 @@
 				<?php echo apply_atomic_shortcode( 'footer_content', hybrid_get_setting( 'footer_insert' ) ); ?>
 
 				<?php do_atomic( 'footer' ); // fs_footer ?>
-
+				
+				<div id="siteinfo">Copyright &copy; 2008 - <?php echo date("Y"); ?> Finding Simple | <a href="/website-disclaimer/" title="WordPress Finding Simple Website Disclaimer">Disclaimer</a></div>
 			</div><!-- .wrap -->
 
 			<?php do_atomic( 'close_footer' ); // fs_close_footer ?>
