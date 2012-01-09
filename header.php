@@ -25,8 +25,6 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
-<link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/js/jquery.jcarousel.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/cs/skin.css" />
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/apple-touch-icon-114.png" /><!-- For iPhone 4 -->
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/apple-touch-icon-72.png" /><!-- For iPad 1-->
 <link rel="apple-touch-icon-precomposed" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/apple-touch-icon.png" /><!-- For iPhone 3G, iPod Touch and Android -->
@@ -67,6 +65,13 @@
 
 			<?php do_atomic( 'close_header' ); // fs_close_header ?>
 
+			
+			<?php if(is_front_page()) { ?>
+				<div id="main-banner">
+					<div id="main-banner-wrapper">
+						We design, build and tweak WordPress websites and provide training and support too. <a href="/contact/" title="Contact Us">Contact us</a>, we love to help.
+					</div>
+				</div> <?php } ?>
 		</header><!-- #header -->
 
 		<?php do_atomic( 'after_header' ); // fs_after_header ?>
