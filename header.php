@@ -34,7 +34,7 @@
 <?php wp_head(); // wp_head ?>
 </head>
 
-<body class="<?php hybrid_body_class(); ?>">
+<body class="<?php hybrid_body_class(); if(is_page("work")) echo "work"; ?>">
 
 	<?php do_atomic( 'open_body' ); // fs_open_body ?>
 

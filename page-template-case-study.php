@@ -7,7 +7,7 @@
  * @subpackage Template
  */
 
-$casestudies = get_option('fs_casestudies');
+$casestudies = hybrid_get_setting('fs_casestudies');
 $featarr = split(",",$casestudies);
 $featarr = array_diff($featarr, array(""));
 $testlast = count($featarr);

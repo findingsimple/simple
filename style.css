@@ -1488,6 +1488,73 @@ body ul#sharebarx li .st_email  { margin: 0 15px !important; }
 
 }
 
+/* Template - Work Page */
+
+.work #content {
+	width:100%;
+	margin-left:0;
+}
+
+.work #sidebar-primary {
+	display:none;
+}
+
+.work-panel img {
+	display:block;
+	margin:0 0 15px 0 !important;
+	padding:0;
+	width: 210px;
+	height: 140px;
+}
+
+.work-panel {
+	display:block;
+	width:217px;
+	margin:0 30px 25px 0;
+	float:left;
+	cursor:pointer;
+}
+
+.work-panel h2 {
+	font-size:22px;
+	line-height:26px;
+	color: #6cb284;
+	font-weight:bold;
+	margin-bottom:5px;
+	margin-top:162px;
+}
+
+
+.work-panel a {
+	color: #6cb284;
+	text-decoration:none;
+	margin-bottom:15px;
+}
+
+.work-panel a:hover{
+	color: #75c28f;
+}
+
+.work-panel.active h2 a{
+	color: #75c28f;
+}
+
+.work-panel p{
+	font-size:14px;
+}
+
+.panel-end {
+	margin-right:0;
+}
+
+div.work-panel img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.work-panel .cs-hover-image {position:absolute;top:55px;left:60px;width:90px; height:30px;}
+
 /* Template - home */
 
 #main-banner {clear:both;	font-family: "museo-sans-1","museo-sans-2",Helvetica, Arial,sans-serif;width:960px;margin:0 auto;color:#fff;font-size:34px;line-height:1.5;padding:30px 0 25px 0;display: block;font-weight:500;}
