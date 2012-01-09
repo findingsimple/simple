@@ -42,19 +42,21 @@ class FSCore {
 	function fs_extensions() {
 
 	/* Load facebook open graph meta fields in header. */
-	require_if_theme_supports( 'facebook-meta', SIMPLE_DIR . '/extensions/facebook-meta.php' );
+	require_if_theme_supports( 'facebook-meta', FS_DIR . '/extensions/facebook-meta.php' );
 
 	/* Load facebook async js */
-	require_if_theme_supports( 'facebook-init', SIMPLE_DIR . '/extensions/facebook-init.php' );
+	require_if_theme_supports( 'facebook-init', FS_DIR . '/extensions/facebook-init.php' );
 
 	/* Load a share bar. */
-	require_if_theme_supports( 'share-bar', SIMPLE_DIR . '/extensions/share-bar.php' );
+	require_if_theme_supports( 'share-bar', FS_DIR . '/extensions/share-bar.php' );
 
 	/* Add is_subpage() tag support. */
-	require_if_theme_supports( 'is-subpage-tag', SIMPLE_DIR . '/extensions/is-subpage-tag.php' );
+	require_if_theme_supports( 'is-subpage-tag', FS_DIR . '/extensions/is-subpage-tag.php' );
 
 	/* Adds load time info to footer. */
-	require_if_theme_supports( 'timer', SIMPLE_DIR . '/extensions/timer.php' );
+	require_if_theme_supports( 'timer', FS_DIR . '/extensions/timer.php' );
+	
+	require_if_theme_supports( 'fs_settings', FS_DIR . '/extensions/fs_settings.php' );
 
 	}
 	

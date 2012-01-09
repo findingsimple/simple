@@ -133,6 +133,13 @@ function fs_theme_setup() {
  		//wp_register_script( 'gmaps', 'http://maps.googleapis.com/maps/api/js?sensor=set_to_true_or_false','','',false);
  		//wp_enqueue_script( 'gmaps' ); 
 		
+		/* Jcarousel*/
+		wp_register_style( 'jcar', THEME_URI . '/js/jquery.jcarousel.css');
+ 		wp_enqueue_style( 'jcar' );
+		
+		/* galskin*/
+		wp_register_style( 'galskin', THEME_URI . '/cs/skin.css');
+ 		wp_enqueue_style( 'galskin' );
 	}	
 	
 	/* Add theme support for simple-core extensions. */
@@ -141,6 +148,7 @@ function fs_theme_setup() {
 //	add_theme_support( 'share-bar' );
 //	add_theme_support( 'is-subpage-tag' );
 //	add_theme_support( 'timer' );
+	add_theme_support( 'fs_settings' );
 
 	/* Add theme support for simple-core shortcodes. */
 //	add_theme_support( 'shortcode-columns' );
