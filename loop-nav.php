@@ -19,8 +19,8 @@
 	<?php elseif ( is_singular( 'post' ) ) : ?>
 
 		<div class="loop-nav">
-			<?php previous_post_link( '<div class="previous">' . __( 'Previous Entry: %link', hybrid_get_textdomain() ) . '</div>', '%title' ); ?>
-			<?php next_post_link( '<div class="next">' . __( 'Next Entry: %link', hybrid_get_textdomain() ) . '</div>', '%title' ); ?>
+			<?php previous_post_link(); ?>
+			<?php next_post_link(); ?>
 		</div><!-- .loop-nav -->
 
 	<?php elseif ( !is_singular() && current_theme_supports( 'loop-pagination' ) ) : loop_pagination(); ?>
