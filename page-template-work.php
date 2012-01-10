@@ -19,9 +19,9 @@ get_header(); // Loads the header.php template. ?>
 	<div id="content">
 
 		<?php do_atomic( 'open_content' ); // fs_open_content ?>
-
+		
 		<div class="hfeed">
-
+<?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
