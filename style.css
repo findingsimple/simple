@@ -614,7 +614,7 @@ img.wp-smiley {
 	 color:#666;
     font-size:13px;
     line-height:18px;
-    margin:0 0 22px 0;
+    margin:0 0 26px 0;
 	}
 .entry-meta a {
 	 color: #598969;
@@ -678,12 +678,31 @@ img.wp-smiley {
 
 /* Singular post prev/next links */
 .singular .loop-nav {
-	font-size: 15px;
+	font-size: 13px;
 	color: #666;
 	}
 .singular .loop-nav a {
 	font-style: italic;
+	text-decoration:none;
+	color: #666666;
 	}
+.singular .loop-nav a:hover {
+	color: #ff4b33;
+	}
+.singular .loop-nav #next{
+	float:right;
+	}
+.singular .loop-nav #next span,
+.singular .loop-nav #prev span{
+	font-style:normal;
+	}
+#related-posts {
+	margin-top:22px;
+	font-size:14px;
+} 
+#related-posts p {
+	font-weight:bold;
+}
 
 /* Page links for multi-paged posts <!--nextpage--> */
 .page-links {

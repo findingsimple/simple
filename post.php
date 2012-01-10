@@ -61,7 +61,9 @@ get_header(); // Loads the header.php template. ?>
 		</div><!-- .hfeed -->
 
 		<?php do_atomic( 'close_content' ); // fs_close_content ?>
-
+		
+		<div id="related-posts"><?php related_posts(); ?></div>
+		
 		<?php get_template_part( 'loop-nav' ); // Loads the loop-nav.php template. ?>
 
 	</div><!-- #content -->
