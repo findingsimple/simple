@@ -163,7 +163,8 @@ body {
 	}
 #menu-primary li ul {
 	}
-#menu-primary li.current-menu-item  {
+#menu-primary li.current-menu-item,
+#menu-primary li.current_page_parent {
 	background:#6cb284;
 	}
 #menu-primary li.current-menu-item a {
