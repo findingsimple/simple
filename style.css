@@ -527,10 +527,14 @@ img.wp-smiley {
 	font-size: 14px;
 	color: #444;
 	}
-.blog .hentry {
+.blog .hentry, 
+.singular-post .hentry {
 	border-bottom:1px solid #e1e1e1;
 	margin-bottom:22px;
 	}
+.singular-post .hentry {
+	padding-bottom:0px;
+}
 .hentry a{
 	color: #598969;
 	text-decoration:underline;
@@ -651,7 +655,9 @@ img.wp-smiley {
 	margin-right: 20px;
 	padding-bottom:10px;
 }
-
+.singular-post .author-grav {
+	padding-bottom:13px;
+}
 .author-grav img {
 	width: 48px;
 	height: 48px;

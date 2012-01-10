@@ -29,6 +29,8 @@ get_header(); // Loads the header.php template. ?>
 
 						<?php do_atomic( 'open_entry' ); // fs_open_entry ?>
 
+						<div class="author-grav"><?php echo get_avatar( get_the_author_meta( 'user_email' ), '100', '', get_the_author_meta( 'display_name' ) ); ?></div>
+						
 						<?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
 
 						<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __( 'By [entry-author] on [entry-published] [entry-edit-link before=" | "]', hybrid_get_textdomain() ) . '</div>' ); ?>
@@ -38,7 +40,7 @@ get_header(); // Loads the header.php template. ?>
 							<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', hybrid_get_textdomain() ), 'after' => '</p>' ) ); ?>
 						</div><!-- .entry-content -->
 
-						<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[entry-terms taxonomy="category" before="Posted in "] [entry-terms taxonomy="post_tag" before="| Tagged "]', hybrid_get_textdomain() ) . '</div>' ); ?>
+						<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[entry-terms taxonomy="category" before="This entry was posted in "] [entry-terms taxonomy="post_tag" before=" and tagged "]', hybrid_get_textdomain() ) . '. Bookmark the <a href="'.  get_permalink($post->ID) .'" title="permalink">permalink</a>. Both comments and trackbacks are currently closed.</div>' ); ?>
 
 						<?php do_atomic( 'close_entry' ); // fs_close_entry ?>
 
