@@ -187,6 +187,14 @@ function add_js_stuff() {
 		
 	}
 	
+	if (is_page('contact') || is_page('wordpress-consultant-canberra')) {
+		
+		/* spamspan */
+		wp_register_script( 'spamspan', THEME_URI . '/js/spamspan.js','','',true);		
+		wp_enqueue_script( 'spamspan' );
+		
+	}
+	
 }
 add_action('wp_print_scripts', 'add_js_stuff');
 
