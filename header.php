@@ -31,6 +31,8 @@
 <link rel="shortcut icon" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/apple-touch-icon.png" /><!-- For Nokia -->
 <link rel="shortcut icon" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/favicon.ico" /><!-- For everything else -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><!--Microsoft. Delete if not required -->
+<script type="text/javascript" src="http://use.typekit.com/wrz4rtj.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <?php wp_head(); // wp_head ?>
 </head>
 

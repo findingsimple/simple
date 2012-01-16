@@ -37,7 +37,7 @@ get_header(); // Loads the header.php template. ?>
 
 						<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __( 'By [entry-author] | Published: [entry-published] [entry-edit-link before=" | "]', hybrid_get_textdomain() ) . '</div>' ); ?>
 
-						<div class="entry-summary">
+						<div class="entry-content">
 							<?php the_content(); ?>
 							<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', hybrid_get_textdomain() ), 'after' => '</p>' ) ); ?>
 						</div><!-- .entry-summary -->

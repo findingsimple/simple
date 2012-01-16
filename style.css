@@ -309,6 +309,9 @@ acronym:hover {
 	background: #f9f9f9;
 	border-bottom: 1px dotted #999;
 	}
+cite, em, i {
+	font-style: italic;
+}
 
 /* Lists. */
 ul {
@@ -317,7 +320,7 @@ ul {
 ul li {
 	list-style: disc;
 	list-style-position:outside;
-	margin-left:21px;
+	margin-left:20px;
 	}
 ol li{
 	list-style:decimal;
@@ -361,7 +364,7 @@ blockquote p {
 /* Code */
 code {
 	font:14px Monaco,monospace;
-	line-height:22px;
+	line-height:20px;
 	}
 pre {
 	padding: 25px;
@@ -550,6 +553,9 @@ img.wp-smiley {
 }
 .singular .hentry {
 	margin: 0;
+	padding-bottom:12px;
+	}
+.singular .hentry p {
 	}
 .sticky {
 	margin: 0 0 50px 0;
@@ -570,10 +576,6 @@ img.wp-smiley {
 	border: none;
 	color:#6cb284;
 	}
-.singular .entry-title {
-	font-size: 25px;
-	line-height: 30px;
-	}
 .singular-page .entry-title, .singular-attachment .entry-title {
 	margin-bottom: 0px;
 	}
@@ -592,7 +594,7 @@ img.wp-smiley {
 	color:#666;
     font-size:13px;
     font-style:italic;
-    line-height:18px;
+    line-height:15px;
 	}
 .byline a {
 	color:#666;
@@ -603,23 +605,17 @@ img.wp-smiley {
 	text-decoration: none;
 	}
 .singular .byline {
-	margin: 0 0 25px 0;
+	margin: 0 0 0 0;
 	}
 
 /* Post excerpts */
-.entry-summary {
-	padding-top:22px;
-}
-.entry-summary p {
-	margin: 0 0 10px 0;
-	}
 
 /* Post metadata */
 .entry-meta {
 	 color:#666;
     font-size:13px;
     line-height:18px;
-    margin:0 0 26px 0;
+    margin:0 0 22px 0;
 	}
 .blog .entry-meta {
     margin:0 0 0 0;
@@ -660,7 +656,8 @@ img.wp-smiley {
 
 .author-grav {
 	float: left;
-	margin-right: 20px;
+	margin-right: 19px;
+	margin-left:1px;
 	padding-bottom:10px;
 }
 .singular-post .author-grav {
@@ -688,6 +685,7 @@ img.wp-smiley {
 .singular .loop-nav {
 	font-size: 13px;
 	color: #666;
+	margin-bottom:42px;
 	}
 .singular .loop-nav a {
 	font-style: italic;
@@ -905,7 +903,7 @@ img.wp-smiley {
 #flickrrss h3 {width: 90px;background: #6cb284;display:block !important;}
 
 .widget {
-	margin-bottom:20px;
+	margin-bottom:22px;
 }
 
 .connect {padding:0;margin:0;list-style:none;}
@@ -1210,7 +1208,7 @@ body ul#sharebarx li .st_email  { margin: 0 15px !important; }
 
 /*Intro Shortcode
 -------------------------------------------------------------- */
-.intro {font-size:16px; line-height:1.6em; color: #777773;padding:0 0 20px 0;background: transparent url(images/underline.gif) no-repeat scroll bottom center;}
+.intro {font-size:16px; line-height:1.6em; color: #777773;padding:7px 0 20px 0;margin-left:0px!important;background: transparent url(images/underline.gif) no-repeat scroll bottom center;}
 
 /*Dropcap Shortcode
 -------------------------------------------------------------- */
@@ -1459,13 +1457,13 @@ body ul#sharebarx li .st_email  { margin: 0 15px !important; }
 .layout-2c-l #content, .layout-default #content {
 	float: left;
 	width: 64.5833333333%; /* 620 / 960 */
-	margin-left: 1.04166666667%; /* 10 / 960 */	
+	margin-left: 10px;
 	}
 .layout-2c-l #sidebar-primary, .layout-default #sidebar-primary {
 	float: right;
 	width: 31.25%; /* 300 / 960 */
 	margin:0;
-	margin-right: 0.0052083333333333%; /* 10 / 960 */
+	
 	}
 .layout-2c-l #sidebar-secondary, .layout-default #sidebar-secondary {
 	clear: right;
@@ -1557,7 +1555,7 @@ body ul#sharebarx li .st_email  { margin: 0 15px !important; }
 /* Template - Work Page */
 
 .work .entry-title{
-	margin-bottom:0px;
+	margin-bottom:7px;
 }
 
 .work #content {
@@ -1642,7 +1640,7 @@ div.work-panel img {
 
 /* Template - home */
 
-#main-banner {clear:both;	font-family: "museo-sans-1","museo-sans-2",Helvetica, Arial,sans-serif;width:960px;margin:0 auto;color:#fff;font-size:34px;line-height:1.5;padding:30px 0 25px 0;display: block;font-weight:500;}
+#main-banner {clear:both;	font-family: "museo-sans-1","museo-sans-2",Helvetica, Arial,sans-serif;width:960px;margin:0 auto;color:#fff;font-size:34px;line-height:1.5;padding:16px 0 39px 0;display: block;font-weight:500;}
 #main-banner a{color:#fff;padding-bottom:.1em;border-bottom: .1em dotted #89c29c;text-decoration:none;}
 #main-banner a:hover{border-bottom: .1em dotted #fff;text-decoration:none;}
 #twitter-home { margin: auto; width: 280px;height: 110px; margin-top:20px;} 
@@ -1710,7 +1708,7 @@ width:125px;
 margin-left:155px;
 }
 
-#home-test .test-content.two p.test-name {width:130px;margin-left:150px;}
+#home-test .test-content.two p. {width:130px;margin-left:150px;}
 #home-test .test-content.two p.test-org {width:170px;margin-left:110px;}
 
 #home-test .test-content.three p.test-name {width:110px;margin-left:170px;}
@@ -1723,6 +1721,7 @@ margin-left:155px;
 	text-transform: uppercase;
 	color:#a8a8a8;
 	font-weight:normal;
+	font-size:14px;
 }
 
 .home-panel h2 {
@@ -1748,6 +1747,10 @@ margin-left:155px;
 
 /* Template - Case Study */
 
+.page-template-case-study .entry-title {
+	margin-bottom:7px;
+}
+
 .page-template-case-study #content {
 	margin-left: 0px!important;
 	margin-right: 0px!important;
@@ -1759,6 +1762,7 @@ margin-left:155px;
 	float:left;
 	font-size:14px;
 	margin-left:10px;
+	padding-bottom:12px;
 }
 
 .page-template-case-study  #cs-gallery-wrapper {
@@ -1766,7 +1770,10 @@ margin-left:155px;
 	width: 630px;
 }
 
-
+ #cs-gallery-wrapper li img {
+	position:relative;
+	right:20px;
+ }
 #cs-more-work {
 	clear: both;
 	width: 100%;
@@ -1824,6 +1831,9 @@ span.launched {
 	text-transform:uppercase;
 	font-size:1.3em;
 	font-weight:bold;
+	line-height:1em;
+	position:relative;
+	top:2px;
 }
 
 span.launched a{
@@ -2445,7 +2455,26 @@ body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ul
 	width: 100%;
 	padding: 5px;
 }
+#text-9 ul li {
+	font-size:15px;
+	line-height:1.5;
+	color: #333;
+}
 
-
+.home #main-banner,
+.home-panel h2,
+#subsidiary h3,
+.page .entry-title,
+#home-test .test-content p.test-name,
+#home-test .test-content p.test-org,
+.entry-content h1, .entry-content h2,
+#primary.main-aside h3, 
+#secondary.main-aside h3,
+.intro,
+.work-panel h2,
+#text-9,
+.entry-title {
+	font-family: "museo-sans-1","museo-sans-2",Helvetica, Arial,sans-serif;
+}
 
 /* The End */
