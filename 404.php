@@ -29,11 +29,24 @@ get_header(); // Loads the header.php template. ?>
 				<div class="entry-content">
 
 					<p>
-					<?php printf( __( 'You tried going to %1$s, and it doesn\'t exist. All is not lost! You can search for what you\'re looking for.', hybrid_get_textdomain() ), '<code>' . home_url( esc_url( $_SERVER['REQUEST_URI'] ) ) . '</code>' ); ?>
+					<?php printf( __( 'Apologies, but we were unable to find what you were looking for. Perhaps searching will help.', hybrid_get_textdomain() )); ?>
 					</p>
 
 					<?php get_search_form(); // Loads the searchform.php template. ?>
-
+					
+					<p>
+					There could be a few different reasons for this:</p>
+					<ul>
+						<li>The page was moved.</li>
+						<li>The page no longer exists.</li>
+						<li>The URL is slightly incorrect.</li>
+					</ul>
+					<p>To get you back on track, try one of the following:</p>
+					<ul>
+						<li><a href="<?php echo get_bloginfo('wpurl');?>">Go to our home page</a></li>
+						<li><a href="<?php echo get_bloginfo('wpurl');?>/blog">View our blog</li>
+						<li><a href="<?php echo get_bloginfo('wpurl');?>/contact">Report a broken link</li>
+					</ul>
 				</div><!-- .entry-content -->
 
 			</div><!-- .hentry -->

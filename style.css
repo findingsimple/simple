@@ -938,6 +938,9 @@ img.wp-smiley {
 .widget .search-form input[type="submit"] {
 	display: none;
 	}
+.search-form input[type="text"] {
+	float:left;
+}
 
 /* Comments */
 .comment-list, .comment-list ol {
@@ -1238,9 +1241,23 @@ body ul#sharebarx li .st_email  { margin: 0 15px !important; }
   pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
   thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
   tr, img { page-break-inside: avoid; }
-  @page { margin: 0.5cm; }
+  @page { margin: 0; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3{ page-break-after: avoid; }
+  header {display:none;}
+  footer {displaY:none;}
+  #sidebar-primary,#sidebar-secondary,#sidebar-subsidiary {displaY:none;}
+  .work-panel {page-break-inside:avoid;}
+  #cs-gallery-wrapper {display:none;}
+  .page-template-case-study  .hentry {width:100%!important;}
+  #twitter-home {display:none;}
+  .home  header {display:inherit;}
+  #menu-primary,#menu-secondary {display:none;}
+  #main-banner {font-size:18px!important;padding-top:0px!important;width:100%!important;}
+  .home-panel{display:block!important;page-break-inside:avoid!important;width:100%!important;}
+  .home #site-title  a {display:block!important;text-indent:0px!important;}
+  .home #site-title  a:after {content:""!important;}
+  #home-test {display:none!important;}
 }	
 
 @media only screen and (min-width: 480px) {	
