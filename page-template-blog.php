@@ -48,8 +48,6 @@ get_header(); // Loads the header.php template. ?>
 
 					<?php do_atomic( 'after_entry' ); // prototype_after_entry ?>
 
-					<?php //get_sidebar( 'after-singular' ); // Loads the sidebar-after-singular.php template. ?>
-
 					<?php //do_atomic( 'after_singular' ); // prototype_after_singular ?>
 
 					<?php //comments_template( '/comments.php', true ); // Loads the comments.php template. ?>

@@ -50,12 +50,11 @@ function fs_theme_setup() {
 	$prefix = hybrid_get_prefix();
 
 	/* Add theme support for core framework features. */
-	add_theme_support( 'hybrid-core-menus', array( 'primary', 'secondary', 'subsidiary' ) );
-	add_theme_support( 'hybrid-core-sidebars', array( 'primary', 'secondary', 'header', 'subsidiary', 'after-singular' ) );
+	add_theme_support( 'hybrid-core-menus', array( 'primary', 'secondary') );
+	add_theme_support( 'hybrid-core-sidebars', array( 'primary', 'secondary', 'subsidiary') );
 	add_theme_support( 'hybrid-core-widgets' );
 	add_theme_support( 'hybrid-core-shortcodes' );
-	add_theme_support( 'hybrid-core-post-meta-box' );
-	add_theme_support( 'hybrid-core-theme-settings' );
+	add_theme_support( 'hybrid-core-theme-settings', array( 'footer', 'about' ) );
 	add_theme_support( 'hybrid-core-meta-box-footer' );
 	add_theme_support( 'hybrid-core-drop-downs' );
 	add_theme_support( 'hybrid-core-seo' );
@@ -72,7 +71,7 @@ function fs_theme_setup() {
 
 	/* Add theme support for WordPress features. */
 	add_theme_support( 'automatic-feed-links' );
-	add_custom_background();
+//	add_custom_background();
 
 	/* Add the breadcrumb trail just after the container is open. */
 	add_action( "{$prefix}_open_main", 'breadcrumb_trail' );
@@ -262,33 +261,5 @@ function new_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
-
-/**
- * Get Subpages
- * investigate replacing with wp_list_pages
- * @since 0.1.0
- */
-function get_subpages($id) {
-    global $wpdb;
-    
-	$query = $wpdb->prepare("
-		SELECT wpposts.ID 
-		FROM $wpdb->posts wpposts 
-		WHERE wpposts.post_status = 'publish' 
-		AND wpposts.post_type = 'page' 
-		AND wpposts.post_parent = $id 
-		ORDER BY wpposts.menu_order ASC
-		");
-
-	$subsarray = $wpdb->get_results($query);
-
-	$subs = '';
-	foreach ($subsarray as $sub) {
-		$subs .= $sub->ID . ',';
-	}
-	
-	return $subs;
-    	
-}
 
 ?>

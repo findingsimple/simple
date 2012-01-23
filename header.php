@@ -49,8 +49,6 @@
 					<?php hybrid_site_description(); ?>
 				</div><!-- #branding -->
 				
-				<?php get_sidebar( 'header' ); // Loads the sidebar-header.php template. ?>
-
 				<?php do_atomic( 'header' ); // fs_header ?>
 				
 				<?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>

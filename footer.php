@@ -25,8 +25,6 @@
 
 		<?php get_sidebar( 'subsidiary' ); // Loads the sidebar-subsidiary.php template. ?>
 
-		<?php get_template_part( 'menu', 'subsidiary' ); // Loads the menu-subsidiary.php template. ?>
-
 		<?php do_atomic( 'before_footer' ); // fs_before_footer ?>
 
 		<footer id="footer">
@@ -39,7 +37,6 @@
 
 				<?php do_atomic( 'footer' ); // fs_footer ?>
 				
-				<div id="siteinfo">Copyright &copy; 2008 - <?php echo date("Y"); ?> Finding Simple | <a href="/website-disclaimer/" title="WordPress Finding Simple Website Disclaimer">Disclaimer</a></div>
 			</div><!-- .wrap -->
 
 			<?php do_atomic( 'close_footer' ); // fs_close_footer ?>
