@@ -22,7 +22,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
-<link rel="shortcut icon" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/favicon.ico" /><!-- For everything else -->
+<link rel="shortcut icon" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/favicon.ico" />
 <script type="text/javascript" src="http://use.typekit.com/wrz4rtj.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <?php wp_head(); // wp_head ?>
@@ -63,7 +63,8 @@
 					<div id="main-banner-wrapper">
 						We design, build and tweak WordPress websites and provide training and support too. <a href="/contact/" title="Contact Us">Contact us</a>, we love to help.
 					</div>
-				</div> <?php } ?>
+				</div> 
+			<?php } ?>
 		</header><!-- #header -->
 
 		<?php do_atomic( 'after_header' ); // fs_after_header ?>

@@ -21,7 +21,7 @@ get_header(); // Loads the header.php template. ?>
 		<?php do_atomic( 'open_content' ); // fs_open_content ?>
 		
 		<div class="hfeed">
-<?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
+			<?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -32,28 +32,28 @@ get_header(); // Loads the header.php template. ?>
 										
 					<?php foreach ( $featarr as $featitem ) { ?>
 										
-					<?php query_posts('page_id=' . $featitem); ?>
+						<?php query_posts('page_id=' . $featitem); ?>
+						
+						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>	
 					
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>	
-				
-						<div id="work-recent" class="work-panel <?php if ($counter==4 || $counter==8 || $counter==12) {echo 'panel-end';}?>">
-						
-						<a href="<?php the_permalink(); ?>" class="cs-image-link">
+							<div id="work-recent" class="work-panel <?php if ($counter==4 || $counter==8 || $counter==12) {echo 'panel-end';}?>">
+							
+								<a href="<?php the_permalink(); ?>" class="cs-image-link">
 
-							<?php if ( function_exists( 'get_the_image' ) ) get_the_image(array( 'link_to_post' => false, 'default_size' => 'medium')); ?>
+									<?php if ( function_exists( 'get_the_image' ) ) get_the_image(array( 'link_to_post' => false, 'default_size' => 'medium')); ?>
+									
+									<img src="http://assets2.binaryplayground.com/wp-content/themes/simpleroyale/images/btn-more.png" alt="Read more about <?php the_title(); ?>" class="cs-hover-image" />
+								</a>
+								
+								<h2 class="home-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+								<div class="home-content">
+									<?php the_excerpt() ?>
+								</div>
+							</div><!-- .post -->
 							
-							<img src="http://assets2.binaryplayground.com/wp-content/themes/simpleroyale/images/btn-more.png" alt="Read more about <?php the_title(); ?>" class="cs-hover-image" />
-						</a>
-						
-						<h2 class="home-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-						<div class="home-content">
-						<?php the_excerpt() ?>
-						</div>
-						</div><!-- .post -->
-						
-						<?php endwhile; endif; ?>
-							
-					   <?php $counter++; ?>
+							<?php endwhile; endif; ?>
+								
+						   <?php $counter++; ?>
 							
 					   <?php } ?>
 					   
