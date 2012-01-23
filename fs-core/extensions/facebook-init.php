@@ -21,23 +21,23 @@
 $prefix = hybrid_get_prefix();
 
 function facebook_init() {
-$appID = ''; ?>
-<script>
-window.fbAsyncInit = function() {
-	FB.init({appId: '<?php echo $appID; ?>', status: true, cookie: true, xfbml: true});};
-	(function() {
-		var e = document.createElement('script'); e.async = true;
-		e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
-		document.getElementById('fb-root').appendChild(e);
-}());
-</script>
-<?php 
+	$appID = ''; ?>
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({appId: '<?php echo $appID; ?>', status: true, cookie: true, xfbml: true});};
+			(function() {
+				var e = document.createElement('script'); e.async = true;
+				e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+				document.getElementById('fb-root').appendChild(e);
+		}());
+	</script>
+	<?php 
 }
 
 add_action('wp_footer','facebook_init');
 
 function facebook_init_div() { ?>
-<div id="fb-root"></div>
+	<div id="fb-root"></div>
 <?php }
 
 add_action( "{$prefix}_open_body", 'facebook_init_div' );

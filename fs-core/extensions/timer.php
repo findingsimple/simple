@@ -21,9 +21,9 @@
 $prefix = hybrid_get_prefix();
 
 function timer_init() {
-?>
-<!-- <?php echo get_num_queries(); ?> queries in <?php timer_stop(1); ?>  seconds. -->
-<?php
+	?>
+	<!-- <?php echo get_num_queries(); ?> queries in <?php timer_stop(1); ?>  seconds. -->
+	<?php
 }
 
 add_action('wp_footer','timer_init', 9999 );

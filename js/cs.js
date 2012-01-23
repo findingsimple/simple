@@ -1,4 +1,4 @@
-	jQuery('#cs-gallery').jcarousel({
-        scroll: 1,
-        wrap: 'both'
-    });
+jQuery('#cs-gallery').jcarousel({
+	scroll: 1,
+	wrap: 'both'
+});

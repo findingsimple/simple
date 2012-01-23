@@ -22,14 +22,13 @@
 $prefix = hybrid_get_prefix();
 
 function sharebar_insert_html() {
-if (is_single()) {
-?>
-<ul id="sharebar">
-	<li><a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-count="vertical"></a></li>
-	<li><fb:like layout="box_count" show_faces="false" href="<?php echo urlencode(get_permalink()); ?>" width="50"></fb:like></li>
-	<li><g:plusone size="tall" href="<?php the_permalink(); ?>"></g:plusone></li>
-	<li><script type="in/share" data-url="<?php the_permalink(); ?>" data-counter="top"></script></li>
-</ul>
+	if (is_single()) { ?>
+		<ul id="sharebar">
+			<li><a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-count="vertical"></a></li>
+			<li><fb:like layout="box_count" show_faces="false" href="<?php echo urlencode(get_permalink()); ?>" width="50"></fb:like></li>
+			<li><g:plusone size="tall" href="<?php the_permalink(); ?>"></g:plusone></li>
+			<li><script type="in/share" data-url="<?php the_permalink(); ?>" data-counter="top"></script></li>
+		</ul>
 <?php }
 }
 
