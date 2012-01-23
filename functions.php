@@ -54,8 +54,8 @@ function fs_theme_setup() {
 	add_theme_support( 'hybrid-core-sidebars', array( 'primary', 'secondary', 'subsidiary') );
 	add_theme_support( 'hybrid-core-widgets' );
 	add_theme_support( 'hybrid-core-shortcodes' );
+	add_theme_support( 'hybrid-core-post-meta-box' );
 	add_theme_support( 'hybrid-core-theme-settings', array( 'footer', 'about' ) );
-	add_theme_support( 'hybrid-core-meta-box-footer' );
 	add_theme_support( 'hybrid-core-drop-downs' );
 	add_theme_support( 'hybrid-core-seo' );
 	add_theme_support( 'hybrid-core-template-hierarchy' );
@@ -115,6 +115,12 @@ function fs_theme_setup() {
 //	add_theme_support( 'shortcode-intro' );
 
 }
+
+/**
+ * Add init JS
+ *
+ * @since 0.1.0
+ */
 function fs_init_js() {
 	/* Additional Theme JS */
     if (!is_admin()) {
@@ -152,12 +158,13 @@ function fs_init_js() {
 }
 add_action('init', 'fs_init_js');
 
-
+/**
+ * Add Conditional JS
+ *
+ * @since 0.1.0
+ */
 function add_js_stuff() {
 	
-	/* galskin*/
-	wp_register_style( 'galskin', THEME_URI . '/cs/skin.css');
-	wp_enqueue_style( 'galskin' );
 	
 	if(is_front_page()) {
 		/* Twitter Search */
@@ -168,10 +175,11 @@ function add_js_stuff() {
 		wp_register_script( 'homejs', THEME_URI . '/js/home.js','','',true);		
 		wp_enqueue_script( 'homejs' );
 	}
-	
-	/* other js */
-	wp_register_script( 'otherjs', THEME_URI . '/js/other.js','','',true);		
-	wp_enqueue_script( 'otherjs' );
+	if(is_page_template('page-template-case-study.php') || is_page_template('page-template-work.php') ){
+		/* other js */
+		wp_register_script( 'otherjs', THEME_URI . '/js/other.js','','',true);		
+		wp_enqueue_script( 'otherjs' );
+	}
 
 	if (is_page_template('page-template-case-study.php')) { 
 		
@@ -186,6 +194,9 @@ function add_js_stuff() {
 		wp_register_script( 'csjs', THEME_URI . '/js/cs.js','jcar','',true);		
 		wp_enqueue_script( 'csjs' );
 		
+		/* galskin*/
+		wp_register_style( 'galskin', THEME_URI . '/cs/skin.css');
+		wp_enqueue_style( 'galskin' );
 	}
 	
 	if (is_page('contact') || is_page('wordpress-consultant-canberra')) {
