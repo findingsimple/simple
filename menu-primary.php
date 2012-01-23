@@ -18,7 +18,7 @@ if ( has_nav_menu( 'primary' ) ) : ?>
 
 			<?php do_atomic( 'open_menu_primary' ); // fs_open_menu_primary ?>
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_class' => 'menu', 'menu_class' => '', 'menu_id' => 'menu-primary-items', 'fallback_cb' => '' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'nav', 'container_class' => 'menu', 'menu_class' => '', 'menu_id' => 'menu-primary-items', 'fallback_cb' => '' ) ); ?>
 
 			<?php do_atomic( 'close_menu_primary' ); // fs_close_menu_primary ?>
 

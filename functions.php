@@ -65,7 +65,7 @@ function fs_theme_setup() {
 	add_theme_support( 'post-stylesheets' );
 	add_theme_support( 'loop-pagination' );
 	add_theme_support( 'get-the-image' );
-	add_theme_support( 'breadcrumb-trail' );
+//	add_theme_support( 'breadcrumb-trail' );
 	add_theme_support( 'cleaner-gallery' );
 //	add_theme_support( 'dev-stylesheet' );
 
@@ -74,10 +74,10 @@ function fs_theme_setup() {
 //	add_custom_background();
 
 	/* Add the breadcrumb trail just after the container is open. */
-	add_action( "{$prefix}_open_main", 'breadcrumb_trail' );
+//	add_action( "{$prefix}_open_main", 'breadcrumb_trail' );
 
 	/* Filter the breadcrumb trail arguments. */
-	add_filter( 'breadcrumb_trail_args', 'fs_breadcrumb_trail_args' );
+//	add_filter( 'breadcrumb_trail_args', 'fs_breadcrumb_trail_args' );
 
 	/* Add the search form to the secondary menu. */
 	add_action( "{$prefix}_close_menu_secondary", 'get_search_form' );
@@ -100,8 +100,23 @@ function fs_theme_setup() {
 	remove_action( 'wp_head', 'parent_post_rel_link_wp_head ', 10, 0 ); // prev link
 	remove_action( 'wp_head', 'start_post_rel_link_wp_head ', 10, 0 ); // start link
 	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 ); // Display relational links for the posts adjacent to the current post.
+	
+	/* Add theme support for simple-core extensions. */
+//	add_theme_support( 'facebook-init' );
+//	add_theme_support( 'facebook-meta' );
+//	add_theme_support( 'share-bar' );
+//	add_theme_support( 'is-subpage-tag' );
+//	add_theme_support( 'timer' );
+	add_theme_support( 'fs_settings' );
 
-   /* Additional Theme JS */
+	/* Add theme support for simple-core shortcodes. */
+//	add_theme_support( 'shortcode-columns' );
+//	add_theme_support( 'shortcode-dropcaps' );
+//	add_theme_support( 'shortcode-intro' );
+
+}
+function fs_init_js() {
+	/* Additional Theme JS */
     if (!is_admin()) {
     
     	//wp_deregister_script('jquery');
@@ -134,21 +149,8 @@ function fs_theme_setup() {
 		
 		
 	}	
-	
-	/* Add theme support for simple-core extensions. */
-//	add_theme_support( 'facebook-init' );
-//	add_theme_support( 'facebook-meta' );
-//	add_theme_support( 'share-bar' );
-//	add_theme_support( 'is-subpage-tag' );
-//	add_theme_support( 'timer' );
-	add_theme_support( 'fs_settings' );
-
-	/* Add theme support for simple-core shortcodes. */
-//	add_theme_support( 'shortcode-columns' );
-//	add_theme_support( 'shortcode-dropcaps' );
-//	add_theme_support( 'shortcode-intro' );
-
 }
+add_action('init', 'fs_init_js');
 
 
 function add_js_stuff() {
@@ -197,19 +199,19 @@ function add_js_stuff() {
 }
 add_action('wp_print_scripts', 'add_js_stuff');
 
-/**
- * Custom breadcrumb trail arguments.
- *
- * @since 0.1.0
- */
-function fs_breadcrumb_trail_args( $args ) {
+// /**
+// * Custom breadcrumb trail arguments.
+// *
+// * @since 0.1.0
+// */
+// function fs_breadcrumb_trail_args( $args ) {
 
-	/* Change the text before the breadcrumb trail. */
-	$args['before'] = __( 'You are here:', hybrid_get_textdomain() );
+	// /* Change the text before the breadcrumb trail. */
+	// $args['before'] = __( 'You are here:', hybrid_get_textdomain() );
 
-	/* Return the filtered arguments. */
-	return $args;
-}
+	// /* Return the filtered arguments. */
+	// return $args;
+// }
 
 /**
  * Disable Sidebar on Single Column Layout

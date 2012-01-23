@@ -18,7 +18,7 @@ if ( has_nav_menu( 'secondary' ) ) : ?>
 
 			<?php do_atomic( 'open_menu_secondary' ); // fs_open_menu_secondary ?>
 
-			<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'container_class' => 'menu', 'menu_class' => '', 'menu_id' => 'menu-secondary-items', 'fallback_cb' => '' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'container' => 'nav', 'container_class' => 'menu', 'menu_class' => '', 'menu_id' => 'menu-secondary-items', 'fallback_cb' => '' ) ); ?>
 
 			<?php do_atomic( 'close_menu_secondary' ); // fs_close_menu_secondary ?>
 

@@ -221,7 +221,7 @@ $j(document).ready(
 	function() {
 
 		/* Drop-down controls. */
-		$j('div.menu ul:first-child').supersubs( {
+		$j('nav.menu ul:first-child').supersubs( {
 			minWidth: 12,
 			maxWidth: 27,
 			extraWidth: 1
