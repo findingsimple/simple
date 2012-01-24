@@ -947,14 +947,27 @@ img.wp-smiley {
 .comment-list, .comment-list ol {
 	list-style: none;
 	margin: 0 0 25px 0;
-	border-top: 1px solid #dfdfdf;
 	}
+.comments-header {
+	font-family: Arial,sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 22px;
+	padding-top: 0pt;
+	padding-right: 0pt;
+	padding-bottom: 18px;
+	padding-left: 0pt;
+}
 .comment-list li {
 	padding: 25px 25px 0 25px;
 	border: 1px solid #dfdfdf;
 	border-top: none;
+	margin-left:0px;
+	list-style:none;
 	}
-
+.comment-list li:first-child {
+	border-top: 1px solid #dfdfdf;
+}
 .comment-list .avatar {
 	float: left;
 	width: 40px;
@@ -974,16 +987,8 @@ img.wp-smiley {
 	font-weight: bold;
 	color: #858585;
 	}
-.comment-meta a {
-	font-style: normal;
-	color: #666;
-	}
-.comment-meta a:hover {
-	color: #000;
-	text-decoration: none;
-	}
 .comment-text {
-	color: #555;
+	color: #000;
 	}
 
 .comments-closed {
@@ -991,6 +996,7 @@ img.wp-smiley {
 	font-size: 14px;
 	color: #666;
 	background: #f9f9f9;
+	display:none;
 	border-left: 5px solid #ddd;
 	}
 
