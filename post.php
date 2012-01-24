@@ -48,8 +48,6 @@ get_header(); // Loads the header.php template. ?>
 
 					<?php do_atomic( 'after_entry' ); // fs_after_entry ?>
 
-
-
 					<?php do_atomic( 'after_singular' ); // fs_after_singular ?>
 
 					<?php comments_template( '/comments.php', true ); // Loads the comments.php template. ?>
@@ -62,7 +60,9 @@ get_header(); // Loads the header.php template. ?>
 
 		<?php do_atomic( 'close_content' ); // fs_close_content ?>
 		
+		<?php if(function_exists('related_posts')) { ?>
 		<div id="related-posts"><?php related_posts(); ?></div>
+		<?php } ?>
 		
 		<?php get_template_part( 'loop-nav' ); // Loads the loop-nav.php template. ?>
 
