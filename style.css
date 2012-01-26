@@ -965,22 +965,53 @@ img.wp-smiley {
 	margin-left:0px;
 	list-style:none;
 	}
+.tback-list li {
+	padding:0;
+	border: none;
+	list-style:decimal;
+	list-style-position:outside;
+	margin-left:36px;
+	list-style:numerical;
+	}
 .comment-list li:first-child {
 	border-top: 1px solid #dfdfdf;
 }
 .comment-list .avatar {
 	float: left;
-	width: 40px;
-	height: 40px;
-	margin: 0 15px 10px 0;
-	padding: 2px;
-	border: 1px solid #eee;
+	width: 36px;
+	height: 36px;
+	margin: 0 10px 10px 0;
 	}
 
 .comment-meta {
+	margin: 0 0 15px 0;
+	font-size: 13px;
+	color: #000;
+	}
+.comment-meta .permalink{
+	font-size: 11px;
+	color: #666666;
+	font-style: italic;
+	text-decoration:none;
+	}
+.comment-meta .permalink:hover {
+	color: #ff4b33;
+	text-decoration:none;
+	}
+.published {
+	font-size: 11px;
+	color: #666666;
+	}
+.tback-meta {
 	margin: 0 0 25px 0;
 	font-size: 14px;
-	color: #999;
+	color: #000;
+	}
+.tback-meta a {
+	font-style:normal;
+	}
+.tback-meta abbr  {
+	border:none
 	}
 .comment-meta .comment-author cite {
 	font-style: normal;

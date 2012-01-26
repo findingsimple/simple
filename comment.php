@@ -20,18 +20,32 @@
 		<div class="comment-wrap">
 
 			<?php do_atomic( 'open_comment' ); // fs_open_comment ?>
+			
+			<?php if((get_comment_type($comment->comment_ID) == "comment")) { ?>
+				
+				<?php echo hybrid_avatar(); ?>
 
-			<?php echo hybrid_avatar(); ?>
+				<?php echo apply_atomic_shortcode( 'comment_meta', '<div class="comment-meta">[comment-author]<br /><span class="published">Posted </span>[comment-published] [comment-permalink before="| "] [comment-edit-link before="| "] [comment-reply-link before="| "]</span></div>' ); ?>
 
-			<?php echo apply_atomic_shortcode( 'comment_meta', '<div class="comment-meta">[comment-author] [comment-published] [comment-permalink before="| "] [comment-edit-link before="| "] [comment-reply-link before="| "]</div>' ); ?>
-
-			<div class="comment-content comment-text">
-				<?php if ( '0' == $comment->comment_approved ) : ?>
-					<?php echo apply_atomic_shortcode( 'comment_moderation', '<p class="alert moderation">' . __( 'Your comment is awaiting moderation.', hybrid_get_textdomain() ) . '</p>' ); ?>
-				<?php endif; ?>
-
-				<?php comment_text( $comment->comment_ID ); ?>
-			</div><!-- .comment-content .comment-text -->
+				<div class="comment-content comment-text">
+					<?php if ( '0' == $comment->comment_approved ) : ?>
+						<?php echo apply_atomic_shortcode( 'comment_moderation', '<p class="alert moderation">' . __( 'Your comment is awaiting moderation.', hybrid_get_textdomain() ) . '</p>' ); ?>
+					<?php endif; ?>
+				
+					<?php comment_text( $comment->comment_ID ); ?>
+				</div><!-- .comment-content .comment-text -->
+			
+			<?php } else { ?>
+				
+				<div class="tback-content comment-text">
+					<?php if ( '0' == $comment->comment_approved ) : ?>
+						<?php echo apply_atomic_shortcode( 'comment_moderation', '<p class="alert moderation">' . __( 'Your comment is awaiting moderation.', hybrid_get_textdomain() ) . '</p>' ); ?>
+					<?php endif; ?>
+				
+					<?php echo apply_atomic_shortcode( 'comment_meta', '<div class="tback-meta">By [comment-author] on [comment-published]</div>' ); ?>
+				</div><!-- .comment-content .comment-text -->
+			
+			<?php } ?>
 
 			<?php do_atomic( 'close_comment' ); // fs_close_comment ?>
 

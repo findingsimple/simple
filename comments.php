@@ -26,12 +26,33 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 
 			<?php if ( have_comments() ) : ?>
 
-				<h3 id="comments-number" class="comments-header"><?php comments_number( __( 'No Responses', hybrid_get_textdomain() ), __( 'One Response', hybrid_get_textdomain() ), __( '% Responses', hybrid_get_textdomain() ) ); ?></h3>
+				<h3 id="comments-number" class="comments-header"><?php comments_number( __( 'No Comments', hybrid_get_textdomain() ), __( 'One Comment', hybrid_get_textdomain() ), __( '% Comments', hybrid_get_textdomain() ) ); ?></h3>
 
 				<?php do_atomic( 'before_comment_list' );// fs_before_comment_list ?>
 
 				<ol class="comment-list">
-					<?php wp_list_comments( hybrid_list_comments_args() ); ?>
+					<?php 
+					$arr = hybrid_list_comments_args();
+					$arr['type'] = 'comment';
+					wp_list_comments( $arr ); ?>
+				</ol><!-- .comment-list -->
+
+				<?php do_atomic( 'after_comment_list' ); // fs_after_comment_list ?>
+
+				<?php if ( get_option( 'page_comments' ) ) : ?>
+					<div class="comment-navigation comment-pagination">
+						<?php paginate_comments_links(); ?>
+					</div><!-- .comment-navigation -->
+				<?php endif; ?>
+				
+				<h3 id="comments-number" class="comments-header tback-header">Trackbacks</h3>
+
+				<?php do_atomic( 'before_comment_list' );// fs_before_comment_list ?>
+
+				<ol class="tback-list">
+					<?php $arr = hybrid_list_comments_args();
+					$arr['type'] = 'pings';
+					wp_list_comments( $arr ); ?>
 				</ol><!-- .comment-list -->
 
 				<?php do_atomic( 'after_comment_list' ); // fs_after_comment_list ?>
