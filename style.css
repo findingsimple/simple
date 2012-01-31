@@ -1298,7 +1298,7 @@ body ul#sharebarx li .st_email  { margin: 0 15px !important; }
   #home-test {display:none!important;}
 }	
 
-@media only screen and (min-width: 480px) {	
+
 
 #branding {
 	float: left;
@@ -1476,9 +1476,9 @@ body ul#sharebarx li .st_email  { margin: 0 15px !important; }
 	color: #ccc;
 	}
 
-}/*/mediaquery*/
 
-@media only screen and (min-width: 768px) {
+
+
 	
 #sidebar-header {
 	overflow: hidden;
@@ -1599,13 +1599,12 @@ body ul#sharebarx li .st_email  { margin: 0 15px !important; }
 #sidebar-subsidiary .widget {
 	float: left;
 	width: 200px; /* 300 / 960 */
-	width: 200px; /* 300 / 960 */
 	margin: 0 40px 7px 0; /* 20 / 960 | 10 / 960 */
 	}
 	
 
 
-}
+
 
 /* Template - Work Page */
 
