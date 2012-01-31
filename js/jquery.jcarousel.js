@@ -17,7 +17,7 @@
     /**
      * Creates a carousel for all matched elements.
      *
-     * @example $("#mycarousel").jcarousel();
+     * @example jQuery("#mycarousel").jcarousel();
      * @before <ul id="mycarousel" class="jcarousel-skin-name"><li>First item</li><li>Second item</li></ul>
      * @result
      *
@@ -39,7 +39,7 @@
      * @param Hash o A set of key/value pairs to set as configuration properties.
      * @cat Plugins/jCarousel
      */
-    $.fn.jcarousel = function(o) {
+    jQuery.fn.jcarousel = function(o) {
         return this.each(function() {
             new $jc(this, o);
         });
@@ -78,13 +78,13 @@
      * The jCarousel object.
      *
      * @constructor
-     * @name $.jcarousel
+     * @name jQuery.jcarousel
      * @param Object e The element to create the carousel for.
      * @param Hash o A set of key/value pairs to set as configuration properties.
      * @cat Plugins/jCarousel
      */
-    $.jcarousel = function(e, o) {
-        this.options    = $.extend({}, defaults, o || {});
+    jQuery.jcarousel = function(e, o) {
+        this.options    = jQuery.extend({}, defaults, o || {});
 
         this.locked     = false;
 
@@ -102,14 +102,14 @@
 
         for (var i = 0; i < split.length; i++) {
             if (split[i].indexOf('jcarousel-skin') != -1) {
-                $(e).removeClass(split[i]);
+                jQuery(e).removeClass(split[i]);
                 var skin = split[i];
                 break;
             }
         }
 
         if (e.nodeName == 'UL' || e.nodeName == 'OL') {
-            this.list = $(e);
+            this.list = jQuery(e);
             this.container = this.list.parent();
 
             if (this.container.hasClass('jcarousel-clip')) {
@@ -120,8 +120,8 @@
             } else if (!this.container.hasClass('jcarousel-container'))
                 this.container = this.list.wrap('<div></div>').parent();
         } else {
-            this.container = $(e);
-            this.list = $(e).find('>ul,>ol,div>ul,div>ol');
+            this.container = jQuery(e);
+            this.list = jQuery(e).find('>ul,>ol,div>ul,div>ol');
         }
 
         if (skin != '' && this.container.parent()[0].className.indexOf('jcarousel-skin') == -1)
@@ -132,14 +132,14 @@
         if (!this.clip.length || !this.clip.hasClass('jcarousel-clip'))
             this.clip = this.list.wrap('<div></div>').parent();
 
-        this.buttonPrev = $('.jcarousel-prev', this.container);
+        this.buttonPrev = jQuery('.jcarousel-prev', this.container);
 
         if (this.buttonPrev.size() == 0 && this.options.buttonPrevHTML != null)
             this.buttonPrev = this.clip.before(this.options.buttonPrevHTML).prev();
 
         this.buttonPrev.addClass(this.className('jcarousel-prev'));
 
-        this.buttonNext = $('.jcarousel-next', this.container);
+        this.buttonNext = jQuery('.jcarousel-next', this.container);
 
         if (this.buttonNext.size() == 0 && this.options.buttonNextHTML != null)
             this.buttonNext = this.clip.before(this.options.buttonNextHTML).prev();
@@ -181,21 +181,21 @@
         if (this.options.initCallback != null)
             this.options.initCallback(this, 'init');
 
-        if ($.browser.safari) {
+        if (jQuery.browser.safari) {
             this.buttons(false, false);
-            $(window).bind('load', function() { self.setup(); });
+            jQuery(window).bind('load', function() { self.setup(); });
         } else
             this.setup();
     };
 
     // Create shortcut for internal use
-    var $jc = $.jcarousel;
+    var $jc = jQuery.jcarousel;
 
     $jc.fn = $jc.prototype = {
         jcarousel: '0.2.3'
     };
 
-    $jc.fn.extend = $jc.extend = $.extend;
+    $jc.fn.extend = $jc.extend = jQuery.extend;
 
     $jc.fn.extend({
         /**
@@ -223,7 +223,7 @@
             this.prevFirst = this.prevLast = null;
             this.animate(p, false);
 
-            $(window).unbind('resize', this.funcResize).bind('resize', this.funcResize);
+            jQuery(window).unbind('resize', this.funcResize).bind('resize', this.funcResize);
         },
 
         /**
@@ -265,7 +265,7 @@
             if (this.options.visible != null) {
                 var self = this;
                 var di = Math.ceil(this.clipping() / this.options.visible), wh = 0, lt = 0;
-                $('li', this.list).each(function(i) {
+                jQuery('li', this.list).each(function(i) {
                     wh += self.dimension(this, di);
                     if (i + 1 < self.first)
                         lt = wh;
@@ -354,7 +354,7 @@
          * @cat Plugins/jCarousel
          */
         get: function(i) {
-            return $('.jcarousel-item-' + i, this.list);
+            return jQuery('.jcarousel-item-' + i, this.list);
         },
 
         /**
@@ -771,7 +771,7 @@
 
             var callback = typeof this.options[cb] == 'object' ? this.options[cb][evt] : this.options[cb];
 
-            if (!$.isFunction(callback))
+            if (!jQuery.isFunction(callback))
                 return;
 
             var self = this;
@@ -792,7 +792,7 @@
         },
 
         format: function(e, i) {
-            var $e = $(e).addClass(this.className('jcarousel-item')).addClass(this.className('jcarousel-item-' + i));
+            var $e = jQuery(e).addClass(this.className('jcarousel-item')).addClass(this.className('jcarousel-item-' + i));
             $e.attr('jcarouselindex', i);
             return $e;
         },
@@ -815,7 +815,7 @@
                 d - $jc.margin(el, 'marginLeft') - $jc.margin(el, 'marginRight') :
                 d - $jc.margin(el, 'marginTop') - $jc.margin(el, 'marginBottom');
 
-            $(el).css(this.wh, w + 'px');
+            jQuery(el).css(this.wh, w + 'px');
 
             return this.dimension(el);
         },
@@ -845,7 +845,7 @@
          * @cat Plugins/jCarousel
          */
         defaults: function(d) {
-            return $.extend(defaults, d || {});
+            return jQuery.extend(defaults, d || {});
         },
 
         margin: function(e, p) {
@@ -854,18 +854,18 @@
 
             var el = e.jquery != undefined ? e[0] : e;
 
-            if (p == 'marginRight' && $.browser.safari) {
+            if (p == 'marginRight' && jQuery.browser.safari) {
                 var old = {'display': 'block', 'float': 'none', 'width': 'auto'}, oWidth, oWidth2;
 
-                $.swap(el, old, function() { oWidth = el.offsetWidth; });
+                jQuery.swap(el, old, function() { oWidth = el.offsetWidth; });
 
                 old['marginRight'] = 0;
-                $.swap(el, old, function() { oWidth2 = el.offsetWidth; });
+                jQuery.swap(el, old, function() { oWidth2 = el.offsetWidth; });
 
                 return oWidth2 - oWidth;
             }
 
-            return $jc.intval($.css(el, p));
+            return $jc.intval(jQuery.css(el, p));
         },
 
         intval: function(v) {
