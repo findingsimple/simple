@@ -432,7 +432,7 @@
             this.stopAuto();
 
             if (this.tail != null && !this.inTail)
-                this.scrollTail(false);
+                this.scroll(jQuery.jcarousel.intval(1));
             else
                 this.scroll(((this.options.wrap == 'both' || this.options.wrap == 'last') && this.options.size != null && this.last == this.options.size) ? 1 : this.first + this.options.scroll);
         },
