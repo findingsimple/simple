@@ -1090,11 +1090,11 @@ img.wp-smiley {
 	font-size: 14px;
 	color: #444;
 	}
-/*Specific Widgets-change for production*/
-#text-9 {
+/*Specific Widgets-changed for production*/
+#text-5 {
 	margin-right:0px!important;
 }
-#text-7 {
+#text-3 {
 	width:460px!important;
 }
 #sidebar-subsidiary .widget-title {
@@ -2509,7 +2509,7 @@ body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ul
 	width: 100%;
 	padding: 5px;
 }
-#text-9 ul li {
+#text-5 ul li {
 	font-size:15px;
 	line-height:1.5;
 	color: #333;
@@ -2526,7 +2526,7 @@ body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ul
 #secondary.main-aside h3,
 .intro,
 .work-panel h2,
-#text-9,
+#text-5,
 .entry-title {
 	font-family: "museo-sans-1","museo-sans-2",Helvetica, Arial,sans-serif;
 }
