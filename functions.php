@@ -113,7 +113,12 @@ function fs_theme_setup() {
 //	add_theme_support( 'shortcode-columns' );
 //	add_theme_support( 'shortcode-dropcaps' );
 //	add_theme_support( 'shortcode-intro' );
-
+	/* galskin*/
+	wp_register_style( 'galskin', THEME_URI . '/cs/skin.css');
+	wp_enqueue_style( 'galskin' );
+		/* Jcarousel*/
+		wp_register_style( 'jcarcss', THEME_URI . '/js/jquery.jcarousel.css');
+		wp_enqueue_style( 'jcarcss' );
 }
 
 /**
@@ -183,9 +188,7 @@ function add_js_stuff() {
 
 	if (is_page_template('page-template-case-study.php')) { 
 		
-		/* Jcarousel*/
-		wp_register_style( 'jcarcss', THEME_URI . '/js/jquery.jcarousel.css');
-		wp_enqueue_style( 'jcarcss' );
+	
 	
 		wp_register_script( 'jcar', THEME_URI . '/js/jquery.jcarousel.js','','',true);		
 		wp_enqueue_script( 'jcar' );
@@ -194,9 +197,7 @@ function add_js_stuff() {
 		wp_register_script( 'csjs', THEME_URI . '/js/cs.js','jcar','',true);		
 		wp_enqueue_script( 'csjs' );
 		
-		/* galskin*/
-		wp_register_style( 'galskin', THEME_URI . '/cs/skin.css');
-		wp_enqueue_style( 'galskin' );
+		
 	}
 	
 	if (is_page('contact') || is_page('wordpress-consultant-canberra')) {
