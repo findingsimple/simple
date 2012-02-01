@@ -51,10 +51,5 @@
 
 <?php wp_footer(); // wp_footer ?>
 
-<!--[if (lt IE 9) & (!IEMobile)]>
-<script src="<?php echo get_bloginfo('stylesheet_directory'); ?>/js/DOMAssistantCompressed-2.8.js"></script>
-<script src="<?php echo get_bloginfo('stylesheet_directory'); ?>/js/selectivizr-1.0.1.js"></script>
-<![endif]-->
-
 </body>
 </html>
