@@ -57,7 +57,7 @@ function fs_theme_setup() {
 	add_theme_support( 'hybrid-core-post-meta-box' );
 	add_theme_support( 'hybrid-core-theme-settings', array( 'footer', 'about' ) );
 //	add_theme_support( 'hybrid-core-drop-downs' );
-	add_theme_support( 'hybrid-core-seo' );
+//	add_theme_support( 'hybrid-core-seo' );
 	add_theme_support( 'hybrid-core-template-hierarchy' );
 
 	/* Add theme support for framework extensions. */
