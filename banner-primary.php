@@ -1,6 +1,6 @@
 <?php
 /**
- * Primary Bannery Template
+ * Primary Banner Template
  *
  * Displays the Banner area after the theme navigation.
  *

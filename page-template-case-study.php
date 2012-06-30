@@ -12,13 +12,13 @@ $featarr = split(",",$casestudies);
 $featarr = array_diff($featarr, array(""));
 $testlast = count($featarr);
  
-get_header(); // Loads the header.php template. ?>
+get_header(); /* Loads the header.php template */ ?>
 
-	<?php do_atomic( 'before_content' ); // fs_before_content ?>
+	<?php do_atomic( 'before_content' ); /* fs_before_content */ ?>
 
 	<div id="content">
 
-		<?php do_atomic( 'open_content' ); // fs_open_content ?>
+		<?php do_atomic( 'open_content' ); /* fs_open_content */ ?>
 
 		<div class="hfeed">
 
@@ -26,32 +26,32 @@ get_header(); // Loads the header.php template. ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php do_atomic( 'before_entry' ); // fs_before_entry ?>
+					<?php do_atomic( 'before_entry' ); /* fs_before_entry */ ?>
 
 					<div id="post-<?php the_ID(); ?>" class="<?php hybrid_entry_class(); ?>">
 
-						<?php do_atomic( 'open_entry' ); // fs_open_entry ?>
+						<?php do_atomic( 'open_entry' ); /* fs_open_entry */ ?>
 
 						<?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
 
 						<div class="entry-content">
-							<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', hybrid_get_textdomain() ) ); ?>
-							<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', hybrid_get_textdomain() ), 'after' => '</p>' ) ); ?>
+							<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', hybrid_get_parent_textdomain() ) ); ?>
+							<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', hybrid_get_parent_textdomain() ), 'after' => '</p>' ) ); ?>
 						</div><!-- .entry-content -->
 
 						<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">[entry-edit-link]</div>' ); ?>
 
-						<?php do_atomic( 'close_entry' ); // fs_close_entry ?>
+						<?php do_atomic( 'close_entry' ); /* fs_close_entry */ ?>
 
 					</div><!-- .hentry -->
 
-					<?php do_atomic( 'after_entry' ); // fs_after_entry ?>
+					<?php do_atomic( 'after_entry' ); /* fs_after_entry */ ?>
 
 
 
-					<?php do_atomic( 'after_singular' ); // fs_after_singular ?>
+					<?php do_atomic( 'after_singular' ); /* fs_after_singular */ ?>
 
-					<?php //comments_template( '/comments.php', true ); // Loads the comments.php template. ?>
+					<?php /* comments_template( '/comments.php', true ); */ /* Loads the comments.php template */ ?>
 
 				<?php endwhile; ?>
 
@@ -59,7 +59,7 @@ get_header(); // Loads the header.php template. ?>
 
 		</div><!-- .hfeed -->
 
-		<?php do_atomic( 'close_content' ); // fs_close_content ?>
+		<?php do_atomic( 'close_content' ); /* fs_close_content */ ?>
 
 		<div id="cs-gallery-wrapper">
 			<?php 
@@ -103,8 +103,8 @@ get_header(); // Loads the header.php template. ?>
 		
 	</div><!-- #content -->
 
-	<?php do_atomic( 'after_content' ); // fs_after_content ?>
+	<?php do_atomic( 'after_content' ); /* fs_after_content */ ?>
 	  
 
 	   
-<?php get_footer(); // Loads the footer.php template. ?>
+<?php get_footer(); /* Loads the footer.php template */ ?>

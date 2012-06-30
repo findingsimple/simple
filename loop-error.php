@@ -12,7 +12,7 @@
 
 		<div class="entry-content">
 
-			<p><?php _e( 'Apologies, but no entries were found.', hybrid_get_textdomain() ); ?></p>
+			<p><?php _e( 'Apologies, but no entries were found.', hybrid_get_parent_textdomain() ); ?></p>
 
 		</div><!-- .entry-content -->
 

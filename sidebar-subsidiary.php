@@ -11,22 +11,22 @@
 
 if ( is_active_sidebar( 'subsidiary' ) ) : ?>
 
-	<?php do_atomic( 'before_sidebar_subsidiary' ); // fs_before_sidebar_subsidiary ?>
+	<?php do_atomic( 'before_sidebar_subsidiary' ); /* fs_before_sidebar_subsidiary */ ?>
 
 	<div id="sidebar-subsidiary" class="sidebar">
 	
 		<div class="wrap">
 
-		<?php do_atomic( 'open_sidebar_subsidiary' ); // fs_open_sidebar_subsidiary ?>
+		<?php do_atomic( 'open_sidebar_subsidiary' ); /* fs_open_sidebar_subsidiary */ ?>
 
 		<?php dynamic_sidebar( 'subsidiary' ); ?>
 
-		<?php do_atomic( 'close_sidebar_subsidiary' ); // fs_close_sidebar_subsidiary ?>
+		<?php do_atomic( 'close_sidebar_subsidiary' ); /* fs_close_sidebar_subsidiary */ ?>
 
 		</div><!-- .wrap -->
 
 	</div><!-- #sidebar-subsidiary .aside -->
 
-	<?php do_atomic( 'after_sidebar_subsidiary' ); // fs_after_sidebar_subsidiary ?>
+	<?php do_atomic( 'after_sidebar_subsidiary' ); /* fs_after_sidebar_subsidiary */ ?>
 
 <?php endif; ?>

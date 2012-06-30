@@ -12,13 +12,13 @@ $featarr = split(",",$casestudies);
 $featarr = array_diff($featarr, array(""));
 $testlast = count($featarr);
  
-get_header(); // Loads the header.php template. ?>
+get_header(); /* Loads the header.php template */ ?>
 
-	<?php do_atomic( 'before_content' ); // fs_before_content ?>
+	<?php do_atomic( 'before_content' ); /* fs_before_content */ ?>
 
 	<div id="content" class="cs">
 
-		<?php do_atomic( 'open_content' ); // fs_open_content ?>
+		<?php do_atomic( 'open_content' ); /* fs_open_content */ ?>
 
 		<?php $temp_query = $wp_query; ?>
 
@@ -95,11 +95,11 @@ get_header(); // Loads the header.php template. ?>
 
 		</div><!-- .post -->
 
-		<?php do_atomic( 'close_content' ); // fs_close_content ?>
+		<?php do_atomic( 'close_content' ); /* fs_close_content */ ?>
 
 	</div><!-- #content -->
 
-	<?php do_atomic( 'after_content' ); // fs_after_content ?>
+	<?php do_atomic( 'after_content' ); /* fs_after_content */ ?>
 
 	   
-<?php get_footer(); // Loads the footer.php template. ?>
+<?php get_footer(); /* Loads the footer.php template */ ?>
