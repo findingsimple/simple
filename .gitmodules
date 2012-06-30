@@ -1,0 +1,3 @@
+[submodule "hybrid-core"]
+	path = hybrid-core
+	url = git@github.com:FindingSimple/hybrid-core.git
