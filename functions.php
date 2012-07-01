@@ -121,7 +121,7 @@ function fs_init_js() {
   		wp_enqueue_script( 'jquery' );
  		
 		/* Modernizr */
- 		wp_register_script( 'modernizr', THEME_URI . '/js/modernizr.js','','',false);
+ 		wp_register_script( 'modernizr', THEME_URI . '/js/modernizr.js','','2.5.3',false);
  		wp_enqueue_script( 'modernizr' );
 
 		/* galskin*/
