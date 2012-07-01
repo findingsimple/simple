@@ -78,7 +78,7 @@ body {
 	overflow: hidden;
 	clear: both;
 	width: 100%;
-	background: #75c28f url(images/bogy.png) repeat-x bottom center; 
+	background: #75c28f url(img/bogy.png) repeat-x bottom center; 
 	}
 #branding {
 	width: 100%;
@@ -100,7 +100,7 @@ body {
 	height:75px;
 	border-bottom: none;
 	text-indent:-9999px;
-	background: transparent url(images/fslogo3.png) no-repeat scroll top left;
+	background: transparent url(img/fslogo3.png) no-repeat scroll top left;
 	}
 #site-title a:hover {
 	text-decoration: underline;
@@ -204,7 +204,7 @@ body {
 	overflow: hidden;
 	width: 100%;
 	padding:44px 0 20px 0;
-	background: transparent url(images/main-grad.png) repeat-x 0 0;
+	background: transparent url(img/main-grad.png) repeat-x 0 0;
 	}	
 	
 .breadcrumbs {
@@ -896,7 +896,7 @@ img.wp-smiley {
 	}
 
 #lastfm-1 h3 {width:90px;background: #75c28f;}
-.lastfm li {background: transparent url(images/music.png) no-repeat scroll 0 0.1em; list-style:none; padding: 0 0 0 23px!important;margin-left:0px!important;margin-bottom:5px;}
+.lastfm li {background: transparent url(img/music.png) no-repeat scroll 0 0.1em; list-style:none; padding: 0 0 0 23px!important;margin-left:0px!important;margin-bottom:5px;}
 .lastfm-timestamp {display:none;}
 #flickrrss {clear:both;height:200px;}
 #flickrrss a {display:block; width:65px; height:65px; border:5px solid #c2e5ce;float:left; margin:0 10px 10px 0;padding:0;}
@@ -911,11 +911,11 @@ img.wp-smiley {
 .connect li {display:block;list-style:none;padding:0;margin:0;}
 .connect a:link,.connect a:visited {color:#333!important;border:none;display:block;padding-left:20px;text-decoration:none;}
 .connect a:hover,.connect a:active {color:#333;border:none;text-decoration:none;}
-.twitter {background:transparent url(images/connect/twitter.png) no-repeat scroll center left;}
-.flickr {background:transparent url(images/connect/flickr.png) no-repeat scroll center left;}
-.linkedin {background:transparent url(images/connect/linkedin.png) no-repeat scroll center left;}
-.connect-rss {background:transparent url(images/connect/feed.png) no-repeat scroll center left;}
-.connect-lastfm {background:transparent url(images/connect/lastfm.png) no-repeat scroll center left;}
+.twitter {background:transparent url(img/connect/twitter.png) no-repeat scroll center left;}
+.flickr {background:transparent url(img/connect/flickr.png) no-repeat scroll center left;}
+.linkedin {background:transparent url(img/connect/linkedin.png) no-repeat scroll center left;}
+.connect-rss {background:transparent url(img/connect/feed.png) no-repeat scroll center left;}
+.connect-lastfm {background:transparent url(img/connect/lastfm.png) no-repeat scroll center left;}
 	
 /* Search form widget. */
 .widget .search-form {
@@ -1249,7 +1249,7 @@ body ul#sharebarx li .st_email  { margin: 0 15px !important; }
 
 /*Intro Shortcode
 -------------------------------------------------------------- */
-.intro {font-size:16px; line-height:1.6em; color: #777773;padding:7px 0 20px 0;margin-left:0px!important;background: transparent url(images/underline.gif) no-repeat scroll bottom center;}
+.intro {font-size:16px; line-height:1.6em; color: #777773;padding:7px 0 20px 0;margin-left:0px!important;background: transparent url(img/underline.gif) no-repeat scroll bottom center;}
 
 /*Dropcap Shortcode
 -------------------------------------------------------------- */
@@ -2147,8 +2147,8 @@ html>body .entry ul,
 .ui-datepicker-next:hover,
 .ui-datepicker-prev:hover {background:#dadada}
 .ui-datepicker-next a,
-.ui-datepicker-prev a {text-indent:-999999px; width:1.3em; height:1.4em; display:block; font-size:1em; background:url(../images/datepicker_arrow_left.gif) 50% 50% no-repeat; border:1px solid #d3d3d3; cursor:pointer}
-.ui-datepicker-next a {background:url(../images/datepicker_arrow_right.gif) 50% 50% no-repeat}
+.ui-datepicker-prev a {text-indent:-999999px; width:1.3em; height:1.4em; display:block; font-size:1em; background:url(../img/datepicker_arrow_left.gif) 50% 50% no-repeat; border:1px solid #d3d3d3; cursor:pointer}
+.ui-datepicker-next a {background:url(../img/datepicker_arrow_right.gif) 50% 50% no-repeat}
 .ui-datepicker-header select {border:1px solid #d3d3d3; color:#555; background:#e6e6e6; font-size:1em; line-height:1.4em; position:absolute; top:.5em; margin:0!important}
 .ui-datepicker-header option:focus,
 .ui-datepicker-header option:hover {background:#dadada}
@@ -2269,15 +2269,15 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {displa
 
 .gform_wrapper .gf_progressbar_wrapper {clear:both; width:92%; margin:0 0 8px 0; padding: 0 0 16px 0; border-bottom:1px dotted #ccc}
 .gform_wrapper .gf_progressbar_wrapper h3.gf_progressbar_title {font-size:13px; line-height:1em!important; margin:0 0 6px 0!important; padding:0!important; clear:both; filter:alpha(opacity=60); -moz-opacity:0.6; -khtml-opacity: 0.6; opacity: 0.6}
-.gform_wrapper .gf_progressbar {width:99%; height:20px; overflow:hidden; line-height:20px!important; background-color:#fff; border:1px solid #acacac; border-right:1px solid #959595; border-bottom:1px solid #959595; background-image: url(../images/percentbar_bg.png); background-repeat: repeat-x; background-position: bottom; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px}
+.gform_wrapper .gf_progressbar {width:99%; height:20px; overflow:hidden; line-height:20px!important; background-color:#fff; border:1px solid #acacac; border-right:1px solid #959595; border-bottom:1px solid #959595; background-image: url(../img/percentbar_bg.png); background-repeat: repeat-x; background-position: bottom; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px}
 .gform_wrapper .gf_progressbar_percentage {background-repeat:repeat-x; height:20px; text-align:right; font-family:"helvetica",arial,sans-serif; font-size:13px!important; text-shadow: 0 1px 1px rgba(0,0,0,0.50)}
 .gform_wrapper .gf_progressbar_percentage span {margin-right:5px; margin-left:5px}
-.gform_wrapper .percentbar_blue {background-image: url(../images/percentbar_blue.png); color:#fff; background-color:#0072BC}
-.gform_wrapper .percentbar_gray {background-image: url(../images/percentbar_gray.png); color:#fff; background-color:#666}
-.gform_wrapper .percentbar_green {background-image: url(../images/percentbar_green.png); color:#fff; background-color:#94DC21}
-.gform_wrapper .percentbar_orange {background-image: url(../images/percentbar_orange.png); color:#fff; background-color:#DC7021}
-.gform_wrapper .percentbar_red {background-image: url(../images/percentbar_red.png); color:#fff; background-color:#DC2521}
-.gform_wrapper .percentbar_custom {background-image: url(../images/percentbar_custom.png)}
+.gform_wrapper .percentbar_blue {background-image: url(../img/percentbar_blue.png); color:#fff; background-color:#0072BC}
+.gform_wrapper .percentbar_gray {background-image: url(../img/percentbar_gray.png); color:#fff; background-color:#666}
+.gform_wrapper .percentbar_green {background-image: url(../img/percentbar_green.png); color:#fff; background-color:#94DC21}
+.gform_wrapper .percentbar_orange {background-image: url(../img/percentbar_orange.png); color:#fff; background-color:#DC7021}
+.gform_wrapper .percentbar_red {background-image: url(../img/percentbar_red.png); color:#fff; background-color:#DC2521}
+.gform_wrapper .percentbar_custom {background-image: url(../img/percentbar_custom.png)}
 
 
 /* multi-page steps ------------------------------------------------------*/
