@@ -1,15 +1,15 @@
 <?php
 /**
- * Page Template
+ * Template Name: Authors
  *
- * This is the default page template.  It is used when a more specific template can't be found to display 
- * singular views of pages.
+ * The Authors page template is for listing the authors of your site.  It shows each author's 
+ * biographical information and avatar while linking the author's archive page.
  *
  * @package fs
  * @subpackage Template
  */
 
-get_header(); /* Loads the header.php template */ ?>
+get_header(); ?>
 
 	<?php do_atomic( 'before_content' ); /* fs_before_content */ ?>
 
@@ -33,7 +33,29 @@ get_header(); /* Loads the header.php template */ ?>
 
 						<div class="entry-content">
 							<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', hybrid_get_parent_textdomain() ) ); ?>
+							
+					<?php foreach ( get_users(array( 'order_by' => 'display_name', 'exclude' => array('1') )) as $author ) : ?>
+
+						<?php $user = new WP_User( $author->ID ); ?>
+
+							<div id="hcard-<?php echo str_replace( ' ', '-', get_the_author_meta( 'user_nicename', $author->ID ) ); ?>" class="author-profile vcard clear">
+
+								<a href="<?php echo get_author_posts_url( $author->ID ); ?>" title="<?php the_author_meta( 'display_name', $author->ID ); ?>">
+									<?php echo get_avatar( get_the_author_meta( 'user_email', $author->ID ), '100', '', get_the_author_meta( 'display_name', $author->ID ) ); ?>
+								</a>
+								<h2 class="author-name fn n">
+									<a href="<?php echo get_author_posts_url( $author->ID ); ?>" title="<?php the_author_meta( 'display_name', $author->ID ); ?>"><?php the_author_meta( 'display_name', $author->ID ); ?></a>
+								</h2>
+								<p class="author-bio">
+									<?php the_author_meta( 'description', $author->ID ); ?>
+								</p><!-- .author-bio -->
+
+							</div><!-- .author-profile .vcard -->
+
+					<?php endforeach; ?>							
+							
 							<?php wp_link_pages_extended( array( 'before' => '<div class="pagination pagination-centered"><ul>', 'after' => '</ul></div>', 'before_page' => '<li>', 'before_current_page' => '<li class="active">', 'after_page' => '</li>'  ) ); ?>
+
 						</div><!-- .entry-content -->
 
 						<?php do_atomic( 'close_entry' ); /* fs_close_entry */ ?>
@@ -46,7 +68,7 @@ get_header(); /* Loads the header.php template */ ?>
 
 					<?php do_atomic( 'after_singular' ); /* fs_after_singular */ ?>
 
-					<?php comments_template( '/comments.php', true ); /* Loads the comments.php template */ ?>
+					<?php /* comments_template( '/comments.php', true ); */ /* Loads the comments.php template */ ?>
 
 				<?php endwhile; ?>
 

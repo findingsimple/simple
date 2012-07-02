@@ -31,14 +31,14 @@ get_header(); /* Loads the header.php template */ ?>
 
 						<?php do_atomic( 'open_entry' ); /* fs_open_entry */ ?>
 
-						<div class="author-grav"><?php echo get_avatar( get_the_author_meta( 'user_email' ), '100', '', get_the_author_meta( 'display_name' ) ); ?></div>
+						<?php if ( current_theme_supports( 'get-the-image' ) ) get_the_image( array( 'meta_key' => 'Thumbnail', 'size' => 'thumbnail' ) ); ?>
 
 						<?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
 
-						<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __( 'By [entry-author] | Published: [entry-published] [entry-edit-link before=" | "]', hybrid_get_parent_textdomain() ) . '</div>' ); ?>
+						<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __( 'By [entry-author] on [entry-published] [entry-edit-link before=" | "]', hybrid_get_parent_textdomain() ) . '</div>' ); ?>
 
-						<div class="entry-content">
-							<?php the_content(); ?>
+						<div class="entry-summary">
+							<?php the_excerpt(); ?>
 							<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', hybrid_get_parent_textdomain() ), 'after' => '</p>' ) ); ?>
 						</div><!-- .entry-summary -->
 
@@ -68,4 +68,4 @@ get_header(); /* Loads the header.php template */ ?>
 
 	<?php do_atomic( 'after_content' ); /* fs_after_content */ ?>
 
-<?php get_footer(); /* Loads the footer.php template */ ?>
+<?php get_footer(); /* Loads the footer.php template. */ ?>

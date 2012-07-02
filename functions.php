@@ -22,8 +22,8 @@
  * @subpackage Functions
  * @version 0.2.0
  * @author Jason Conroy <jason@findingsimple.com>
- * @copyright Copyright (c) 2010 - 2011, Jason Conroy
- * @link http://findingsimple.com/
+ * @copyright Copyright (c) 2010 - 2012, Jason Conroy
+ * @link http://base.findingsimple.com/
  * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -32,11 +32,11 @@ require_once( trailingslashit( TEMPLATEPATH ) . 'hybrid-core/hybrid.php' );
 $theme = new Hybrid();
 
 /* Load the fs core. */
-require_once( trailingslashit( TEMPLATEPATH ) . 'fs-core/fs-core.php' );
-$theme_fs = new FSCore();
+require_once( trailingslashit( TEMPLATEPATH ) . 'simple-core/fs-core.php' );
+$theme_simple = new FSCore();
 
 /* Do theme setup on the 'after_setup_theme' hook. */
-add_action( 'after_setup_theme', 'fs_theme_setup' );
+add_action( 'after_setup_theme', 'base_theme_setup' );
 
 /**
  * Theme setup function.  This function adds support for theme features and defines the default theme
@@ -44,40 +44,40 @@ add_action( 'after_setup_theme', 'fs_theme_setup' );
  *
  * @since 0.1.0
  */
-function fs_theme_setup() {
+function base_theme_setup() {
 
 	/* Get action/filter hook prefix. */
 	$prefix = hybrid_get_prefix();
 
 	/* Add theme support for core framework features. */
-	add_theme_support( 'hybrid-core-menus', array( 'primary', 'secondary') );
-	add_theme_support( 'hybrid-core-sidebars', array( 'primary', 'secondary', 'subsidiary') );
+	add_theme_support( 'hybrid-core-menus', array( 'primary', 'secondary', 'subsidiary' ) );
+	add_theme_support( 'hybrid-core-sidebars', array( 'primary', 'secondary', 'header', 'subsidiary', 'after-singular' ) );
 	add_theme_support( 'hybrid-core-widgets' );
 	add_theme_support( 'hybrid-core-shortcodes' );
 	add_theme_support( 'hybrid-core-post-meta-box' );
 	add_theme_support( 'hybrid-core-theme-settings', array( 'footer', 'about' ) );
 //	add_theme_support( 'hybrid-core-drop-downs' );
-//	add_theme_support( 'hybrid-core-seo' );
+	add_theme_support( 'hybrid-core-seo' );
 	add_theme_support( 'hybrid-core-template-hierarchy' );
 
 	/* Add theme support for framework extensions. */
-	add_theme_support( 'theme-layouts', array( '2c-l', '2c-r', '3c-l', '3c-r', '3c-c' ) );
+	add_theme_support( 'theme-layouts', array( '1c', '2c-l', '2c-r', '3c-l', '3c-r', '3c-c' ) );
 	add_theme_support( 'post-stylesheets' );
 	add_theme_support( 'loop-pagination' );
 	add_theme_support( 'get-the-image' );
-//	add_theme_support( 'breadcrumb-trail' );
+	add_theme_support( 'breadcrumb-trail' );
 	add_theme_support( 'cleaner-gallery' );
 //	add_theme_support( 'dev-stylesheet' );
 
 	/* Add theme support for WordPress features. */
 	add_theme_support( 'automatic-feed-links' );
-//	add_custom_background();
-
-	/* Add the breadcrumb trail just after the container is open. */
-//	add_action( "{$prefix}_open_main", 'breadcrumb_trail' );
-
+	add_theme_support( 'custom-background' ); 
+	
 	/* Filter the breadcrumb trail arguments. */
-//	add_filter( 'breadcrumb_trail_args', 'fs_breadcrumb_trail_args' );
+	add_filter( 'breadcrumb_trail_args', 'base_breadcrumb_trail_args' );
+
+	/* Filter the breadcrumb trail separater class. */
+	add_filter( 'breadcrumb_trail','base_breadcrumb_trail_sep_class');
 
 	/* Add the search form to the secondary menu. */
 	add_action( "{$prefix}_close_menu_secondary", 'get_search_form' );
@@ -100,100 +100,118 @@ function fs_theme_setup() {
 	remove_action( 'wp_head', 'parent_post_rel_link_wp_head ', 10, 0 ); // prev link
 	remove_action( 'wp_head', 'start_post_rel_link_wp_head ', 10, 0 ); // start link
 	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 ); // Display relational links for the posts adjacent to the current post.
-	
-	/* Add theme support for fs-core extensions. */
-	add_theme_support( 'fs_settings' );
 
-	/* Add theme support for fs-core shortcodes. */
+	add_action( 'add_meta_boxes', 'base_remove_meta_boxes', 11 );
+	
+	/* Add theme support for simple-core extensions. */
+//	add_theme_support( 'facebook-init' );
+
+	/* Add theme support for simple-core shortcodes. */
 //	add_theme_support( 'shortcode-columns' );
 
 }
 
 /**
- * Add init JS
+ * Add new scripts and remove unused scripts
  *
- * @since 0.1.0
  */
-function fs_init_js() {
-	/* Additional Theme JS */
+function base_add_remove_scripts(){
+
+   /* Additional Theme JS */
     if (!is_admin()) {
-    
-  		wp_enqueue_script( 'jquery' );
- 		
+     		
+     	wp_enqueue_script( 'jquery' );	
+     	
 		/* Modernizr */
  		wp_register_script( 'modernizr', THEME_URI . '/js/modernizr.js','','2.5.3',false);
  		wp_enqueue_script( 'modernizr' );
- 		
- 		/* Twitter Bootstrap */
- 		wp_register_script( 'bootstrap-js', THEME_URI . '/js/bootstrap.min.js','','2.0.4',true);
+
+ 		/* Twitter Bootstrap JS */
+ 		wp_register_script( 'bootstrap-js', THEME_URI . '/js/bootstrap.min.js','jquery','2.0.4',true);
  		wp_enqueue_script( 'bootstrap-js' );
-
-		/* galskin*/
-		wp_register_style( 'galskin', THEME_URI . '/cs/skin.css');
-		wp_enqueue_style( 'galskin' );
-		
-		/* Jcarousel*/
-		wp_register_style( 'jcarcss', THEME_URI . '/js/jquery.jcarousel.css');
-		wp_enqueue_style( 'jcarcss' );
-		
-		
-	}	
-	
-	if(is_front_page()) {
-	
-		/* Twitter Search */
-		wp_register_script( 'twitter-search', THEME_URI . '/js/jquery.twitter.search.js','','',true);		
-		wp_enqueue_script( 'twitter-search' );
-
-		/* home js */
-		wp_register_script( 'homejs', THEME_URI . '/js/home.js','','',true);		
-		wp_enqueue_script( 'homejs' );
-		
-	}
-	
-	if(is_page_template('page-template-case-study.php') || is_page_template('page-template-work.php') ){
-		/* other js */
-		wp_register_script( 'otherjs', THEME_URI . '/js/other.js','','',true);		
-		wp_enqueue_script( 'otherjs' );
-	}
-
-	if (is_page_template('page-template-case-study.php')) { 
-	
-		wp_register_script( 'jcar', THEME_URI . '/js/jquery.jcarousel.js','','',true);		
-		wp_enqueue_script( 'jcar' );
-		
-		/* cs js */
-		wp_register_script( 'csjs', THEME_URI . '/js/cs.js','jcar','',true);		
-		wp_enqueue_script( 'csjs' );
-		
-	}
-	
-	if (is_page('contact') || is_page('wordpress-consultant-canberra')) {
-		
-		/* spamspan */
-		wp_register_script( 'spamspan', THEME_URI . '/js/spamspan.js','','',true);		
-		wp_enqueue_script( 'spamspan' );
+ 		
+ 		/* Base JS */
+ 		wp_register_script( 'base-js', THEME_URI . '/js/base.js','jquery','1',true);
+ 		wp_enqueue_script( 'base-js' );
 		
 	}	
 	
 }
+add_action( 'wp_print_scripts', 'base_add_remove_scripts', 100 );
 
-add_action( 'wp_print_scripts', 'fs_init_js' );
+/**
+ * Remove unwanted template meta box
+ *
+ * @since 0.1.0
+ */
+function base_remove_meta_boxes() {
+	
+	remove_meta_box( 'hybrid-core-post-template', 'post', 'side' );
+
+}
+
+/**
+ * Remove unwanted admin menu items
+ *
+ * @since 0.1.0
+ */
+function my_remove_menu_pages() {
+
+	remove_menu_page('link-manager.php');
+	
+}
+
+add_action( 'admin_menu', 'my_remove_menu_pages' );
+
+function my_admin_bar_render() {
+    global $wp_admin_bar;
+
+    $wp_admin_bar->remove_menu('new-link');
+    $wp_admin_bar->remove_menu('new-media');
+    
+}
+
+add_action( 'wp_before_admin_bar_render', 'my_admin_bar_render' );
 
 
-// /**
-// * Custom breadcrumb trail arguments.
-// *
-// * @since 0.1.0
-// */
-// function fs_breadcrumb_trail_args( $args ) {
+function base_breadcrumbs() {
 
-	// /* Change the text before the breadcrumb trail. */
-	// $args['before'] = __( 'You are here:', hybrid_get_textdomain() );
+	$prefix = hybrid_get_prefix();
 
-	// /* Return the filtered arguments. */
-	// return $args;
-// }
+	/* Add the breadcrumb trail just before the main content. */
+	if (!is_front_page())
+		add_action( "{$prefix}_before_content", 'breadcrumb_trail' );
+
+}
+
+//add_action('wp_head','base_breadcrumbs');
+
+/**
+ * Custom breadcrumb trail arguments.
+ *
+ * @since 0.1.0
+ */
+function base_breadcrumb_trail_args( $args ) {
+
+	/* Change the text before the breadcrumb trail. */
+	$args['before'] = __( 'You are here:', hybrid_get_parent_textdomain() );
+
+	/* Return the filtered arguments. */
+	return $args;
+}
+
+/**
+ * Custom breadcrumb trail seperator class for twitter bootstrap
+ *
+ * @since 0.1.0
+ */
+function base_breadcrumb_trail_sep_class( $breadcrumb ) {
+
+	$breadcrumb = str_replace('class="sep"', 'class="divider"', $breadcrumb );
+
+	/* Return the breadcrumb. */
+	return $breadcrumb;
+}
 
 /**
  * Disable Sidebar on Single Column Layout
@@ -244,6 +262,7 @@ function new_excerpt_more($more) {
 	return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
 
 /**
  * Custom Walker to add top level drop downs
@@ -352,5 +371,72 @@ class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
 	}
 	
 }
+
+/**
+ * The formatted output of a list of pages.
+ *
+ */
+function wp_link_pages_extended($args = '') {
+	$defaults = array(
+		'before' => '<p>' . __('Pages:'), 'after' => '</p>',
+		'link_before' => '', 'link_after' => '',
+		'next_or_number' => 'number', 'nextpagelink' => __('Next page'),
+		'previouspagelink' => __('Previous page'), 'pagelink' => '%',
+		'before_page' => '' , 'before_current_page' => '', 'after_page' => '',
+		'echo' => 1
+	);
+
+	$r = wp_parse_args( $args, $defaults );
+	$r = apply_filters( 'wp_link_pages_args', $r );
+	extract( $r, EXTR_SKIP );
+
+	global $page, $numpages, $multipage, $more, $pagenow;
+
+	$output = '';
+	if ( $multipage ) {
+		if ( 'number' == $next_or_number ) {
+			$output .= $before;
+			for ( $i = 1; $i < ($numpages+1); $i = $i + 1 ) {
+				$j = str_replace('%',$i,$pagelink);
+				if ( ($i != $page) || ((!$more) && ($page==1)) ) {
+					$output .= $before_page;
+					$output .= _wp_link_page($i);
+				} else {
+					$output .= $before_current_page;
+					$output .= '<a href="#">';
+				}
+				$output .= $link_before . $j . $link_after;
+				$output .= '</a>';
+				$output .= $after_page;
+			}
+			$output .= $after;
+		} else {
+			if ( $more ) {
+				$output .= $before;
+				$i = $page - 1;
+				if ( $i && $more ) {
+					$output .= $before_page;
+					$output .= _wp_link_page($i);
+					$output .= $link_before. $previouspagelink . $link_after . '</a>';
+					$output .= $after_page;
+				}
+				$i = $page + 1;
+				if ( $i <= $numpages && $more ) {
+					$output .= $before_page;
+					$output .= _wp_link_page($i);
+					$output .= $link_before. $nextpagelink . $link_after . '</a>';
+					$output .= $after_page;
+				}
+				$output .= $after;
+			}
+		}
+	}
+
+	if ( $echo )
+		echo $output;
+
+	return $output;
+}
+
 
 ?>

@@ -29,18 +29,14 @@ get_header(); /* Loads the header.php template */ ?>
 
 						<?php do_atomic( 'open_entry' ); /* fs_open_entry */ ?>
 
-						<div class="author-grav"><?php echo get_avatar( get_the_author_meta( 'user_email' ), '100', '', get_the_author_meta( 'display_name' ) ); ?></div>
-						
 						<?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
 
-						<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __( 'By [entry-author] | Published: [entry-published] [entry-edit-link before=" | "]', hybrid_get_parent_textdomain() ) . '</div>' ); ?>
+						<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __( 'By [entry-author] on [entry-published] [entry-edit-link before=" | "]', hybrid_get_parent_textdomain() ) . '</div>' ); ?>
 
 						<div class="entry-content">
-							<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', hybrid_get_parent_textdomain() ) ); ?>
-							<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', hybrid_get_parent_textdomain() ), 'after' => '</p>' ) ); ?>
+							<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', hybrid_get_textdomain() ) ); ?>
+							<?php wp_link_pages_extended( array( 'before' => '<div class="pagination pagination-centered"><ul>', 'after' => '</ul></div>', 'before_page' => '<li>', 'before_current_page' => '<li class="active">', 'after_page' => '</li>'  ) ); ?>
 						</div><!-- .entry-content -->
-
-						<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[entry-terms taxonomy="category" before="This entry was posted in "] [entry-terms taxonomy="post_tag" before=" and tagged "]', hybrid_get_parent_textdomain() ) . '. Bookmark the <a href="'.  get_permalink($post->ID) .'" title="permalink">permalink</a>. Both comments and trackbacks are currently closed.</div>' ); ?>
 
 						<?php do_atomic( 'close_entry' ); /* fs_close_entry */ ?>
 
@@ -48,7 +44,11 @@ get_header(); /* Loads the header.php template */ ?>
 
 					<?php do_atomic( 'after_entry' ); /* fs_after_entry */ ?>
 
+					<?php get_sidebar( 'after-singular' ); /* Loads the sidebar-after-singular.php template */ ?>
+
 					<?php do_atomic( 'after_singular' ); /* fs_after_singular */ ?>
+
+					<?php comments_template( '/comments.php', true ); /* Loads the comments.php template */ ?>
 
 				<?php endwhile; ?>
 
@@ -57,15 +57,9 @@ get_header(); /* Loads the header.php template */ ?>
 		</div><!-- .hfeed -->
 
 		<?php do_atomic( 'close_content' ); /* fs_close_content */ ?>
-		
-		<?php if(function_exists('related_posts')) { ?>
-		<div id="related-posts"><?php related_posts(); ?></div>
-		<?php } ?>
-		
+
 		<?php get_template_part( 'loop-nav' ); /* Loads the loop-nav.php template */ ?>
 
-		
-		<?php comments_template( '/comments.php', true ); /* Loads the comments.php template */ ?>
 	</div><!-- #content -->
 
 	<?php do_atomic( 'after_content' ); /* fs_after_content */ ?>

@@ -49,7 +49,9 @@ get_header(); /* Loads the header.php template */ ?>
 							<?php endif; ?>
 
 							<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', hybrid_get_parent_textdomain() ) ); ?>
-							<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', hybrid_get_parent_textdomain() ), 'after' => '</p>' ) ); ?>
+
+							<?php wp_link_pages_extended( array( 'before' => '<div class="pagination pagination-centered"><ul>', 'after' => '</ul></div>', 'before_page' => '<li>', 'before_current_page' => '<li class="active">', 'after_page' => '</li>'  ) ); ?>
+
 						</div><!-- .entry-content -->
 
 						<?php if ( wp_attachment_is_image( get_the_ID() ) ) echo do_shortcode( sprintf( '[gallery id="%1$s" exclude="%2$s" columns="8"]', $post->post_parent, get_the_ID() ) ); ?>
@@ -59,6 +61,8 @@ get_header(); /* Loads the header.php template */ ?>
 					</div><!-- .hentry -->
 
 					<?php do_atomic( 'after_entry' ); /* fs_after_entry */ ?>
+
+					<?php get_sidebar( 'after-singular' ); /* Loads the sidebar-after-singular.php template */ ?>
 
 					<?php do_atomic( 'after_singular' ); /* fs_after_singular */ ?>
 

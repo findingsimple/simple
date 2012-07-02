@@ -21,7 +21,7 @@ if ( is_active_sidebar( 'secondary' ) ) : ?>
 
 		<?php do_atomic( 'close_sidebar_secondary' ); /* fs_close_sidebar_secondary */ ?>
 
-	</div><!-- #sidebar-secondary .aside -->
+	</div><!-- #sidebar-secondary .sidebar -->
 
 	<?php do_atomic( 'after_sidebar_secondary' ); /* fs_after_sidebar_secondary */ ?>
 

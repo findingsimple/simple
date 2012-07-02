@@ -1,9 +1,9 @@
 <?php
 /**
- * Page Template
+ * Template Name: Categories
  *
- * This is the default page template.  It is used when a more specific template can't be found to display 
- * singular views of pages.
+ * The categories template is a page template that lists your categories along with a link 
+ * to the each category's RSS feed and post count.
  *
  * @package fs
  * @subpackage Template
@@ -16,7 +16,7 @@ get_header(); /* Loads the header.php template */ ?>
 	<div id="content">
 
 		<?php do_atomic( 'open_content' ); /* fs_open_content */ ?>
-
+		
 		<div class="hfeed">
 
 			<?php if ( have_posts() ) : ?>
@@ -33,7 +33,13 @@ get_header(); /* Loads the header.php template */ ?>
 
 						<div class="entry-content">
 							<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', hybrid_get_parent_textdomain() ) ); ?>
+							
+							<ul class="xoxo category-archives">
+								<?php wp_list_categories( array( 'feed' => __( 'RSS', hybrid_get_parent_textdomain() ), 'show_count' => true, 'use_desc_for_title' => false, 'title_li' => false ) ); ?>
+							</ul><!-- .xoxo .category-archives -->
+							
 							<?php wp_link_pages_extended( array( 'before' => '<div class="pagination pagination-centered"><ul>', 'after' => '</ul></div>', 'before_page' => '<li>', 'before_current_page' => '<li class="active">', 'after_page' => '</li>'  ) ); ?>
+
 						</div><!-- .entry-content -->
 
 						<?php do_atomic( 'close_entry' ); /* fs_close_entry */ ?>
@@ -46,7 +52,7 @@ get_header(); /* Loads the header.php template */ ?>
 
 					<?php do_atomic( 'after_singular' ); /* fs_after_singular */ ?>
 
-					<?php comments_template( '/comments.php', true ); /* Loads the comments.php template */ ?>
+					<?php /* comments_template( '/comments.php', true ); */ /* Loads the comments.php template */ ?>
 
 				<?php endwhile; ?>
 

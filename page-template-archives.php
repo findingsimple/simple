@@ -45,10 +45,9 @@ get_header(); /* Loads the header.php template */ ?>
 								<?php wp_get_archives( array( 'show_post_count' => true, 'type' => 'monthly' ) ); ?>
 							</ul><!-- .xoxo .monthly-archives -->
 
-							<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', hybrid_get_parent_textdomain() ), 'after' => '</p>' ) ); ?>
-						</div><!-- .entry-content -->
+							<?php wp_link_pages_extended( array( 'before' => '<div class="pagination pagination-centered"><ul>', 'after' => '</ul></div>', 'before_page' => '<li>', 'before_current_page' => '<li class="active">', 'after_page' => '</li>'  ) ); ?>
 
-						<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">[entry-edit-link]</div>' ); ?>
+						</div><!-- .entry-content -->
 
 						<?php do_atomic( 'close_entry' ); /* fs_close_entry */ ?>
 
@@ -56,7 +55,7 @@ get_header(); /* Loads the header.php template */ ?>
 
 					<?php do_atomic( 'after_entry' ); /* fs_after_entry */ ?>
 
-
+					<?php get_sidebar( 'after-singular' ); /* Loads the sidebar-after-singular.php template */ ?>
 
 					<?php do_atomic( 'after_singular' ); /* fs_after_singular */ ?>
 

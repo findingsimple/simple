@@ -1,9 +1,9 @@
 <?php
 /**
- * Page Template
+ * Template Name: Yearly
  *
- * This is the default page template.  It is used when a more specific template can't be found to display 
- * singular views of pages.
+ * The Yearly page template is used to show a list of your post archives by year. For each year a 
+ * post has been made, the year is listed along with the number of posts for that particular year.
  *
  * @package fs
  * @subpackage Template
@@ -33,7 +33,13 @@ get_header(); /* Loads the header.php template */ ?>
 
 						<div class="entry-content">
 							<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', hybrid_get_parent_textdomain() ) ); ?>
+
+							<ul class="xoxo yearly-archives">
+								<?php wp_get_archives( array( 'type' => 'yearly', 'show_post_count' => true ) ); ?>
+							</ul><!-- .xoxo .yearly-archives -->
+							
 							<?php wp_link_pages_extended( array( 'before' => '<div class="pagination pagination-centered"><ul>', 'after' => '</ul></div>', 'before_page' => '<li>', 'before_current_page' => '<li class="active">', 'after_page' => '</li>'  ) ); ?>
+
 						</div><!-- .entry-content -->
 
 						<?php do_atomic( 'close_entry' ); /* fs_close_entry */ ?>
@@ -46,7 +52,7 @@ get_header(); /* Loads the header.php template */ ?>
 
 					<?php do_atomic( 'after_singular' ); /* fs_after_singular */ ?>
 
-					<?php comments_template( '/comments.php', true ); /* Loads the comments.php template */ ?>
+					<?php /* comments_template( '/comments.php', true ); */ /* Loads the comments.php template */ ?>
 
 				<?php endwhile; ?>
 

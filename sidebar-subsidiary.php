@@ -25,7 +25,7 @@ if ( is_active_sidebar( 'subsidiary' ) ) : ?>
 
 		</div><!-- .wrap -->
 
-	</div><!-- #sidebar-subsidiary .aside -->
+	</div><!-- #sidebar-subsidiary .sidebar -->
 
 	<?php do_atomic( 'after_sidebar_subsidiary' ); /* fs_after_sidebar_subsidiary */ ?>
 
