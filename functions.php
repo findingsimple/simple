@@ -32,7 +32,7 @@ require_once( trailingslashit( TEMPLATEPATH ) . 'hybrid-core/hybrid.php' );
 $theme = new Hybrid();
 
 /* Load the fs core. */
-require_once( trailingslashit( TEMPLATEPATH ) . 'simple-core/fs-core.php' );
+require_once( trailingslashit( TEMPLATEPATH ) . 'fs-core/fs-core.php' );
 $theme_simple = new FSCore();
 
 /* Do theme setup on the 'after_setup_theme' hook. */
