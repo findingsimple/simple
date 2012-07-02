@@ -123,6 +123,10 @@ function fs_init_js() {
 		/* Modernizr */
  		wp_register_script( 'modernizr', THEME_URI . '/js/modernizr.js','','2.5.3',false);
  		wp_enqueue_script( 'modernizr' );
+ 		
+ 		/* Twitter Bootstrap */
+ 		wp_register_script( 'bootstrap-js', THEME_URI . '/js/bootstrap.min.js','','2.0.4',true);
+ 		wp_enqueue_script( 'bootstrap-js' );
 
 		/* galskin*/
 		wp_register_style( 'galskin', THEME_URI . '/cs/skin.css');
