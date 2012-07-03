@@ -10,9 +10,6 @@
 
 get_header(); // Loads the header.php template. ?>
 
-
-	<?php get_template_part( 'banner', 'primary' ); // Loads the banner-primary.php template. ?>
-
 	<?php do_atomic( 'before_content' ); // fs_before_content ?>
 
 	<div id="content">

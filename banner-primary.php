@@ -12,7 +12,8 @@
 	<div id="banner-primary" class="banner">
 
 		<div class="wrap">
-				
+		
+		Banner Here	
 		
 		</div><!-- .wrap -->
 

@@ -1,3 +1,6 @@
+/* @override 
+	http://fs.local.dev/wp-content/themes/FindingSimple/style.css */
+
 /**
  * Theme Name: Finding Simple Theme
  * Theme URI: http://findingsimple.com/
@@ -9,7 +12,7 @@
  * License: GNU General Public License v2.0
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Copyright (c) 2010 - 2011 Finding Simple.  All rights reserved.
+ * Copyright (c) 2010 - 2012 Finding Simple.  All rights reserved.
  * http://findingsimple.com
  */
 
@@ -19,7 +22,7 @@
 /* Body type & links
 ================================================*/
  
-body{padding-top: 60px; margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;line-height:18px;color:#333333;background-color:#ffffff;}
+body{padding-top: 40px; margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;line-height:18px;color:#333333;background-color:#ffffff;}
 a{color:#0088cc;text-decoration:none;}
 a:hover{color:#005580;text-decoration:underline;}
 
@@ -99,7 +102,7 @@ cite{}
 /* Banner Primary
 ================================================*/
 
-#banner-primary { }
+#banner-primary { background: #75c28f; height:  450px; }
 
 /* Breadcrumbs 
 ================================================*/
@@ -325,71 +328,6 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 
 #menu-subsidiary {width: 100%; padding: 0; clear: both;}
 
-
-/* Subnav */
-.subnav {
-	width: 100%;
-	height: 36px;
-	background-color: #eeeeee; /* Old browsers */
-	background-repeat: repeat-x; /* Repeat the gradient */
-	background-image: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%); /* FF3.6+ */
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
-	background-image: -webkit-linear-gradient(top, #f5f5f5 0%,#eeeeee 100%); /* Chrome 10+,Safari 5.1+ */
-	background-image: -ms-linear-gradient(top, #f5f5f5 0%,#eeeeee 100%); /* IE10+ */
-	background-image: -o-linear-gradient(top, #f5f5f5 0%,#eeeeee 100%); /* Opera 11.10+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
-	background-image: linear-gradient(top, #f5f5f5 0%,#eeeeee 100%); /* W3C */
-	border: 1px solid #e5e5e5;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-}
-.subnav .nav {
-	margin-bottom: 0;
-}
-.subnav .nav > li > a {
-	margin: 0;
-	padding-top:    11px;
-	padding-bottom: 11px;
-	border-left: 1px solid #f5f5f5;
-	border-right: 1px solid #e5e5e5;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0;
-}
-.subnav .nav > .active > a,
-.subnav .nav > .active > a:hover {
-	padding-left: 13px;
-	color: #777;
-	background-color: #e9e9e9;
-	border-right-color: #ddd;
-	border-left: 0;
-	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
-	-moz-box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
-	box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
-}
-.subnav .nav > .active > a .caret,
-.subnav .nav > .active > a:hover .caret {
-	border-top-color: #777;
-}
-.subnav .nav > li:first-child > a,
-.subnav .nav > li:first-child > a:hover {
-	border-left: 0;
-	padding-left: 12px;
-	-webkit-border-radius: 4px 0 0 4px;
-	-moz-border-radius: 4px 0 0 4px;
-	border-radius: 4px 0 0 4px;
-}
-.subnav .nav > li:last-child > a {
-	border-right: 0;
-}
-.subnav .dropdown-menu {
-	-webkit-border-radius: 0 0 4px 4px;
-	-moz-border-radius: 0 0 4px 4px;
-	border-radius: 0 0 4px 4px;
-}
-
-
 /* Footer
 ================================================*/
 
@@ -399,6 +337,16 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 #footer .copyright {float: left; width: 45%;}
 #footer .credit {float: right; width: 45%; text-align: right;}
 
+/* Conatiner Mods
+================================================*/
+
+.container {width: auto;}
+.container .wrap { width: 940px; margin: 0 auto; *zoom:1;}
+.container .wrap:before,
+.container .wrap:after {display:table;content:"";}
+.container .wrap:after {clear:both;}
+
+.navbar-fixed-top, .navbar-fixed-bottom { margin: 0 ;}
 
 /* Layouts
 ================================================*/
@@ -436,10 +384,11 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 
 @media (max-width:767px){
 
-	body {padding-left: 20px;padding-right: 20px;}
+	body { padding: 0; }
 	
-	.container, .navbar .container {width: auto;}
-	.navbar-fixed-top,.navbar-fixed-bottom {margin-left: -20px;margin-right: -20px;}
+	.container .wrap, .navbar-fixed-top .container, .navbar-fixed-bottom .container { width: auto; padding: 0 20px; }
+
+	.navbar .container { width: auto; padding: 0 20px; }
 	
 	.layout-2c-l #content,
 	.layout-2c-l #sidebar-primary,
@@ -504,7 +453,7 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 
 @media (min-width:768px) and (max-width:979px){
 
-	.container,.navbar-fixed-top .container,.navbar-fixed-bottom .container{width:724px;} 
+	.container .wrap, .navbar-fixed-top .container, .navbar-fixed-bottom .container { width:724px;} 
 
 	/* Content Layouts. */	
 	.layout-2c-l #content, .layout-default #content,
@@ -567,7 +516,7 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 
 @media (max-width:979px){
 
-	body{padding-top:0;}
+	body { padding: 0; }
 
 }
 
@@ -585,7 +534,7 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 
 @media (min-width:1200px){
 
-	.container , .navbar-fixed-top .container, .navbar-fixed-bottom .container { width:1170px; } 
+	.container .wrap,.navbar-fixed-top .container,.navbar-fixed-bottom .container { width:1170px; } 
 	
 	.layout-2c-l #content, .layout-default #content { float: left; width: 770px; }
 	.layout-2c-l #sidebar-primary, .layout-default #sidebar-primary { float: right; width: 370px; margin-bottom: 20px; }

@@ -70,7 +70,7 @@
 
 	<div id="container" class="container">
 
-		<?php /* get_template_part( 'menu', 'secondary' ); // Loads the menu-secondary.php template */ ?>
+		<?php if (is_front_page()) { get_template_part( 'banner', 'primary' ); } /* Loads the banner-primary.php template */ ?>
 
 		<?php do_atomic( 'before_main' ); /* fs_before_main */ ?>
 
