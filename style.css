@@ -16,15 +16,15 @@
  * http://findingsimple.com
  */
 
-.admin-bar #header {top:28px;}
+.admin-bar #header { top:28px; }
 
 
 /* Body type & links
 ================================================*/
  
-body{padding-top: 40px; margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;line-height:18px;color:#333333;background-color:#ffffff;}
-a{color:#0088cc;text-decoration:none;}
-a:hover{color:#005580;text-decoration:underline;}
+body{ padding-top: 40px; margin:0; font-family: "proxima-nova-1", "proxima-nova-2", "Helvetica Neue", Helvetica, Arial, sans-serif;font-size:13px;line-height:18px;color:#333333; background-color: #ffffff;}
+a{ color: #40AD84; text-decoration: none;}
+a:hover{ color: #40AD84; text-decoration: none; }
 
 
 /* Headings, body, etc. 
@@ -72,19 +72,19 @@ address{}
 small{}
 cite{}
 
+.amp { font-family: Baskerville; font-style: italic; font-weight: 400; }
+
 /* Header 
 ================================================*/
 
 #header {}
 #branding {}	
-#site-title { font-size: 20px; line-height: 36px; font-weight: bold; float: left; font-family: "proxima-nova-1","proxima-nova-2","Helvetica Neue",Helvetica,Arial,sans-serif; font-weight: 400; font-style: normal; }
+#site-title { font-size: 20px; line-height: 36px; font-weight: bold; float: left; font-weight: 400; font-style: normal; }
 #site-title a { color: #fff; text-decoration: none; }
 #site-title a:hover { color: #fff; text-decoration: none; }
 #site-title span { font-weight: 600; } 
 
-
 #site-description { display:  none; }
-#sidebar-header {}
 
 /* Menu Primary
 ================================================*/
@@ -102,7 +102,10 @@ cite{}
 /* Banner Primary
 ================================================*/
 
-#banner-primary { background: #75c28f; height:  450px; }
+#banner-primary { background: #40AD84; padding:  80px 0; text-align: center;}
+#banner-primary .banner-content { color: #fff; font-size: 60px; line-height: 1.3; font-family: "adelle-1","adelle-2",serif; font-weight: 600;}
+#banner-primary .banner-content a { color: #fff; }
+
 
 /* Breadcrumbs 
 ================================================*/

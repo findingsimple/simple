@@ -13,8 +13,12 @@
 
 		<div class="wrap">
 		
-		Banner Here	
+			<div class="banner-content">
 		
+			We design, build <span class="amp">&amp;</span> support WordPress websites. <a href="/#contact" title="Contact Us">Contact us</a>, we love to help. 
+			
+			</div>
+			
 		</div><!-- .wrap -->
 
 	</div><!-- #banner-primary .banner -->
