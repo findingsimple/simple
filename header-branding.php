@@ -22,7 +22,12 @@
 					</a>
 
 					<div id="branding">
-						<?php hybrid_site_title(); ?> 
+						<?php 
+						if ( is_front_page() )
+							echo '<h1 id="site-title"><a href="/" title="Finding Simple"><span>finding</span>simple</a></h1>'; 
+						else
+							echo '<span id="site-title"><a href="/" title="Finding Simple"><span>finding</span>simple</a></span>';
+						?>
 						<?php hybrid_site_description(); ?>
 					</div><!-- #branding -->
 				
