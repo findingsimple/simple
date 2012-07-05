@@ -131,8 +131,8 @@ function base_add_remove_scripts(){
  		wp_enqueue_script( 'bootstrap-js' );
  		
  		/* Base JS */
- 		wp_register_script( 'base-js', THEME_URI . '/js/base.js','jquery','1',true);
- 		wp_enqueue_script( 'base-js' );
+ 		wp_register_script( 'fs-js', THEME_URI . '/js/fs.js','jquery','1',true);
+ 		wp_enqueue_script( 'fs-js' );
 		
 	}	
 	
