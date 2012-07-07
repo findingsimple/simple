@@ -106,6 +106,11 @@ cite{}
 .banner {
 	border-bottom: 1px solid #ddd;
 	padding: 30px 0;
+	position: relative;
+}
+
+.banner .wrap {
+	position: relative;
 }
 
 .banner h2 {
@@ -122,6 +127,12 @@ cite{}
 	text-shadow: 0px 1px #fff, 0px 3px 1px rgba(0, 0, 0, 0.15);
 }
 
+#container .banner .flexslider,
+#container .banner .slides,
+#container .banner .banner-content {
+	margin: 0 ;
+	padding: 0 ;
+}
 
 /* Banner Primary
 ================================================*/
@@ -152,6 +163,14 @@ cite{}
 	margin-bottom: 0.8em;
 }
 
+#banner-tertiary .slide img {
+	margin:  0 auto;
+}
+
+#banner-tertiary .slide {
+	text-align: center;
+}
+
 /* Banner Quaternary
 ================================================*/
 
@@ -168,6 +187,16 @@ cite{}
 	margin-bottom: 0.8em;
 }
 
+#banner-quaternary h3 {
+	line-height: 1.2em;
+}
+
+#banner-quaternary h4 {
+	color: #888;
+	margin-bottom: 0.8em;
+}
+
+
 /* Banner Quinary
 ================================================*/
 
@@ -182,6 +211,23 @@ cite{}
 	-o-transform: rotate(-1deg);
 	transform: rotate(-1deg);
 	margin-bottom: 0.8em;
+}
+
+#banner-quinary p {
+	margin-bottom: 1.5em;
+}
+
+#banner-quinary .contact-method {
+	padding: 20px 0 20px 60px;
+	border-bottom: 1px solid #ddd;
+}
+
+#banner-quinary .contact-method:first-child {
+	padding-top: 0;
+}
+
+#banner-quinary .contact-method:last-child {
+	border-bottom: 0;
 }
 
 /* Front Page Google Map
@@ -416,11 +462,57 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 /* Footer
 ================================================*/
 
-#footer { overflow: hidden;clear: both;width: 100%; padding: 20px 0; background: #e1e1e1 url(img/bg-banner.png) repeat scroll top center; }
-#footer a {}
-#footer a:hover {}
+#footer { overflow: hidden;clear: both;width: 100%; padding: 30px 0; background: #e1e1e1 url(img/bg-banner.png) repeat scroll top center; }
+#footer p { margin-bottom: 0; }
+#footer a { color: #333; font-weight: bold;}
+#footer a:hover { color: #333; text-decoration: underline; }
 #footer .copyright {float: left; width: 45%;}
 #footer .credit {float: right; width: 45%; text-align: right;}
+
+/* Flexslider
+================================================*/
+
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.flexslider {margin: 0; padding: 0;}
+.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider {position: relative;}
+.flexslider .slides {zoom: 1;}
+.flexslider .slides > li {position: relative;}
+/* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
+.flex-container {zoom: 1; position: relative;}
+
+/* Direction Nav */
+.flex-direction-nav { height: 0; }
+.flex-direction-nav li a {width: 70px; height: 70px; margin: -35px 0 0; display: block; background: url(img/nav-slide.png) no-repeat; position: absolute;  top: 20px; cursor: pointer; text-indent: -999em; overflow:hidden; opacity: 0.4;}
+.flex-direction-nav li a:hover {border: none; opacity: 1;}
+.flex-direction-nav li .flex-next {background-position: top right; right: 0; }
+.flex-direction-nav li .flex-prev {background-position: bottom right; right: 70px; }	
+.flex-direction-nav li .flex-disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
+
 
 /* Conatiner Mods
 ================================================*/
@@ -614,8 +706,15 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 		-moz-border-radius: 0;
 		border-radius: 0;
 	}
+	
+	.flex-direction-nav li a { top: 50%; }
+	.flex-direction-nav li .flex-next {background-position: top left; right: 0;}
+	.flex-direction-nav li .flex-prev {background-position: bottom left; left: 0;}
+	 
+	#banner-quaternary .flex-direction-nav li .flex-prev { display: none; } 
   
 }
+
 
 @media (min-width:1200px){
 

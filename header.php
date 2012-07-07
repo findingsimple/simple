@@ -64,11 +64,11 @@
 </script>
 <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/bootstrap.min.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/apple-touch-icon-114.png" /><!-- For iPhone 4 -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/apple-touch-icon-72.png" /><!-- For iPad 1-->
-<link rel="apple-touch-icon-precomposed" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/apple-touch-icon.png" /><!-- For iPhone 3G, iPod Touch and Android -->
-<link rel="shortcut icon" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/apple-touch-icon.png" /><!-- For Nokia -->
-<link rel="shortcut icon" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/favicon.ico" /><!-- For everything else -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/apple-touch-icon-114.png" /><!-- For iPhone 4 -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/apple-touch-icon-72.png" /><!-- For iPad 1-->
+<link rel="apple-touch-icon-precomposed" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/apple-touch-icon.png" /><!-- For iPhone 3G, iPod Touch and Android -->
+<link rel="shortcut icon" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/apple-touch-icon.png" /><!-- For Nokia -->
+<link rel="shortcut icon" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/favicon.ico" /><!-- For everything else -->
 <?php wp_head(); ?>
 </head>
 

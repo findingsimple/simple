@@ -27,13 +27,17 @@
 					</div><!-- .span6 -->
 					
 					<div class="span6">
-					
-						<h3>Email</h3>
-						<a href="mailto:<?php echo antispambot( 'hi@findingsimple.com' ); ?>" title="Get in touch"><?php echo antispambot( 'hi@findingsimple.com' ); ?></a>
 						
-						<h3>Twitter</h3>
-						<a href="https://twitter.com/findingsimple" title="findingsimple twitter profile">@findingsimple</a>
-					
+						<div class="contact-method">
+							<h3>Email</h3>
+							<a href="mailto:<?php echo antispambot( 'hi@findingsimple.com' ); ?>" title="Get in touch"><?php echo antispambot( 'hi@findingsimple.com' ); ?></a>
+						</div><!-- .contact-method -->
+						
+						<div class="contact-method">
+							<h3>Twitter</h3>
+							<a href="https://twitter.com/findingsimple" title="findingsimple twitter profile">@findingsimple</a>
+						</div><!-- .contact-method -->
+						
 					</div><!-- .span6 -->
 				
 				</div><!-- .row -->

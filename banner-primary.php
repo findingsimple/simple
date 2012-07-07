@@ -17,7 +17,7 @@
 		
 			We design, build <span class="amp">&amp;</span> support WordPress websites. <a href="/#contact" title="Contact Us">Contact us</a>, we love to help. 
 			
-			</div>
+			</div><!-- .banner-content -->
 			
 		</div><!-- .wrap -->
 

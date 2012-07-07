@@ -13,13 +13,33 @@
 
 		<div class="wrap">
 		
-			<div class="banner-content">
+			<div class="flexslider">
 		
 				<h2>Our Work</h2>
 				
-				<p>Slider Here</p>
-			
-			</div>
+				<ul class="slides">
+				
+					<li class="slide">
+	
+						<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/tedx.png" alt="TEDxCanberra" />
+	
+					</li><!-- .slide -->
+					
+					<li class="slide">
+	
+						<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/eex.png" alt="EEX" />
+	
+					</li><!-- .slide -->
+					
+					<li class="slide">
+	
+						<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/dschool.png" alt="d.school" />
+	
+					</li><!-- .slide -->
+					
+				</ul>
+					
+			</div><!-- .banner-content -->
 			
 		</div><!-- .wrap -->
 

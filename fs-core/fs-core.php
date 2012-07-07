@@ -113,6 +113,23 @@ function front_page_map() {
 <?php
 }
 
+/**
+ * Set default footer text
+ * 
+ * @since 1.0
+ * @author Jason Conroy
+ * @package eeo
+ */
+
+function default_footer_text( $settings ) {
+
+	$settings['footer_insert'] = '<p class="copyright">Copyright &#169; 2008 - [the-year] <strong>finding</strong>simple</p><p class="credit">Powered by [wp-link]</p>';
+		
+	return $settings;
+	
+}
+
+add_filter("fs_default_theme_settings", 'default_footer_text' );
 
 
 
