@@ -111,6 +111,8 @@ function base_theme_setup() {
 
 }
 
+
+
 /**
  * Add new scripts and remove unused scripts
  *
@@ -135,6 +137,9 @@ function base_add_remove_scripts(){
  		wp_enqueue_script( 'fs-js' );
 		
 	}	
+	
+	if ( is_front_page() )
+		add_action( 'wp_head' , 'front_page_map' );
 	
 }
 add_action( 'wp_print_scripts', 'base_add_remove_scripts', 100 );
