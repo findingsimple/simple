@@ -650,6 +650,14 @@ html[xmlns] .slides {display: block;}
 		border-radius: 4px 4px 0 0;
 	}	
 	
+	#banner-primary { padding: 40px 0; }
+	#banner-primary .banner-content {font-size: 40px;}
+	
+	#banner-quaternary img { margin-bottom: 30px; }
+	
+	#map_canvas { margin-bottom: 30px; }
+	
+	
 }
 
 @media (min-width:768px) and (max-width:979px){
@@ -711,6 +719,9 @@ html[xmlns] .slides {display: block;}
 		float: left;
 		width: 198px;
 	}
+	
+	#banner-primary { padding: 50px 0; }
+	#banner-primary .banner-content {font-size: 50px;}
 
 	
 }
