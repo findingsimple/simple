@@ -384,21 +384,6 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 .comment-navigation a:hover {}
 .comment-navigation .current {}
 
-/* Sidebar after singular posts but before comments
-================================================*/
-
-#sidebar-after-singular { background:#f1f1f1; margin: 0 0 20px 0; }
-
-/* Widgets */
-#sidebar-after-singular .widget {padding: 10px 15px;}
-	
-/* Widget Title */
-#sidebar-after-singular .widget-title {}
-
-/* Widget unordered lists */
-#sidebar-after-singular .widget ul {}
-#sidebar-after-singular .widget ul li a {}
-#sidebar-after-singular .widget ul li a:hover {}
 
 /* Comments
 ================================================*/
@@ -431,31 +416,27 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 /* Primary and Secondary sidebars
 ================================================*/
 
-#sidebar-primary, #sidebar-secondary {background:#f1f1f1; margin: 0;}
+#sidebar-primary {background:#f1f1f1; margin: 0;}
 
 /* Widgets */
-#sidebar-primary .widget, #sidebar-secondary .widget {padding: 10px 15px;}
+#sidebar-primary .widget {padding: 10px 15px;}
 
 /* Widget title */
-#sidebar-primary .widget-title, #sidebar-secondary .widget-title {}
+#sidebar-primary .widget-title {}
 
 /* Widget unordered lists */
 #sidebar-primary .widget ul {}
 #sidebar-primary .widget ul li a {}
 #sidebar-primary .widget ul li a:hover {}
-	
-#sidebar-secondary .widget ul {}
-#sidebar-secondary .widget ul li a {}
-#sidebar-secondary .widget ul li a:hover {}
 
 
 /* Subsidiary sidebar 
 ================================================*/
 
-#sidebar-subsidiary {float: left;width:100%;overflow: hidden;}
+#sidebar-subsidiary {float: left;width:100%;overflow: hidden; background: #e1e1e1 url(img/bg-banner.png) repeat scroll top center; padding-top: 20px; margin-top: 20px;}
 
 /* Widgets */
-#sidebar-subsidiary .widget {float: left;width: 270px; padding: 10px 15px;margin: 0 20px 20px 0;background: #f1f1f1;}
+#sidebar-subsidiary .widget {float: left;width: 270px; padding: 10px 15px;margin: 0 20px 20px 0; }
 #sidebar-subsidiary .widget:last-child {margin-right:0;}
 
 /* Widget Title */
@@ -476,11 +457,6 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 .widget .search-form input[type="text"] {}
 .widget .search-form input[type="submit"] {display: none;}
 
-
-/* Subsidiary menu 
-================================================*/
-
-#menu-subsidiary {width: 100%; padding: 0; clear: both;}
 
 /* Footer
 ================================================*/
