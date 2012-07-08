@@ -50,8 +50,8 @@ function base_theme_setup() {
 	$prefix = hybrid_get_prefix();
 
 	/* Add theme support for core framework features. */
-	add_theme_support( 'hybrid-core-menus', array( 'primary', 'secondary', 'subsidiary' ) );
-	add_theme_support( 'hybrid-core-sidebars', array( 'primary', 'secondary', 'header', 'subsidiary', 'after-singular' ) );
+	add_theme_support( 'hybrid-core-menus', array( 'primary' ) );
+	add_theme_support( 'hybrid-core-sidebars', array( 'primary', 'subsidiary' ) );
 	add_theme_support( 'hybrid-core-widgets' );
 	add_theme_support( 'hybrid-core-shortcodes' );
 	add_theme_support( 'hybrid-core-post-meta-box' );
@@ -61,26 +61,14 @@ function base_theme_setup() {
 	add_theme_support( 'hybrid-core-template-hierarchy' );
 
 	/* Add theme support for framework extensions. */
-	add_theme_support( 'theme-layouts', array( '1c', '2c-l', '2c-r', '3c-l', '3c-r', '3c-c' ) );
+	add_theme_support( 'theme-layouts', array( '1c', '2c-l', '2c-r' ) );
 	add_theme_support( 'post-stylesheets' );
 	add_theme_support( 'loop-pagination' );
 	add_theme_support( 'get-the-image' );
-	add_theme_support( 'breadcrumb-trail' );
 	add_theme_support( 'cleaner-gallery' );
-//	add_theme_support( 'dev-stylesheet' );
 
 	/* Add theme support for WordPress features. */
 	add_theme_support( 'automatic-feed-links' );
-	add_theme_support( 'custom-background' ); 
-	
-	/* Filter the breadcrumb trail arguments. */
-	add_filter( 'breadcrumb_trail_args', 'base_breadcrumb_trail_args' );
-
-	/* Filter the breadcrumb trail separater class. */
-	add_filter( 'breadcrumb_trail','base_breadcrumb_trail_sep_class');
-
-	/* Add the search form to the secondary menu. */
-	add_action( "{$prefix}_close_menu_secondary", 'get_search_form' );
 
 	/* Disable Sidebar for Single Column Layout*/
 	add_filter( 'sidebars_widgets', 'my_disable_sidebars' );
@@ -177,46 +165,6 @@ function my_admin_bar_render() {
 }
 
 add_action( 'wp_before_admin_bar_render', 'my_admin_bar_render' );
-
-
-function base_breadcrumbs() {
-
-	$prefix = hybrid_get_prefix();
-
-	/* Add the breadcrumb trail just before the main content. */
-	if (!is_front_page())
-		add_action( "{$prefix}_before_content", 'breadcrumb_trail' );
-
-}
-
-//add_action('wp_head','base_breadcrumbs');
-
-/**
- * Custom breadcrumb trail arguments.
- *
- * @since 0.1.0
- */
-function base_breadcrumb_trail_args( $args ) {
-
-	/* Change the text before the breadcrumb trail. */
-	$args['before'] = __( 'You are here:', hybrid_get_parent_textdomain() );
-
-	/* Return the filtered arguments. */
-	return $args;
-}
-
-/**
- * Custom breadcrumb trail seperator class for twitter bootstrap
- *
- * @since 0.1.0
- */
-function base_breadcrumb_trail_sep_class( $breadcrumb ) {
-
-	$breadcrumb = str_replace('class="sep"', 'class="divider"', $breadcrumb );
-
-	/* Return the breadcrumb. */
-	return $breadcrumb;
-}
 
 /**
  * Disable Sidebar on Single Column Layout

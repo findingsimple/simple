@@ -13,8 +13,6 @@
 ?>
 				<?php get_sidebar( 'primary' ); /* Loads the sidebar-primary.php template */ ?>
 
-				<?php get_sidebar( 'secondary' ); /* Loads the sidebar-secondary.php template */ ?>
-
 				<?php do_atomic( 'close_main' ); /* fs_close_main */ ?>
 
 			</div><!-- .wrap -->
@@ -23,9 +21,7 @@
 
 		<?php do_atomic( 'after_main' ); /* fs_after_main */ ?>
 
-		<?php get_sidebar( 'subsidiary' ); /* Loads the sidebar-subsidiary.php template */ ?>
-
-		<?php get_template_part( 'menu', 'subsidiary' ); /* Loads the menu-subsidiary.php template */ ?>
+		<?php if ( !is_front_page() ) get_sidebar( 'subsidiary' ); /* Loads the sidebar-subsidiary.php template */ ?>
 
 		<?php do_atomic( 'before_footer' ); /* fs_before_footer */ ?>
 
