@@ -145,6 +145,20 @@ cite{}
 /* Banner Secondary
 ================================================*/
 
+#banner-secondary h2 img {
+	width:  50px;
+	margin-right: 15px;
+}
+
+#banner-secondary .service-icon {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+#banner-secondary .service-icon {
+	width:  50%;
+	margin:  0 auto 30px auto;
+}
 
 
 /* Banner Tertiary
@@ -218,8 +232,14 @@ cite{}
 }
 
 #banner-quinary .contact-method {
-	padding: 20px 0 20px 60px;
+	padding: 20px 0 20px 0;
 	border-bottom: 1px solid #ddd;
+}
+
+#banner-quinary .contact-method img {
+	width:  50px;
+	float: left;
+	margin-right: 20px;
 }
 
 #banner-quinary .contact-method:first-child {
@@ -230,10 +250,14 @@ cite{}
 	border-bottom: 0;
 }
 
+#banner-quinary .contact-method span {
+	color:#40AD84;
+}
+
 /* Front Page Google Map
 ================================================*/
 
-#map_canvas { height: 300px; }
+#map_canvas { height: 340px; }
 
 /* Breadcrumbs 
 ================================================*/

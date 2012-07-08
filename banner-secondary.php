@@ -18,7 +18,10 @@
 				<div class="row">
 				
 					<div class="span4">
-						<h2>Web Design</h2>
+					
+						<h2><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/services-design.png" alt="WordPress Web Design" />
+Design</h2>
+						
 						<ul>
 							<li>Custom site designs <span class="amp">&amp;</span> redesigns</li>
 							<li>WordPress conversions</li>
@@ -26,8 +29,11 @@
 						</ul>
 					</div><!-- .span4 -->
 
-					<div class="span4">									
-						<h2>Development</h2>
+					<div class="span4">	
+					
+						<h2><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/services-build.png" alt="WordPress Web Development" />
+Build</h2>
+								
 						<ul>
 							<li>Theme development <span class="amp">&amp;</span> customisation</li>
 							<li>Plugin development <span class="amp">&amp;</span> customisation</li>
@@ -35,8 +41,11 @@
 						</ul>
 					</div><!-- .span4 -->
 					
-					<div class="span4">						
-						<h2>Support</h2>
+					<div class="span4">	
+					
+						<h2><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/services-support.png" alt="WordPress Support &amp; Maintenance" />
+Support</h2>
+						
 						<ul>
 							<li>Troubleshooting <span class="amp">&amp;</span> support</li>
 							<li>Maintenance <span class="amp">&amp;</span> upgrades</li>
