@@ -22,7 +22,7 @@
 /* Body type & links
 ================================================*/
  
-body{ padding-top: 40px; margin:0; font-family: "proxima-nova-1", "proxima-nova-2", "Helvetica Neue", Helvetica, Arial, sans-serif; color:#333333; background-color: #ffffff; font-size: 1em; line-height: 1.4em; }
+body{ padding-top: 40px; margin:0; font-family: "proxima-nova-1", "proxima-nova-2", "Helvetica Neue", Helvetica, Arial, sans-serif; color:#333333; background: #ffffff url(img/bg-banner.png) repeat scroll top center;  font-size: 1em; line-height: 1.4em; }
 a{ color: #40AD84; text-decoration: none;}
 a:hover{ color: #40AD84; text-decoration: none; }
 
