@@ -8,6 +8,9 @@
  * @subpackage Template
  */
 
+if( !defined( 'FS_HIDE_SIDEBAR' ) )
+	define( 'FS_HIDE_SIDEBAR', true );
+
 get_header(); /* Loads the header.php template */ ?>
 
 <?php get_footer(); /* Loads the footer.php template */ ?>

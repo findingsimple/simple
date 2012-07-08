@@ -11,7 +11,7 @@
  * @subpackage Template
  */
 ?>
-				<?php get_sidebar( 'primary' ); /* Loads the sidebar-primary.php template */ ?>
+				<?php if ( !is_front_page() ) get_sidebar( 'primary' ); /* Loads the sidebar-primary.php template */ ?>
 
 				<?php do_atomic( 'close_main' ); /* fs_close_main */ ?>
 
