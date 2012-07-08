@@ -25,21 +25,7 @@
 <script type="text/javascript">
   TypekitConfig = {
 	kitId: 'wrz4rtj',
-	scriptTimeout: 2000,
-	active: function() {
-	  // As soon as the fonts are active, fade in the example
-	  // Don't fade in browsers that don't do proper opacity, like IE
-	  if (jQuery.support.opacity) {
-		jQuery('.container').css('visibility', 'visible').hide().fadeIn(200);
-	  } else {
-		jQuery('.container').css('visibility', 'visible');
-	  }
-	},
-	inactive: function() {
-	  // If the fonts are inactive, just show the example
-	  // You can apply fallback styles using the wf-inactive class in your CSS
-	  jQuery('.container').css('visibility', 'visible');
-	}
+	scriptTimeout: 2000
   };
   (function() {
 	var h = document.getElementsByTagName('html')[0];

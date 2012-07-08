@@ -541,7 +541,7 @@ html[xmlns] .slides {display: block;}
 /* Conatiner Mods
 ================================================*/
 
-.container {width: auto; visibility: hidden; }
+.container {width: auto; }
 .container .wrap { width: 940px; margin: 0 auto; *zoom:1;}
 .container .wrap:before,
 .container .wrap:after {display:table;content:"";}
