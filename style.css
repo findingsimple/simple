@@ -389,7 +389,7 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 ================================================*/
 
 #comments {padding-top:10px;}
-.comment-list, .comment-list ol {margin: 5px 0 15px 0;border-top: 1px solid #dfdfdf;}
+.comment-list, .comment-list ol {margin: 5px 0 15px 0;border-top: 1px solid #dfdfdf;list-style:none;}
 .comment-list li {padding: 13px 25px 0 13px;border: 1px solid #dfdfdf;border-top: none;word-wrap:break-word;}
 .comment-list li.bypostauthor {background:#f1f1f1;}
 .comment-list .avatar {float: left;width: 40px;height: 40px;margin: 0 15px 2px 2px;border-radius:5px;}
