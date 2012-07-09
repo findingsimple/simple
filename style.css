@@ -327,7 +327,7 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 /* Content
 ================================================*/
 
-#content {  }
+#content {  padding-top: 20px; }
 
 /* Posts
 ================================================*/
@@ -339,7 +339,7 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 /* Post titles */
 .hentry .entry-title {}
 .singular .entry-title {}
-.singular-page .entry-title, .singular-attachment .entry-title {}
+.singular-page .entry-title, .singular-attachment .entry-title { margin-bottom: 20px; }
 
 .entry-title a { border-bottom: none; }
 .entry-title a:hover { text-decoration: underline; }
@@ -436,7 +436,7 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 #sidebar-subsidiary {float: left;width:100%;overflow: hidden; background: #e1e1e1 url(img/bg-banner.png) repeat scroll top center; padding-top: 20px; margin-top: 20px;}
 
 /* Widgets */
-#sidebar-subsidiary .widget {float: left;width: 270px; padding: 10px 15px;margin: 0 20px 20px 0; }
+#sidebar-subsidiary .widget {float: left;width: 300px; margin: 0 20px 20px 0; }
 #sidebar-subsidiary .widget:last-child {margin-right:0;}
 
 /* Widget Title */
@@ -692,7 +692,7 @@ html[xmlns] .slides {display: block;}
 	
 	#sidebar-subsidiary .widget {
 		float: left;
-		width: 198px;
+		width: 228px;
 	}
 	
 	#banner-primary { padding: 50px 0; }
@@ -750,7 +750,7 @@ html[xmlns] .slides {display: block;}
 	.layout-3c-c #sidebar-primary {float: left; width: 270px; margin-left: -870px; }
 	.layout-3c-c #sidebar-secondary {clear: none; float: right; width: 270px; padding: 0; border: none;}
 		
-	#sidebar-subsidiary .widget { float: left; width: 340px; margin-right: 30px;}
+	#sidebar-subsidiary .widget { float: left; width: 370px; margin-right: 30px;}
 
 }
 
