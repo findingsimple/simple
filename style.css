@@ -416,7 +416,7 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 /* Primary and Secondary sidebars
 ================================================*/
 
-#sidebar-primary {background:#f1f1f1; margin: 0; padding-top:  20px;}
+#sidebar-primary { margin: 0; padding-top:  20px;}
 
 /* Widgets */
 #sidebar-primary .widget {padding: 10px 15px;}
