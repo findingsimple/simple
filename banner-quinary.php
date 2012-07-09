@@ -28,7 +28,7 @@
 						<div class="contact-method">
 							<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/contact-phone.png" alt="Call Us" />
 							<h3>Phone</h3>
-							<a href="tel:+61-403-864-202" title="Phone">+61 403 864 202</a>
+							<a href="tel:+61-2-6243-5115" title="Phone">+61 2 6243 5115</a>
 						</div><!-- .contact-method -->
 						
 						<div class="contact-method">
