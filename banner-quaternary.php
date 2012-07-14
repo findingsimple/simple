@@ -21,7 +21,7 @@
 
 					<li class="slide">
 					
-						<div class="row">
+						<div class="row-fluid">
 				
 							<div class="span6">
 						
@@ -47,7 +47,7 @@
 
 					<li class="slide">
 				
-						<div class="row">
+						<div class="row-fluid">
 				
 							<div class="span6">
 						
@@ -73,7 +73,7 @@
 
 					<li class="slide">
 				
-						<div class="row">
+						<div class="row-fluid">
 				
 							<div class="span6">
 						

@@ -15,7 +15,7 @@
 		
 			<div class="banner-content">
 			
-				<div class="row">
+				<div class="row-fluid">
 				
 					<div class="span4">
 					

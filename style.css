@@ -81,10 +81,10 @@ code { display: block; }
 
 #header {}
 #branding {}	
-#site-title { font-size: 20px; line-height: 36px; font-weight: bold; float: left; font-weight: 400; font-style: normal; font-family: "proxima-nova-1", "proxima-nova-2", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+#site-title { font-size: 20px; line-height: 36px; font-weight: 300; float: left; font-style: normal; font-family: "proxima-nova-1", "proxima-nova-2", "Helvetica Neue", Helvetica, Arial, sans-serif; text-rendering: optimizeLegibility; }
 #site-title a { color: #fff; text-decoration: none; }
 #site-title a:hover { color: #fff; text-decoration: none; }
-#site-title span { font-weight: 600; } 
+#site-title span { font-weight: 700; } 
 
 #site-description { display:  none; }
 
@@ -609,7 +609,7 @@ html[xmlns] .slides {display: block;}
 
 }
 
-@media (max-width:767px){
+@media (max-width:768px){
 
 	body { padding: 0; }
 	
@@ -636,46 +636,17 @@ html[xmlns] .slides {display: block;}
 		clear:both;
 	}
 	
-	/* Subnav */
-	.subnav {
-		position: static;
-		top: auto;
-		z-index: auto;
-		width: auto;
-		height: auto;
-		background: #fff; 
-		-webkit-box-shadow: none;
-		-moz-box-shadow: none;
-		box-shadow: none;
-	}
-	.subnav .nav > li {
-		float: none;
-	}
-	.subnav .nav > li > a {
-		border: 0;
-	}
-	.subnav .nav > li + li > a {
-		border-top: 1px solid #e5e5e5;
-	}
-	.subnav .nav > li:first-child > a,
-	.subnav .nav > li:first-child > a:hover {
-		-webkit-border-radius: 4px 4px 0 0;
-		-moz-border-radius: 4px 4px 0 0;
-		border-radius: 4px 4px 0 0;
-	}	
-	
 	#banner-primary { padding: 40px 0; }
 	#banner-primary .banner-content {font-size: 40px;}
 	
 	#banner-quaternary img { display: block;
 		margin: 0 auto 30px auto; }
 	
-	#map_canvas { margin-bottom: 30px; }
-	
+	#map { margin-bottom: 30px; }
 	
 }
 
-@media (min-width:768px) and (max-width:979px){
+@media (min-width:769px) and (max-width:979px){
 
 	.container .wrap, .navbar-fixed-top .container, .navbar-fixed-bottom .container { width:724px;} 
 
@@ -752,7 +723,7 @@ html[xmlns] .slides {display: block;}
 
 @media (min-width: 1450px){
 	
-	.dateline { position:absolute; width:130px; height:90px; left:-130px; top:0; text-align: left; }
+	.dateline { position:absolute; width:110px; height:90px; left:-120px; top:0; text-align: left; }
 	.dateline span { display: block; }	
 	.dateline .sep { display: none; }
 }
