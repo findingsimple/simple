@@ -78,13 +78,23 @@ jQuery(document).ready(function() {
 	jQuery("code").addClass("prettyprint");
 	jQuery("pre").addClass("prettyprint");
 	prettyPrint();
-
+if (Modernizr.touch){
 	jQuery('.flexslider').flexslider({
 		animation: "slide",
 		controlNav: false,
 		initDelay: 15,
-		slideshowSpeed: 15000
+		slideshowSpeed: 15000,
+		useCSS: false,
+		slideshow: false
 	});
-  
+} else {
+	jQuery('.flexslider').flexslider({
+		animation: "slide",
+		controlNav: false,
+		initDelay: 15,
+		slideshowSpeed: 15000,
+		useCSS: false
+	});
+}
 });
 
