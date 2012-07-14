@@ -430,19 +430,23 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 }
 .comment-list, .comment-list ol {margin: 0 0 20px 0;list-style:none;}
 .comment-list li { padding: 10px 0; word-wrap:break-word; }
-.comment-list li.bypostauthor {background:#f1f1f1;}
+.comment-list li.bypostauthor {}
 
 .comment-wrap { padding: 0; }
 
-.comment-meta-wrap { width:  25%; float: left; }
-.avatar-wrap { border: 5px solid #e1e1e1; margin-right: 20px; float: left; }
+.comment-meta-wrap { width: 25%; float: left; }
+.avatar-wrap { border: 5px solid #e1e1e1; margin: 0 0 10px 0; float: left; }
 .avatar-wrap , .avatar-wrap img{ width: 68px; height: 68px; -webkit-border-radius: 42px; border-radius: 42px; }
+.bypostauthor .avatar-wrap { border-color: #40ad84; }
+
 
 .comment-meta {clear: both; margin: 0 0 12px 0;}
 .comment-meta cite {font-weight:bold;}
 
 .comment-meta .comment-author { display:block; }
 .comment-meta .published { display: block; font-size: 70%; }
+
+.comment-content { float: left; width: 75%; }
 
 .comments-closed {}
 

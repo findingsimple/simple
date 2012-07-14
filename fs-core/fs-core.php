@@ -177,9 +177,11 @@ function hybrid_avatar_circles() {
 	$avatar = get_avatar( $comment, absint( $size ), $default_avatar, $author );
 
 	/* If URL input, wrap avatar in hyperlink. */
-	if ( !empty( $url ) && !empty( $avatar ) )
+	if ( !empty( $url ) && !empty( $avatar ) ) {
 		$avatar = '<a href="' . esc_url( $url ) . '" rel="external nofollow" title="' . esc_attr( $author ) . '" class="avatar-wrap" >' . $avatar . '</a>';
-
+	} else {
+		$avatar = '<span class="avatar-wrap" >' . $avatar . '</span>';
+	}
 	/* Display the avatar and allow it to be filtered. Note: Use the get_avatar filter hook where possible. */
 	echo apply_filters( "{$hybrid->prefix}_avatar", $avatar );
 }
