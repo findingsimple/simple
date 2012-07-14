@@ -62,7 +62,7 @@ abbr[title]{cursor:help;border-bottom:1px dotted #ddd;}
 abbr.initialism{font-size:90%;text-transform:uppercase;}
 
 blockquote{}
-blockquote p{}
+blockquote p{ margin-bottom: 1em; }
 blockquote small{}
 blockquote small:before{}
 blockquote.pull-right{}
@@ -277,7 +277,7 @@ code { display: block; }
 /* Main Content
 ================================================*/
 
-#main { clear: both; overflow: hidden; width: 100%; padding:0;}
+#main { clear: both; overflow: hidden; width: 100%; padding: 10px 0 0 0;}
 	
 /* Alignment */
 .left, .alignleft {float: left;margin: 0 25px 10px 0;}
@@ -339,12 +339,12 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 /* Posts
 ================================================*/
 
-.hentry { margin: 0 0 25px 0; }
+.hentry { margin: 0 0 60px 0; }
 .singular .hentry { margin: 0; position: relative; }
 .sticky { margin: 0 0 50px 0; padding: 25px 25px 0 25px; background: #f9f9f9; border-left: 5px solid #ddd; }
 
 /* Post titles */
-.hentry .entry-title {}
+.hentry .entry-title { font-size: 34px; line-height: 1.2em; margin-bottom: 0.2em; }
 .singular .entry-title { font-size: 50px; line-height: 1.3em; }
 .singular-page .entry-title, .singular-attachment .entry-title { margin-bottom: 20px; }
 .singular-post .entry-title { margin-bottom: 0.15em; }
@@ -371,10 +371,10 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 .dateline abbr:hover { color: #333; }
 
 /* Post excerpts */
-.entry-summary p { margin: 0 0 10px 0; }
+.entry-summary p { margin: 0 0 10px 0; line-height: 1.5em;}
 
 /* Post metadata */
-.entry-meta { clear: both; margin: 0 0 25px 0; font-size: 12px; color: #999; }
+.entry-meta { clear: both; margin: 0 0 25px 0; font-size: 0.825em; color: #999; }
 .entry-meta a { color: #777; }
 .entry-meta a:hover { color: #000; text-decoration: none; }
 
