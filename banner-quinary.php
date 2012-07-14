@@ -21,7 +21,7 @@
 				
 				<div class="row">
 					
-					<div id="map_canvas" class="span6"></div><!-- .span6 -->
+					<div id="map" class="span6"><img src="http://maps.google.com/maps/api/staticmap?center=-31.203405,151.655273&zoom=4&markers=-35.282000,149.128684|-33.417653,149.581031|-35.282000,149.128684|-27.470933,153.023502&size=570x380&sensor=true" alt="Australia" /></div><!-- .span6 -->
 					
 					<div class="span6">
 					
