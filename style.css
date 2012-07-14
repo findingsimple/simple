@@ -84,7 +84,7 @@ code { display: block; }
 #site-title { font-size: 20px; line-height: 36px; font-weight: 300; float: left; font-style: normal; font-family: "proxima-nova-1", "proxima-nova-2", "Helvetica Neue", Helvetica, Arial, sans-serif; text-rendering: optimizeLegibility; }
 #site-title a { color: #fff; text-decoration: none; }
 #site-title a:hover { color: #fff; text-decoration: none; }
-#site-title span { font-weight: 700; } 
+#site-title span { font-weight: 600; } 
 
 #site-description { display:  none; }
 
