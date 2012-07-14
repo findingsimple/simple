@@ -609,7 +609,7 @@ html[xmlns] .slides {display: block;}
 
 }
 
-@media (max-width:767px){
+@media (max-width:768px){
 
 	body { padding: 0; }
 	
@@ -675,7 +675,7 @@ html[xmlns] .slides {display: block;}
 	
 }
 
-@media (min-width:768px) and (max-width:979px){
+@media (min-width:769px) and (max-width:979px){
 
 	.container .wrap, .navbar-fixed-top .container, .navbar-fixed-bottom .container { width:724px;} 
 
