@@ -19,7 +19,7 @@
 				
 					<div class="span4">
 					
-						<h2><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/services-design.png" alt="WordPress Web Design" />
+						<h2><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/services-design-medium.png" alt="WordPress Web Design" />
 Design</h2>
 						
 						<ul>
@@ -31,7 +31,7 @@ Design</h2>
 
 					<div class="span4">	
 					
-						<h2><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/services-build.png" alt="WordPress Web Development" />
+						<h2><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/services-build-medium.png" alt="WordPress Web Development" />
 Build</h2>
 								
 						<ul>
@@ -43,7 +43,7 @@ Build</h2>
 					
 					<div class="span4">	
 					
-						<h2><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/services-support.png" alt="WordPress Support &amp; Maintenance" />
+						<h2><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/services-support-medium.png" alt="WordPress Support &amp; Maintenance" />
 Support</h2>
 						
 						<ul>

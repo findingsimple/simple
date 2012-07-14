@@ -210,6 +210,11 @@ cite{}
 	margin-bottom: 0.8em;
 }
 
+#banner-quaternary .span5 ul { list-style: none; margin: 0; padding: 0;}
+#banner-quaternary .span5 ul li { list-style: none; margin: 0; padding: 0; line-height: 2em; zoom: 1;; overflow: hidden; position: relative; }
+
+#banner-quaternary .span5 ul li.profile-email { list-style: none; margin: 0; padding: 0 0 0 30px; background: transparent url(img/contact-email-small.png) no-repeat scroll center left;}
+#banner-quaternary .span5 ul li.profile-twitter { list-style: none; margin: 0; padding: 0 0 0 30px; background: transparent url(img/contact-twitter-small.png) no-repeat scroll center left;}
 
 /* Banner Quinary
 ================================================*/
@@ -232,14 +237,14 @@ cite{}
 }
 
 #banner-quinary .contact-method {
-	padding: 20px 0 20px 0;
+	padding: 20px 0 20px 70px;
 }
 
-#banner-quinary .contact-method img {
-	width:  50px;
-	float: left;
-	margin-right: 20px;
-}
+#banner-quinary .contact-method.phone { background: transparent url(img/contact-phone-medium.png) no-repeat scroll top left; }
+#banner-quinary .contact-method.email { background: transparent url(img/contact-email-medium.png) no-repeat scroll center left; }
+#banner-quinary .contact-method.twitter { background: transparent url(img/contact-twitter-medium.png) no-repeat scroll center left; }
+#banner-quinary .contact-method.postal { background: transparent url(img/contact-postal-medium.png) no-repeat scroll center left; }
+
 
 #banner-quinary .contact-method:first-child {
 	padding-top: 0;
@@ -519,8 +524,8 @@ html[xmlns] .slides {display: block;}
 .flex-direction-nav { height: 0; }
 .flex-direction-nav li a {width: 50px; height: 50px; margin: -35px 0 0; display: block; background: url(img/nav-slide.png) no-repeat; position: absolute;  top: 30px; cursor: pointer; text-indent: -999em; overflow:hidden; opacity: 0.4;}
 .flex-direction-nav li a:hover {border: none; opacity: 1;}
-.flex-direction-nav li .flex-next {background-position: -80px -10px; right: 0; }
-.flex-direction-nav li .flex-prev {background-position: -80px -80px; right: 55px; }	
+.flex-direction-nav li .flex-next {background-position: -80px -10px; right: -10px; }
+.flex-direction-nav li .flex-prev {background-position: -80px -80px; right: 45px; }	
 .flex-direction-nav li .flex-disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
 
 
@@ -612,7 +617,8 @@ html[xmlns] .slides {display: block;}
 	#banner-primary { padding: 40px 0; }
 	#banner-primary .banner-content {font-size: 40px;}
 	
-	#banner-quaternary img { margin-bottom: 30px; }
+	#banner-quaternary img { display: block;
+		margin: 0 auto 30px auto; }
 	
 	#map_canvas { margin-bottom: 30px; }
 	

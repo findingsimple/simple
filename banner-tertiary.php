@@ -21,19 +21,19 @@
 				
 					<li class="slide">
 	
-						<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/tedx.png" alt="TEDxCanberra" />
+						<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/tedx.png" alt="TEDxCanberra WordPress Design &amp; Development" />
 	
 					</li><!-- .slide -->
 					
 					<li class="slide">
 	
-						<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/eex.png" alt="EEX" />
+						<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/eex.png" alt="EEX WordPress Development" />
 	
 					</li><!-- .slide -->
 					
 					<li class="slide">
 	
-						<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/dschool.png" alt="d.school" />
+						<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/dschool.png" alt="d.school WordPress Development" />
 	
 					</li><!-- .slide -->
 					

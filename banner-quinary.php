@@ -25,26 +25,22 @@
 					
 					<div class="span6">
 					
-						<div class="contact-method">
-							<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/contact-phone.png" alt="Call Us" />
+						<div class="contact-method phone">
 							<h3>Phone</h3>
 							<a href="tel:+61-2-6243-5115" title="Phone">+61 2 6243 5115</a>
 						</div><!-- .contact-method -->
 						
-						<div class="contact-method">
-							<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/contact-email.png" alt="Email Us" />
+						<div class="contact-method email">
 							<h3>Email</h3>
 							<a href="mailto:<?php echo antispambot( 'hi@findingsimple.com' ); ?>" title="Get in touch"><?php echo antispambot( 'hi@findingsimple.com' ); ?></a>
 						</div><!-- .contact-method -->
 						
-						<div class="contact-method">
-							<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/contact-twitter.png" alt="Tweet Us" />
+						<div class="contact-method twitter">
 							<h3>Twitter</h3>
 							<a href="https://twitter.com/findingsimple" title="findingsimple twitter profile">@findingsimple</a>
 						</div><!-- .contact-method -->
 						
-						<div class="contact-method">
-							<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/contact-postal.png" alt="Snail Mail" />
+						<div class="contact-method postal">
 							<h3>Postal</h3>
 							<span>PO Box 7314 Kaleen ACT 2617</span>
 						</div><!-- .contact-method -->
