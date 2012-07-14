@@ -151,8 +151,8 @@ PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING
 /*
  * Initialise Below
  */
- 
-jQuery(window).load(function() {
+
+jQuery(document).ready(function(){
 
 	jQuery("code").addClass("prettyprint");
 	jQuery("pre").addClass("prettyprint");
@@ -164,24 +164,17 @@ jQuery(window).load(function() {
 			controlNav: false,
 			initDelay: 15,
 			slideshowSpeed: 15000,
-			useCSS: false,
-			slideshow: false,
-			video: true
+			slideshow: false
 		});
 	} else {
 		jQuery('.flexslider').flexslider({
 			animation: "slide",
 			controlNav: false,
 			initDelay: 15,
-			slideshowSpeed: 15000,
-			useCSS: false,
-			video: true
+			slideshowSpeed: 15000
 		});
 	}
 
-});
-
-jQuery(document).ready(function(){
 	// Target your .container, .wrapper, .post, etc.
 	jQuery(".singular #content").fitVids();
 		
