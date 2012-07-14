@@ -30,11 +30,12 @@ get_header(); /* Loads the header.php template */ ?>
 						<?php do_atomic( 'open_entry' ); /* fs_open_entry */ ?>
 
 						<?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
-
-						<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __( 'By [entry-author] on [entry-published] [entry-edit-link before=" | "]', hybrid_get_parent_textdomain() ) . '</div>' ); ?>
+			
+						<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __( 'By [entry-author]', hybrid_get_parent_textdomain() ) . '</div>' ); ?>
 
 						<div class="entry-content">
-							<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', hybrid_get_textdomain() ) ); ?>
+							<div class="dateline"><abbr class="published" title="<?php echo get_the_time( esc_attr__( 'l, F jS, Y, g:i a', 'hybrid-core' ) ); ?>"><?php echo get_the_time( 'M j, Y' ); ?></abbr>  <span class="sep">|</span> <?php echo apply_atomic_shortcode( 'dateline_comments', '<span class="dateline_comments">' . __( '[entry-comments-link after=" &darr;"]', hybrid_get_parent_textdomain() ) . '</span>' ); ?></div>
+							<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', hybrid_get_parent_textdomain() ) ); ?>
 							<?php wp_link_pages_extended( array( 'before' => '<div class="pagination pagination-centered"><ul>', 'after' => '</ul></div>', 'before_page' => '<li>', 'before_current_page' => '<li class="active">', 'after_page' => '</li>'  ) ); ?>
 						</div><!-- .entry-content -->
 

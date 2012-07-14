@@ -184,6 +184,37 @@ function hybrid_avatar_circles() {
 	echo apply_filters( "{$hybrid->prefix}_avatar", $avatar );
 }
 
+/* My translations. */
+add_filter( 'gettext', 'my_translations', 10, 3 );
+
+function my_translations( $translation, $text, $domain ) {
+
+	$translations = &get_translations_for_domain( $domain );
+
+	if ( '%1$s Responses' == $text )
+		$translation = $translations->translate( '%1$s Comments' );
+
+	if ( 'Leave a response' == $text )
+		$translation = $translations->translate( 'Comment' );
+
+	if ( '1 Response' == $text )
+		$translation = $translations->translate( '1 Comment' );
+
+	if ( '%1$s responses to %2$s' == $text )
+		$translation = $translations->translate( '%1$s comments' );
+
+	if ( 'Leave a Reply' == $text )
+		$translation = $translations->translate( 'Leave a Comment' );
+
+	if ( 'No responses to %1$s' == $text )
+		$translation = $translations->translate( 'No comments' );
+
+	if ( 'One response to %1$s' == $text )
+		$translation = $translations->translate( 'One comment' );
+
+	return $translation;
+}
+
 
 
 ?>
