@@ -365,7 +365,7 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 .singular .byline a:hover { color: #E63029; text-decoration: underline; }
 
 /* Post dateline */
-.dateline { position:absolute; width: 50%; right: 0; top: -3.1em; color:#999; font-size: 0.875em; text-align: right;}
+.dateline { position: absolute; width: 50%; right: 0; top: -3.1em; color:#999; font-size: 0.875em; text-align: right; }
 .dateline a { color: #999; }
 .dateline a:hover { color: #333; text-decoration: underline; }
 .dateline abbr:hover { color: #333; }
@@ -434,7 +434,7 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 
 .comment-wrap { padding: 0; }
 
-.comment-meta-wrap { width: 25%; float: left; }
+.comment-meta-wrap { width: 25%; padding-right: 5%; float: left; }
 .avatar-wrap { border: 5px solid #e1e1e1; margin: 0 0 10px 0; float: left; }
 .avatar-wrap , .avatar-wrap img{ width: 68px; height: 68px; -webkit-border-radius: 42px; border-radius: 42px; }
 .bypostauthor .avatar-wrap { border-color: #40ad84; }
@@ -446,7 +446,7 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 .comment-meta .comment-author { display:block; }
 .comment-meta .published { display: block; font-size: 70%; }
 
-.comment-content { float: left; width: 75%; }
+.comment-content { float: left; width: 70%; }
 
 .comments-closed {}
 
@@ -606,6 +606,12 @@ html[xmlns] .slides {display: block;}
 ================================================*/
 
 @media (max-width:480px){
+
+	.dateline { position: static; margin-bottom: 1em; text-align: left; width:  100%; }
+	.singular .byline { margin-bottom: 0.5em; }
+
+	.avatar-wrap , .avatar-wrap img{ width: 50px; height: 50px; -webkit-border-radius: 32px; border-radius: 32px; }
+
 
 }
 
