@@ -393,29 +393,59 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 /* Comments
 ================================================*/
 
-#comments {padding-top:10px;}
-.comment-list, .comment-list ol {margin: 5px 0 15px 0;border-top: 1px solid #dfdfdf;list-style:none;}
-.comment-list li {padding: 13px 25px 0 13px;border: 1px solid #dfdfdf;border-top: none;word-wrap:break-word;}
-.comment-list li.bypostauthor {background:#f1f1f1;}
-.comment-list .avatar {float: left;width: 40px;height: 40px;margin: 0 15px 2px 2px;border-radius:5px;}
+#comments-template {
+	padding: 30px 0 20px 0;
+	margin-top: 30px;
+	border-top: 5px solid #e1e1e1;
+}
 
-.comment-meta {margin: 0 0 12px 0;line-height:40px;}
+#comments {padding-top:10px;}
+#comments .comments-header {
+	color: #fff;
+	background: #40AD84;
+	display:  inline-block;
+	padding: 5px 10px;
+	-webkit-transform: rotate(-1deg);
+	-moz-transform: rotate(-1deg);
+	-o-transform: rotate(-1deg);
+	transform: rotate(-1deg);
+	margin-bottom: 0.8em;
+	font-weight: normal;
+}
+.comment-list, .comment-list ol {margin: 5px 0 15px 0;list-style:none;}
+.comment-list li { padding: 10px 0; word-wrap:break-word; }
+.comment-list li.bypostauthor {background:#f1f1f1;}
+
+.comment-wrap { padding: 0 0 20px 0 ; }
+
+.comment-meta-wrap { width:  25%; float: left; }
+.avatar-wrap { border: 5px solid #e1e1e1; margin-right: 20px; float: left; }
+.avatar-wrap , .avatar-wrap img{ width: 68px; height: 68px; -webkit-border-radius: 42px; border-radius: 42px; }
+
+.comment-meta {clear: both; margin: 0 0 12px 0;}
 .comment-meta cite {font-weight:bold;}
+
+.comment-meta .comment-author { display:block; }
+.comment-meta .published { display: block; font-size: 70%; }
 
 .comments-closed {}
 
 /* Comment form */
-#respond {overflow: hidden;padding-top:10px;}
+#respond { overflow: hidden; padding: 20px 0; }
 .comment-list #respond {margin-top: 25px;}
-#respond .log-in-out {font-size: 15px;}
-#respond .log-in-out a {}
-#reply-title small a {}
 
-#respond label {display:block;}
+#respond #reply-title { color: #fff; background: #333; display:  inline-block; padding: 5px 10px; -webkit-transform: rotate(-1deg); -moz-transform: rotate(-1deg); -o-transform: rotate(-1deg); transform: rotate(-1deg); margin-bottom: 0.8em; font-weight: normal;	}
+
+#respond #commentform { padding-top: 20px; }
+#respond .log-in-out { font-size: 15px; }
+#respond .log-in-out a { }
+#reply-title small a { }
+
+#respond label { display:block; }
 #respond p.req label {}
 #respond span.required {}
-#respond #comment {width: 98%;}
-#respond #submit {float: right;}
+#respond #comment { width: 98%; }
+#respond #submit { float: right; }
 
 
 /* Primary and Secondary sidebars

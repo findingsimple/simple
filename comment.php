@@ -17,14 +17,18 @@
 
 		<?php do_atomic( 'before_comment' ); /* fs_before_comment */ ?>
 
-		<div class="comment-wrap">
+		<div class="comment-wrap clearfix">
 
 			<?php do_atomic( 'open_comment' ); /* fs_open_comment */ ?>
+			
+			<div class="comment-meta-wrap">
 
-			<?php echo hybrid_avatar(); ?>
+				<?php echo hybrid_avatar_circles(); ?>
 
-			<?php echo apply_atomic_shortcode( 'comment_meta', '<div class="comment-meta">[comment-author] [comment-published] [comment-permalink before="| "] [comment-edit-link before="| "] [comment-reply-link before="| "]</div>' ); ?>
-
+				<?php echo apply_atomic_shortcode( 'comment_meta', '<div class="comment-meta">[comment-author] [comment-published]</div>' ); ?>
+			
+			</div><!-- .comment-meta-wrap -->
+			
 			<div class="comment-content comment-text">
 				<?php if ( '0' == $comment->comment_approved ) : ?>
 					<?php echo apply_atomic_shortcode( 'comment_moderation', '<p class="alert moderation">' . __( 'Your comment is awaiting moderation.', hybrid_get_parent_textdomain() ) . '</p>' ); ?>
