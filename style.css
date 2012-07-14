@@ -239,7 +239,7 @@ code { display: block; }
 }
 
 #banner-quinary .contact-method {
-	padding: 20px 0 20px 70px;
+	padding: 15px 0 15px 70px;
 }
 
 #banner-quinary .contact-method.phone { background: transparent url(img/contact-phone-medium.png) no-repeat scroll top left; }
@@ -263,7 +263,7 @@ code { display: block; }
 /* Front Page Google Map
 ================================================*/
 
-#map_canvas { height: 340px; }
+#map { }
 
 /* Breadcrumbs 
 ================================================*/
@@ -643,6 +643,7 @@ html[xmlns] .slides {display: block;}
 		margin: 0 auto 30px auto; }
 	
 	#map { margin-bottom: 30px; }
+	#map img { display: block; margin: 0 auto; }
 	
 }
 
