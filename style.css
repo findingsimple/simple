@@ -30,7 +30,7 @@ a:hover{ color: #40AD84; text-decoration: none; }
 /* Headings, body, etc. 
 ================================================*/
  
-p{ font-size: 1em; line-height: 1.4em; }
+p{ font-size: 1em; line-height: 1.4em; margin-bottom: 1em; }
 p small{}
 
 
