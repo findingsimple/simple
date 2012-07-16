@@ -520,7 +520,7 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 #sidebar-subsidiary {float: left;width:100%;overflow: hidden; background: #e1e1e1 url(img/bg-banner.png) repeat scroll top center; padding-top: 20px; margin-top: 20px;}
 
 /* Widgets */
-#sidebar-subsidiary .widget {float: left;width: 300px; margin: 0 20px 20px 0; }
+#sidebar-subsidiary .widget {float: left;width: 300px; margin: 0 20px 20px 0; overflow: hidden; zoom: 1; }
 #sidebar-subsidiary .widget:last-child,
 #sidebar-subsidiary .widget.last-child,
 .ie8 #sidebar-subsidiary .widget.last-child { margin-right:0;}
