@@ -264,6 +264,7 @@ code { display: block; }
 ================================================*/
 
 #map { }
+#map_canvas { height: 340px; margin-bottom: 30px; }
 
 /* Breadcrumbs 
 ================================================*/
