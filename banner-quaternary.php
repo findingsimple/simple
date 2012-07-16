@@ -65,7 +65,7 @@
 									<li class="profile-twitter"><a href="https://twitter.com/enigmakthx" title="findingsimple twitter profile">@enigmakthx</a></li>
 								</ul>
 								
-							</div><!-- .span6 -->
+							</div><!-- .span5 -->
 						
 						</div><!-- .row -->
 					
@@ -91,7 +91,7 @@
 									<li class="profile-twitter"><a href="https://twitter.com/thenbrent" title="findingsimple twitter profile">@thenbrent</a></li>
 								</ul>
 								
-							</div><!-- .span6 -->
+							</div><!-- .span5 -->
 						
 						</div><!-- .row -->
 					
