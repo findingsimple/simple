@@ -262,10 +262,8 @@ code { display: block; }
 	padding-top: 0;
 }
 
-#banner-quinary .contact-method:last-child,
-#banner-quinary .contact-method.last-child {
-	border-bottom: 0;
-}
+#banner-quinary .contact-method:last-child { border-bottom: 0; }
+#banner-quinary .contact-method.last-child { border-bottom: 0; }
 
 #banner-quinary .contact-method span {
 	color:#40AD84;
@@ -410,7 +408,7 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 .pagination span:hover,.pagination span.current{background-color:#f5f5f5;}
 .pagination span.current{color:#999999;cursor:default;}
 .pagination li:first-child span{border-left-width:1px;-webkit-border-radius:3px 0 0 3px;-moz-border-radius:3px 0 0 3px;border-radius:3px 0 0 3px;}
-.pagination li:last-child span,
+.pagination li:last-child span {-webkit-border-radius:0 3px 3px 0;-moz-border-radius:0 3px 3px 0;border-radius:0 3px 3px 0;}
 .pagination li.last-child span {-webkit-border-radius:0 3px 3px 0;-moz-border-radius:0 3px 3px 0;border-radius:0 3px 3px 0;}
 
 .comment-navigation {margin-bottom: 25px;}
