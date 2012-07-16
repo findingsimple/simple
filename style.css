@@ -177,6 +177,8 @@ code { display: block; }
 	-o-transform: rotate(-1deg);
 	transform: rotate(-1deg);
 	margin-bottom: 0.8em;
+	zoom: 1;
+	*display:inline;
 }
 
 #banner-tertiary .slide img {
@@ -201,6 +203,8 @@ code { display: block; }
 	-o-transform: rotate(-1deg);
 	transform: rotate(-1deg);
 	margin-bottom: 0.8em;
+	zoom: 1;
+	*display:inline;
 }
 
 #banner-quaternary h3 {
@@ -234,6 +238,8 @@ code { display: block; }
 	-o-transform: rotate(-1deg);
 	transform: rotate(-1deg);
 	margin-bottom: 0.8em;
+	zoom: 1;
+	*display:inline;
 }
 
 #banner-quinary p {
@@ -431,6 +437,8 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 	transform: rotate(-1deg);
 	margin-bottom: 0.8em;
 	font-weight: normal;
+	zoom: 1;
+	*display:inline;
 }
 .comment-list, .comment-list ol {margin: 0 0 20px 0;list-style:none;}
 .comment-list li { padding: 10px 0; word-wrap:break-word; }
@@ -458,7 +466,7 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 #respond { overflow: hidden; padding: 0 0 20px 0; }
 .comment-list #respond {margin-top: 25px;}
 
-#respond #reply-title { color: #fff; background: #333; display:  inline-block; padding: 5px 10px; -webkit-transform: rotate(-1deg); -moz-transform: rotate(-1deg); -o-transform: rotate(-1deg); transform: rotate(-1deg); margin-bottom: 0.8em; font-weight: normal;	}
+#respond #reply-title { color: #fff; background: #333; display:  inline-block; padding: 5px 10px; -webkit-transform: rotate(-1deg); -moz-transform: rotate(-1deg); -o-transform: rotate(-1deg); transform: rotate(-1deg); margin-bottom: 0.8em; font-weight: normal; zoom: 1; *display:inline; }
 
 #respond #commentform { padding-top: 20px; }
 #respond .log-in-out { font-size: 15px; }
@@ -492,6 +500,8 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 	transform: rotate(-1deg);
 	margin-bottom: 0.8em;
 	font-weight: normal;
+	zoom: 1;
+	*display:inline;
 }
 
 /* Widget unordered lists */
