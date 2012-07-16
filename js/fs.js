@@ -158,22 +158,12 @@ jQuery(document).ready(function(){
 	jQuery("pre").addClass("prettyprint");
 	prettyPrint();
 	
-	if (Modernizr.touch){
-		jQuery('.slider').flexslider({
-			animation: "slide",
-			controlNav: false,
-			initDelay: 15,
-			slideshowSpeed: 15000,
-			slideshow: false
-		});
-	} else {
-		jQuery('.slider').flexslider({
-			animation: "slide",
-			controlNav: false,
-			initDelay: 15,
-			slideshowSpeed: 15000
-		});
-	}
+	jQuery('.slider').flexslider({
+		animation: "slide",
+		controlNav: false,
+		initDelay: 15,
+		slideshowSpeed: 15000
+	});
 
 	// Target your .container, .wrapper, .post, etc.
 	jQuery(".singular #content").fitVids();
