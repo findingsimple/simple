@@ -521,9 +521,9 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 
 /* Widgets */
 #sidebar-subsidiary .widget {float: left;width: 300px; margin: 0 20px 20px 0; overflow: hidden; zoom: 1; }
-#sidebar-subsidiary .widget:last-child,
-#sidebar-subsidiary .widget.last-child,
-.ie8 #sidebar-subsidiary .widget.last-child { margin-right:0;}
+#sidebar-subsidiary .widget:last-child { margin-right:0;}
+#sidebar-subsidiary .widget.last-child { margin-right:0;}
+
 
 /* Widget Title */
 #sidebar-subsidiary .widget-title {}
