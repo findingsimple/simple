@@ -164,7 +164,6 @@ jQuery(document).ready(function(){
 			controlNav: false,
 			initDelay: 15,
 			slideshowSpeed: 15000,
-			useCSS: false,
 			slideshow: false
 		});
 	} else {
