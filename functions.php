@@ -115,6 +115,10 @@ function base_add_remove_scripts(){
 		/* Modernizr */
  		wp_register_script( 'modernizr', THEME_URI . '/js/modernizr.js','','2.5.3',false);
  		wp_enqueue_script( 'modernizr' );
+ 		
+ 		/* Respond JS */
+ 		wp_register_script( 'respond', THEME_URI . '/js/respond.min.js','','1.1.0',false);
+		wp_enqueue_script( 'respond' );
 
  		/* Twitter Bootstrap JS */
  		wp_register_script( 'bootstrap-js', THEME_URI . '/js/bootstrap.min.js','jquery','2.0.4',true);
