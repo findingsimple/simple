@@ -159,7 +159,7 @@ jQuery(document).ready(function(){
 	prettyPrint();
 	
 	if (Modernizr.touch){
-		jQuery('.flexslider').flexslider({
+		jQuery('.slider').flexslider({
 			animation: "slide",
 			controlNav: false,
 			initDelay: 15,
@@ -168,7 +168,7 @@ jQuery(document).ready(function(){
 			slideshow: false
 		});
 	} else {
-		jQuery('.flexslider').flexslider({
+		jQuery('.slider').flexslider({
 			animation: "slide",
 			controlNav: false,
 			initDelay: 15,

@@ -13,7 +13,7 @@
 
 		<div class="wrap">
 		
-			<div class="banner-content flexslider">
+			<div class="banner-content slider">
 		
 				<h2>Our Team</h2>
 				
