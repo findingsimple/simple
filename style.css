@@ -627,6 +627,8 @@ html[xmlns] .slides {display: block;}
 	#banner-primary { padding: 40px 0; }
 	#banner-primary .banner-content {font-size: 40px;}
 	
+	#banner-secondary ul { margin-bottom: 40px;}
+	
 	#banner-quaternary img { display: block;
 		margin: 0 auto 30px auto; }
 	
