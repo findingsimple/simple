@@ -48,7 +48,7 @@
 	s.parentNode.insertBefore(tk, s);
   })();
 </script>
-<link href="//get.pictos.cc/fonts/2351/2" rel="stylesheet" type="text/css">
+<link href="//get.pictos.cc/fonts/2351/1" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/bootstrap.min.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
 <link rel="shortcut icon" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/favicon.ico" />

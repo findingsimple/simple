@@ -35,8 +35,8 @@
 								<h4>Founder</h4>
 								<p>Jason is a web designer/developer and Certified Information System Security Professional (CISSP) based in Canberra with a passion for simple, usable and attractive web design.</p>
 								<ul>
-									<li class="profile-email"><a href="mailto:<?php echo antispambot( 'jason@findingsimple.com' ); ?>" title="Get in touch"><?php echo antispambot( 'jason@findingsimple.com' ); ?></a></li>
-									<li class="profile-twitter"><a href="https://twitter.com/findingsimple" title="findingsimple twitter profile">@findingsimple</a></li>
+									<li class="profile-email"><a href="mailto:<?php echo antispambot( 'jason@findingsimple.com' ); ?>" title="Get in touch" data-icon="&#57348;" ><?php echo antispambot( 'jason@findingsimple.com' ); ?></a></li>
+									<li class="profile-twitter"><a href="https://twitter.com/findingsimple" title="findingsimple twitter profile" data-icon="&#57349;" >@findingsimple</a></li>
 								</ul>
 								
 							</div><!-- .span5 -->
@@ -61,8 +61,8 @@
 								<h4>Developer</h4>
 								<p>Michael is dabest...</p>
 								<ul>
-									<li class="profile-email"><a href="mailto:<?php echo antispambot( 'michael@findingsimple.com' ); ?>" title="Get in touch"><?php echo antispambot( 'michael@findingsimple.com' ); ?></a></li>
-									<li class="profile-twitter"><a href="https://twitter.com/enigmakthx" title="findingsimple twitter profile">@enigmakthx</a></li>
+									<li class="profile-email"><a href="mailto:<?php echo antispambot( 'michael@findingsimple.com' ); ?>" title="Get in touch" data-icon="&#57348;" ><?php echo antispambot( 'michael@findingsimple.com' ); ?></a></li>
+									<li class="profile-twitter"><a href="https://twitter.com/enigmakthx" title="findingsimple twitter profile" data-icon="&#57349;" >@enigmakthx</a></li>
 								</ul>
 								
 							</div><!-- .span5 -->
@@ -87,8 +87,8 @@
 								<h4>Developer</h4>
 								<p>Brent is dabest...</p>
 								<ul>
-									<li class="profile-email"><a href="mailto:<?php echo antispambot( 'brent@findingsimple.com' ); ?>" title="Get in touch"><?php echo antispambot( 'brent@findingsimple.com' ); ?></a></li>
-									<li class="profile-twitter"><a href="https://twitter.com/thenbrent" title="findingsimple twitter profile">@thenbrent</a></li>
+									<li class="profile-email"><a href="mailto:<?php echo antispambot( 'brent@findingsimple.com' ); ?>" title="Get in touch" data-icon="&#57348;" ><?php echo antispambot( 'brent@findingsimple.com' ); ?></a></li>
+									<li class="profile-twitter"><a href="https://twitter.com/thenbrent" title="findingsimple twitter profile" data-icon="&#57349;" >@thenbrent</a></li>
 								</ul>
 								
 							</div><!-- .span5 -->

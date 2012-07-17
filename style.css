@@ -153,20 +153,9 @@ code { display: block; }
 /* Banner Secondary
 ================================================*/
 
-#banner-secondary h2 img {
-	width:  50px;
-	margin-right: 15px;
-}
+#banner-secondary h2 { vertical-align: middle; line-height:1em; }
 
-#banner-secondary .service-icon {
-	text-align: center;
-	margin-bottom: 30px;
-}
-
-#banner-secondary .service-icon {
-	width:  50%;
-	margin:  0 auto 30px auto;
-}
+#banner-secondary h2:before { font-family: 'Pictos Custom';  content: attr(data-icon); -webkit-font-smoothing: antialiased; vertical-align: middle; padding: 0 0.3em 0 0; color: #4c4c4c; font-size: 1.5em; line-height: 1em; font-weight: normal; }
 
 
 /* Banner Tertiary
@@ -186,14 +175,8 @@ code { display: block; }
 	zoom: 1;
 	*display:inline;
 }
-
-#banner-tertiary .slide img {
-	margin:  0 auto;
-}
-
-#banner-tertiary .slide {
-	text-align: center;
-}
+#banner-tertiary .slide { text-align: center; }
+#banner-tertiary .slide img { margin:  0 auto; }
 
 /* Banner Quaternary
 ================================================*/
@@ -213,26 +196,21 @@ code { display: block; }
 	*display:inline;
 }
 
-#banner-quaternary h3 {
-	line-height: 1.2em;
-}
-
-#banner-quaternary h4 {
-	color: #888;
-	margin-bottom: 0.8em;
-}
+#banner-quaternary h3 { line-height: 1.2em; }
+#banner-quaternary h4 { color: #888; margin-bottom: 0.8em;}
 
 #banner-quaternary .span5 ul { list-style: none; margin: 0; padding: 0;}
-#banner-quaternary .span5 ul li { list-style: none; margin: 0; padding: 0; line-height: 2em; zoom: 1;; overflow: hidden; position: relative; }
+#banner-quaternary .span5 ul li { list-style: none; margin: 0; padding: 0; line-height: 1em; zoom: 1; overflow: hidden; position: relative; display: block; }
 
-#banner-quaternary .span5 ul li.profile-email { list-style: none; margin: 0; padding: 0 0 0 30px; background: transparent url(img/contact-email-small.png) no-repeat scroll center left;}
-#banner-quaternary .span5 ul li.profile-twitter { list-style: none; margin: 0; padding: 0 0 0 30px; background: transparent url(img/contact-twitter-small.png) no-repeat scroll center left;}
+#banner-quaternary .span5 ul li.profile-email { list-style: none; margin: 0 0 0.3em 0; padding: 0; vertical-align: middle;}
+#banner-quaternary .span5 ul li.profile-twitter { list-style: none; margin: 0; padding: 0; vertical-align: middle; }
+#banner-quaternary .span5 ul li.profile-email a:before,
+#banner-quaternary .span5 ul li.profile-twitter a:before { font-family: 'Pictos Custom';  content: attr(data-icon); -webkit-font-smoothing: antialiased; vertical-align: top; padding: 0 5px 0 0; color: #4c4c4c; font-size: 1.5em; line-height: 1.1em; }
 
 /* Banner Quinary
 ================================================*/
 
 #banner-quinary { border-bottom: 0; }
-
 #banner-quinary h2 {
 	text-shadow: 0px 1px #fff, 0px 3px 1px rgba(0, 0, 0, 0.15);
 	color: #fff;
@@ -248,30 +226,11 @@ code { display: block; }
 	*display:inline;
 }
 
-#banner-quinary p {
-	margin-bottom: 1.5em;
-}
-
-#banner-quinary .contact-method {
-	padding: 15px 0 15px 70px;
-}
-
-#banner-quinary .contact-method.phone { background: transparent url(img/contact-phone-medium.png) no-repeat scroll top left; }
-#banner-quinary .contact-method.email { background: transparent url(img/contact-email-medium.png) no-repeat scroll center left; }
-#banner-quinary .contact-method.twitter { background: transparent url(img/contact-twitter-medium.png) no-repeat scroll center left; }
-#banner-quinary .contact-method.postal { background: transparent url(img/contact-postal-medium.png) no-repeat scroll center left; }
-
-
-#banner-quinary .contact-method:first-child {
-	padding-top: 0;
-}
-
-#banner-quinary .contact-method:last-child { border-bottom: 0; }
-#banner-quinary .contact-method.last-child { border-bottom: 0; }
-
-#banner-quinary .contact-method span {
-	color:#40AD84;
-}
+#banner-quinary p { margin-bottom: 1.5em; }
+#banner-quinary .contact-method { padding: 0 0 0 70px; position: relative; margin-bottom: 30px; }
+#banner-quinary .contact-method span { color:#40AD84; }
+#banner-quinary .contact-method .pictos { font-size: 60px; line-height: 1.05em; position: absolute; top: 0; left: 0; color: #4c4c4c; }
+#banner-quinary .contact-method.postal .pictos { left: 0.2em; }
 
 /* Front Page Google Map
 ================================================*/
