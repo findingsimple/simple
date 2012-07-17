@@ -18,6 +18,10 @@
 
 .admin-bar #header { top:28px; }
 
+/* Generic Pictos Class
+================================================*/
+
+.pictos { font-family: 'Pictos Custom'; -webkit-font-smoothing: antialiased; }
 
 /* Body type & links
 ================================================*/
