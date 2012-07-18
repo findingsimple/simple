@@ -77,7 +77,7 @@
 				
 							<div class="span6">
 						
-								<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/profile-brent.png" alt="Brent Shepherd" />
+								<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/profile-brent.jpg" alt="Brent Shepherd" />
 							
 							</div><!-- .span6 -->
 						
