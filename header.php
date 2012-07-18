@@ -22,37 +22,29 @@
 <title><?php hybrid_document_title(); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<script type="text/javascript">
-  TypekitConfig = {
-	kitId: 'wrz4rtj',
-	scriptTimeout: 2000
-  };
-  (function() {
-	var h = document.getElementsByTagName('html')[0];
-	h.className += ' wf-loading';
-	var t = setTimeout(function() {
-	  h.className = h.className.replace(/(\s|^)wf-loading(\s|$)/g, '');
-	  h.className += ' wf-inactive';
-	}, TypekitConfig.scriptTimeout);
-	var tk = document.createElement('script');
-	tk.src = '//use.typekit.com/' + TypekitConfig.kitId + '.js';
-	tk.type = 'text/javascript';
-	tk.async = 'true';
-	tk.onload = tk.onreadystatechange = function() {
-	  var rs = this.readyState;
-	  if (rs && rs != 'complete' && rs != 'loaded') return;
-	  clearTimeout(t);
-	  try { Typekit.load(TypekitConfig); } catch (e) {}
-	};
-	var s = document.getElementsByTagName('script')[0];
-	s.parentNode.insertBefore(tk, s);
-  })();
-</script>
 <link href="//get.pictos.cc/fonts/2351/1" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/bootstrap.min.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
 <link rel="shortcut icon" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/favicon.ico" />
 <?php wp_head(); ?>
+<script type="text/javascript">
+	TypekitConfig = { kitId: 'wrz4rtj', scriptTimeout: 2000 };
+	(function() {
+		jQuery('html').addClass('wf-loading');
+		var t = setTimeout(function() {
+			jQuery('html').removeClass('wf-loading').addClass('wf-inactive');
+		}, TypekitConfig.scriptTimeout);
+		jQuery.ajax({
+			url: '//use.typekit.com/' + TypekitConfig.kitId + '.js',
+			dataType: 'script',
+			cache: true,
+			success: function() {
+				clearTimeout(t);
+				try { Typekit.load(TypekitConfig); } catch (e) {}
+			}
+		});
+	})();
+</script>
 </head>
 
 <body class="<?php hybrid_body_class(); ?>">
