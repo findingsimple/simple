@@ -152,7 +152,7 @@ code { display: block; }
 
 #banner-secondary h2 { vertical-align: middle; line-height:1em; }
 
-#banner-secondary h2:before { font-family: 'Pictos Custom';  content: attr(data-icon); -webkit-font-smoothing: antialiased; vertical-align: middle; padding: 0 0.3em 0 0; color: #4c4c4c; font-size: 1.5em; line-height: 1em; font-weight: normal; }
+#banner-secondary h2:before { font-family: 'Pictos Custom';  content: attr(data-icon); -webkit-font-smoothing: antialiased; vertical-align: middle; padding: 0 0.3em 0 0; color: #4c4c4c; font-size: 1.5em; line-height: 1em; font-weight: normal; speak: none; }
 
 
 /* Banner Tertiary
@@ -202,7 +202,7 @@ code { display: block; }
 #banner-quaternary .span5 ul li.profile-email { list-style: none; margin: 0 0 0.3em 0; padding: 0; vertical-align: middle;}
 #banner-quaternary .span5 ul li.profile-twitter { list-style: none; margin: 0; padding: 0; vertical-align: middle; }
 #banner-quaternary .span5 ul li.profile-email a:before,
-#banner-quaternary .span5 ul li.profile-twitter a:before { font-family: 'Pictos Custom';  content: attr(data-icon); -webkit-font-smoothing: antialiased; vertical-align: top; padding: 0 5px 0 0; color: #4c4c4c; font-size: 1.5em; line-height: 1.1em; }
+#banner-quaternary .span5 ul li.profile-twitter a:before { font-family: 'Pictos Custom';  content: attr(data-icon); -webkit-font-smoothing: antialiased; vertical-align: top; padding: 0 5px 0 0; color: #4c4c4c; font-size: 1.5em; line-height: 1.1em; speak: none; }
 
 /* Banner Quinary
 ================================================*/
@@ -226,7 +226,7 @@ code { display: block; }
 #banner-quinary p { margin-bottom: 1.5em; }
 #banner-quinary .contact-method { padding: 0 0 0 70px; position: relative; margin-bottom: 30px; }
 #banner-quinary .contact-method span { color:#40AD84; }
-#banner-quinary .contact-method .pictos { font-size: 60px; line-height: 1.05em; position: absolute; top: 0; left: 0; color: #4c4c4c; }
+#banner-quinary .contact-method .pictos { font-size: 60px; line-height: 1.05em; position: absolute; top: 0; left: 0; color: #4c4c4c; speak: none; }
 #banner-quinary .contact-method.postal .pictos { left: 0.2em; }
 
 /* Front Page Google Map
