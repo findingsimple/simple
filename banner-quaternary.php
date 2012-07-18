@@ -59,7 +59,8 @@
 						
 								<h3>Michael Furner</h3>
 								<h4>Developer</h4>
-								<p>Michael is dabest...</p>
+								<p>Michael has been working with WordPress since 2009 and has extensive experience setting up, maintaining and fixing all things WordPress.</p>
+								<p>In his spare time, Michael's busy studying Computer Science and enjoys learning new trivia.</p>
 								<ul>
 									<li class="profile-email"><a href="mailto:<?php echo antispambot( 'michael@findingsimple.com' ); ?>" title="Get in touch" data-icon="&#57348;" ><?php echo antispambot( 'michael@findingsimple.com' ); ?></a></li>
 									<li class="profile-twitter"><a href="https://twitter.com/enigmakthx" title="findingsimple twitter profile" data-icon="&#57349;" >@enigmakthx</a></li>
@@ -85,7 +86,8 @@
 						
 								<h3>Brent Shepherd</h3>
 								<h4>Developer</h4>
-								<p>Brent is dabest...</p>
+								<p>Brent has been developing on WordPress since 2009. He has built plugins downloaded by 10,000's of people, including the popular <a href="http://wordpress.org/extend/plugins/social-connect/" title="Social Connect plugin - Allow your visitors to comment, login and register with their Twitter, Facebook, Google, Yahoo or WordPress.com account.">Social Connect</a>, <a href="http://wordpress.org/extend/plugins/prospress/" title="Prospress Wordpress Plugin - Add an auction marketplace to your WordPress site.">Prospress</a> and <a href="http://www.woothemes.com/extension/subscriptions/" title="WooCommerce Subsbcriptions WordPress Plugin">WooCommerce Subsbcriptions</a> plugins.</p>
+								<p>Brent has also been a co-organiser of WordCamp Melbourne & WordCamp Gold Coast.</p>
 								<ul>
 									<li class="profile-email"><a href="mailto:<?php echo antispambot( 'brent@findingsimple.com' ); ?>" title="Get in touch" data-icon="&#57348;" ><?php echo antispambot( 'brent@findingsimple.com' ); ?></a></li>
 									<li class="profile-twitter"><a href="https://twitter.com/thenbrent" title="findingsimple twitter profile" data-icon="&#57349;" >@thenbrent</a></li>
