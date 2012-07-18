@@ -225,16 +225,29 @@ jQuery(document).ready(function(){
 	jQuery("pre").addClass("prettyprint");
 	prettyPrint();
 
-	if( jQuery('.lt-ie9').length ) {
-		jQuery('body').lastChild();
-	}
+	if( jQuery('.lt-ie9').length ) { jQuery('body').lastChild(); }
 	
-	jQuery('.slider').flexslider({
-		animation: "slide",
-		controlNav: false,
-		initDelay: 15,
-		slideshowSpeed: 15000
-	});
+	if ( Modernizr.touch ){
+		
+		// If touch device don't animate / start the slideshow automatically
+		jQuery('.slider').flexslider({
+			animation: "slide",
+			controlNav: false,
+			initDelay: 15,
+			slideshowSpeed: 15000,
+			slideshow: false
+		});
+
+	} else {
+	
+		jQuery('.slider').flexslider({
+			animation: "slide",
+			controlNav: false,
+			initDelay: 15,
+			slideshowSpeed: 15000
+		});
+	
+	}
 
 	// Target your .container, .wrapper, .post, etc.
 	jQuery(".singular #content").fitVids();
