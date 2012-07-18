@@ -557,8 +557,8 @@ html[xmlns] .slides {display: block;}
 .flex-direction-nav { height: 0; }
 .flex-direction-nav li a {width: 50px; height: 50px; margin: -35px 0 0; display: block; background: url(img/nav-slide.png) no-repeat; position: absolute;  top: 30px; cursor: pointer; text-indent: -999em; overflow:hidden; opacity: 0.4;}
 .flex-direction-nav li a:hover {border: none; opacity: 1;}
-.flex-direction-nav li .flex-next {background-position: -80px -10px; right: 0px; }
-.flex-direction-nav li .flex-prev {background-position: -80px -80px; right: 50px; }	
+.flex-direction-nav li .flex-next {background-position: -80px -10px; right: 10px; }
+.flex-direction-nav li .flex-prev {background-position: -80px -80px; right: 60px; }	
 .flex-direction-nav li .flex-disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
 
 
