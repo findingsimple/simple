@@ -594,6 +594,8 @@ html[xmlns] .slides {display: block;}
 	.avatar-wrap , .avatar-wrap img{ width: 50px; height: 50px; -webkit-border-radius: 32px; border-radius: 32px; }
 
 	.hentry .thumbnail { float: right; width: 70px; height: auto; margin-right: 0; margin-left: 1em }
+
+	#banner-primary .banner-content { font-size: 30px; }
 	
 }
 
@@ -625,8 +627,7 @@ html[xmlns] .slides {display: block;}
 	}
 	
 	#banner-primary { padding: 40px 0; }
-	#banner-primary .banner-content {font-size: 40px;}
-	
+
 	#banner-secondary ul { margin-bottom: 40px;}
 	
 	#banner-quaternary img { display: block;
@@ -635,6 +636,12 @@ html[xmlns] .slides {display: block;}
 	#map { margin-bottom: 30px; }
 	#map img { display: block; margin: 0 auto; }
 	
+}
+
+@media (min-width:481px) and (max-width:768px){
+
+	#banner-primary .banner-content {font-size: 40px;}
+
 }
 
 @media (min-width:769px) and (max-width:979px){
