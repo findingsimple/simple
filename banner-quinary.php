@@ -29,13 +29,13 @@
 					
 						<div class="contact-method phone">
 							<h3>Phone</h3>
-							<a href="tel:+61-2-6243-5115" title="Phone">+61 2 6243 5115</a>
+							<a href="tel:+61-2-6243-5115" title="Phone us for WordPress Design, Development and Support">+61 2 6243 5115</a>
 							<span class="pictos">&#57347;</span>
 						</div><!-- .contact-method -->
 						
 						<div class="contact-method email">
 							<h3>Email</h3>
-							<a href="mailto:<?php echo antispambot( 'hi@findingsimple.com' ); ?>" title="Get in touch"><?php echo antispambot( 'hi@findingsimple.com' ); ?></a>
+							<a href="mailto:<?php echo antispambot( 'hi@findingsimple.com' ); ?>" title="Get in touch with us for WordPress Design, Development and Support"><?php echo antispambot( 'hi@findingsimple.com' ); ?></a>
 							<span class="pictos">&#57348;</span>
 						</div><!-- .contact-method -->
 						
