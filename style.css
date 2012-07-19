@@ -448,7 +448,7 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 #sidebar-primary { margin: 0; padding-top:  20px;}
 
 /* Widgets */
-#sidebar-primary .widget {}
+#sidebar-primary .widget { margin-bottom: 20px; }
 
 /* Widget title */
 #sidebar-primary .widget-title {
