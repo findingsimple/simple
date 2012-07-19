@@ -35,7 +35,7 @@ p{ font-size: 1em; line-height: 1.4em; margin-bottom: 1em; }
 p small{}
 
 
-h1,h2,h3,h4,h5,h6 { font-family: "adelle-1","adelle-2",serif; font-weight: 600; }
+h1,h2,h3,h4,h5,h6 { font-family: "adelle-1","adelle-2",serif; font-weight: 600; text-rendering: auto !important;}
 h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{}
 h1{}
 h1 small{}
@@ -82,7 +82,7 @@ code { display: block; }
 
 #header {}
 #branding {}	
-#site-title { font-size: 20px; line-height: 36px; font-weight: 300; float: left; font-style: normal; font-family: "proxima-nova-1", "proxima-nova-2", "Helvetica Neue", Helvetica, Arial, sans-serif; text-rendering: optimizeLegibility; }
+#site-title { font-size: 20px; line-height: 36px; font-weight: 300; float: left; font-style: normal; font-family: "proxima-nova-1", "proxima-nova-2", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 #site-title a { color: #fff; text-decoration: none; }
 #site-title a:hover { color: #fff; text-decoration: none; }
 #site-title span { font-weight: 600; } 
