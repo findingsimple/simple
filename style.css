@@ -73,7 +73,7 @@ address{}
 small{}
 cite{}
 
-.amp { font-family: Baskerville; font-style: italic; font-weight: 400; }
+.amp { font-family: Baskerville, Palatino, "Book Antiqua", serif;; font-style: italic; font-weight: 400; }
 
 code { display: block; }
 
