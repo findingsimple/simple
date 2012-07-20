@@ -575,6 +575,11 @@ html[xmlns] .slides {display: block;}
 
 .widget_twitter ul li { margin-bottom: 10px; }
 
+/* LastFM
+================================================*/
+
+.lastfm-timestamp abbr { color: #777777; font-size: 11px; }
+
 /* Conatiner Mods
 ================================================*/
 
