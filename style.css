@@ -568,6 +568,11 @@ html[xmlns] .slides {display: block;}
 #flickrrss ul li a:hover { display: block; width: 75px; height: 75px; border: 5px solid #40ad84;}
 #flickrrss ul li a img { display: block; }
 
+/* Twitter Widget
+================================================*/
+
+.widget_twitter ul li { margin-bottom: 10px; }
+
 /* Conatiner Mods
 ================================================*/
 
