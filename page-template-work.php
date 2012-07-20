@@ -56,7 +56,7 @@ get_header(); /* Loads the header.php template */ ?>
 								?>
 								
 								<div class="work span3">
-									<?php if ( current_theme_supports( 'get-the-image' ) ) get_the_image( array( 'default_size' => 'full', 'width' => 212, 'height' => 142 ) ); ?>
+									<?php if ( current_theme_supports( 'get-the-image' ) ) get_the_image( array( 'default_size' => 'full', 'width' => 255, 'height' => 142 ) ); ?>
 									<h3><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h3>
 									<?php the_excerpt(); ?>
 								</div><!-- .work .span4 -->
