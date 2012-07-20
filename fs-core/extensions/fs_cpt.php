@@ -38,7 +38,7 @@ function fs_register_custom_post_types() {
 				'singular_name'      => __( 'Work', hybrid_get_parent_textdomain() ),
 				'all_items'          => __( 'All Works', hybrid_get_parent_textdomain() ),
 				'add_new_item'       => __( 'Add New Works', hybrid_get_parent_textdomain() ),
-				'edit_item'          => __( 'Edit Works', hybrid_get_parent_textdomain() ),
+				'edit_item'          => __( 'Edit Work', hybrid_get_parent_textdomain() ),
 				'new_item'           => __( 'New Work', hybrid_get_parent_textdomain() ),
 				'view_item'          => __( 'View Work', hybrid_get_parent_textdomain() ),
 				'search_items'       => __( 'Search Work', hybrid_get_parent_textdomain() ),

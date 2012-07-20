@@ -593,6 +593,10 @@ html[xmlns] .slides {display: block;}
 #work-area .thumbnail {float:none; width: 212px; height: 142px; margin: 0 0 12px 0; }
 #work-area .work {margin-bottom:20px;}
 
+/* Singular Work
+================================================*/
+
+.singular-fs_work  .byline {display:none;}
 
 /* Layouts
 ================================================*/
