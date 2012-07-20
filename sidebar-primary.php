@@ -9,7 +9,7 @@
  * @subpackage Template
  */
 
-if ( is_active_sidebar( 'primary' ) ) : ?>
+if ( is_active_sidebar( 'primary' ) && get_post_type() != "fs_work") : ?>
 
 	<?php do_atomic( 'before_sidebar_primary' ); /* fs_before_sidebar_primary */ ?>
 
