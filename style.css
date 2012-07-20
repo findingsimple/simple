@@ -465,6 +465,8 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 	zoom: 1;
 	*display:inline;
 }
+#sidebar-primary .widget-title a { color: #fff; text-decoration: none; }
+#sidebar-primary .widget-title a:hover { color: #fff; text-decoration: none; }
 
 /* Widget unordered lists */
 #sidebar-primary .widget ul {}
