@@ -29,7 +29,7 @@ function fs_register_custom_post_types() {
 			'description'       => __( 'Information about work completed for a particular client\'s site.', hybrid_get_parent_textdomain() ),
 			'public'            => true,
 			'has_archive'       => false,
-			'supports'          => array( 'title', 'editor', 'thumbnail' ),
+			'supports'          => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
 			'rewrite'           => array( 'slug' => 'work', 'with_front' => false ),
 			'show_in_nav_menus' => false,
 			'label'             => __( 'Works', hybrid_get_parent_textdomain() ),
