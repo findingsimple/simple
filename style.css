@@ -73,7 +73,7 @@ address{}
 small{}
 cite{}
 
-.amp { font-family: Baskerville; font-style: italic; font-weight: 400; }
+.amp { font-family: Baskerville, Palatino, "Book Antiqua", serif;; font-style: italic; font-weight: 400; }
 
 code { display: block; }
 
@@ -558,6 +558,15 @@ html[xmlns] .slides {display: block;}
 .flex-direction-nav li .flex-prev {background-position: -80px -80px; right: 60px; }	
 .flex-direction-nav li .flex-disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
 
+
+/* FlickrRSS
+================================================*/
+
+#flickrrss ul { list-style: none; margin: 0; padding: 0; }
+#flickrrss ul li { display: block; width: 75px; height: 75px; float: left; margin: 0 10px 10px 0; }
+#flickrrss ul li a { display: block; width: 75px; height: 75px; border: 5px solid #e1e1e1;}
+#flickrrss ul li a { display: block; width: 75px; height: 75px; border: 5px solid #333;}
+#flickrrss ul li a img { display: block; }
 
 /* Conatiner Mods
 ================================================*/
