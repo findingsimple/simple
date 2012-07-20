@@ -73,7 +73,7 @@ address{}
 small{}
 cite{}
 
-.amp { font-family: Baskerville, Palatino, "Book Antiqua", serif;; font-style: italic; font-weight: 400; }
+.amp { font-family: Baskerville, Palatino, "Book Antiqua", serif; font-style: italic; font-weight: 400; }
 
 code { display: block; }
 
@@ -331,7 +331,7 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 .byline a { color: #777; }
 .byline a:hover { color: #000; text-decoration: none; }
 
-.singular .byline { margin: 0 0 25px 0; color: #E63029; font-size: 1.25em; font-family: Baskerville,Georgia,Serif; font-style: italic; }
+.singular .byline { margin: 0 0 25px 0; color: #E63029; font-size: 1.25em; font-family: Baskerville, Palatino, "Book Antiqua", serif; font-style: italic; }
 .singular .byline a { color: #E63029; }
 .singular .byline a:hover { color: #E63029; text-decoration: underline; }
 
