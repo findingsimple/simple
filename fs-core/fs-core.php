@@ -43,6 +43,8 @@ class FSCore {
 
 		/* Load fs settings if required */
 		require_if_theme_supports( 'fs_settings', FS_DIR . '/extensions/fs_settings.php' );
+		
+		require_if_theme_supports( 'fs_cpt', FS_DIR . '/extensions/fs_cpt.php' );
 
 	}
 	
