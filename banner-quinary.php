@@ -26,12 +26,6 @@
 					<div id="map_canvas" class="span6"></div><!-- .span6 -->
 					
 					<div class="span6">
-					
-						<div class="contact-method phone">
-							<h3>Phone</h3>
-							<a href="tel:+61-2-6243-5115" title="Phone us for WordPress Design, Development and Support">+61 2 6243 5115</a>
-							<span class="pictos">&#57347;</span>
-						</div><!-- .contact-method -->
 						
 						<div class="contact-method email">
 							<h3>Email</h3>
