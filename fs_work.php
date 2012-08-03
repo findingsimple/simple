@@ -1,6 +1,9 @@
 <?php
 /**
- * Template Name: Work Page Template
+ * Work Template
+ *
+ * This is the default work template.  It is used when a more specific template can't be found to display
+ * singular views of the 'fs_work' post type.
  *
  * @package fs
  * @subpackage Template
@@ -13,7 +16,7 @@ get_header(); /* Loads the header.php template */ ?>
 	<div id="content">
 
 		<?php do_atomic( 'open_content' ); /* fs_open_content */ ?>
-		
+
 		<div class="hfeed">
 
 			<?php if ( have_posts() ) : ?>
@@ -27,9 +30,12 @@ get_header(); /* Loads the header.php template */ ?>
 						<?php do_atomic( 'open_entry' ); /* fs_open_entry */ ?>
 
 						<?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
+			
+						<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __( 'By [entry-author]', hybrid_get_parent_textdomain() ) . '</div>' ); ?>
 
 						<div class="entry-content">
-							<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', hybrid_get_parent_textdomain() ) ); ?>							
+							<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', hybrid_get_parent_textdomain() ) ); ?>
+							<?php wp_link_pages_extended( array( 'before' => '<div class="pagination pagination-centered"><ul>', 'after' => '</ul></div>', 'before_page' => '<li>', 'before_current_page' => '<li class="active">', 'after_page' => '</li>'  ) ); ?>
 						</div><!-- .entry-content -->
 
 						<?php do_atomic( 'close_entry' ); /* fs_close_entry */ ?>
@@ -37,43 +43,6 @@ get_header(); /* Loads the header.php template */ ?>
 					</div><!-- .hentry -->
 
 					<?php do_atomic( 'after_entry' ); /* fs_after_entry */ ?>
-
-					<div id="work-area">
-						<?php	
-						$args = array( 
-							'numberposts' => 12 , 
-							'post_type' => 'fs_work', 
-							'order' => 'DESC'
-						);
-						
-						$works = get_posts( $args ); 
-						$count=0;
-						if(!empty($works)) {
-							foreach($works as $post) {
-								setup_postdata($post);
-								if($count%4 == 0 && $count!=0) { ?></div><!-- .row --><?php }
-								if($count%4 == 0) { ?><div class="row"><?php }
-								?>
-								
-								<div class="work span3">
-									<?php if ( current_theme_supports( 'get-the-image' ) ) get_the_image( array( 'default_size' => 'full', 'width' => 255 ) ); ?>
-									<h3><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h3>
-									<?php the_excerpt(); ?>
-								</div><!-- .work .span4 -->
-								
-								<?php
-								$count++;
-							}
-							?></div><!-- .row -->
-							<?php
-						} 
-					
-						wp_reset_postdata();	
-
-						?>
-					</div><!-- #work-area -->
-					
-					<?php get_sidebar( 'after-singular' ); /* Loads the sidebar-after-singular.php template */ ?>
 
 					<?php do_atomic( 'after_singular' ); /* fs_after_singular */ ?>
 
@@ -84,6 +53,8 @@ get_header(); /* Loads the header.php template */ ?>
 		</div><!-- .hfeed -->
 
 		<?php do_atomic( 'close_content' ); /* fs_close_content */ ?>
+
+		<?php get_template_part( 'loop-nav' ); /* Loads the loop-nav.php template */ ?>
 
 	</div><!-- #content -->
 

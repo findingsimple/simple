@@ -595,7 +595,7 @@ html[xmlns] .slides {display: block;}
 ================================================*/
 
 #work-area {margin-top:30px;}
-#work-area .thumbnail {float:none; width: 212px; height: 142px; margin: 0 0 12px 0; }
+#work-area .thumbnail {float:none; width: 255px; height: auto; margin: 0 0 12px 0; }
 #work-area .work {margin-bottom:20px;}
 
 /* Singular Work
