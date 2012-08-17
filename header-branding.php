@@ -10,9 +10,9 @@
 		<header id="header" class="menu-container navbar navbar-fixed-top" >
 
 			<?php do_atomic( 'open_header' ); /* fs_open_header */ ?>
-
+			
 			<div class="wrap navbar-inner">
-
+			<a href="#content" class="skipLink">Skip to Content</a>
 				<div class="container">
 			
 					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">

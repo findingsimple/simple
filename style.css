@@ -91,7 +91,8 @@ code { display: block; }
 
 /* Menu Primary
 ================================================*/
-
+.skipLink {float:left; font-size: 10px; text-transform:lowercase;color:#fff;margin:0 0 0 10px;line-height:36px;}
+.skipLink:hover {text-decoration:underline;color:#fff;}
 #header .navbar { }
 #header .navbar .navbar-inner { }
 #header .navbar .nav .active>a,.navbar .nav .active>a:hover{ }
@@ -626,13 +627,16 @@ html[xmlns] .slides {display: block;}
 	.avatar-wrap , .avatar-wrap img{ width: 50px; height: 50px; -webkit-border-radius: 32px; border-radius: 32px; }
 
 	.hentry .thumbnail { float: right; width: 70px; height: auto; margin-right: 0; margin-left: 1em }
+	
+	.skipLink {margin-left:20px;}
+	.navbar-inner .container {clear:both;}
 
 	#banner-primary .banner-content { font-size: 30px; }
 	
 }
 
 @media (max-width:768px){
-
+	
 	body { padding: 0; }
 	
 	.container .wrap, .navbar-fixed-top .container, .navbar-fixed-bottom .container { width: auto; padding: 0 20px; }
@@ -667,7 +671,8 @@ html[xmlns] .slides {display: block;}
 	
 	#map { margin-bottom: 30px; }
 	#map img { display: block; margin: 0 auto; }
-	
+	.navbar-inner .container {clear:both;}
+	.skipLink {margin-left:20px;}
 }
 
 @media (min-width:481px) and (max-width:768px){
@@ -679,6 +684,7 @@ html[xmlns] .slides {display: block;}
 @media (min-width:769px) and (max-width:979px){
 
 	.container .wrap, .navbar-fixed-top .container, .navbar-fixed-bottom .container { width:724px;} 
+	.navbar-inner .container {clear:both;}
 
 	/* Content Layouts. */	
 	.layout-2c-l #content, .layout-default #content {
@@ -708,7 +714,7 @@ html[xmlns] .slides {display: block;}
 	
 	#banner-primary { padding: 50px 0; }
 	#banner-primary .banner-content {font-size: 50px;}
-
+	.skipLink {margin-left:20px;}
 	
 }
 
