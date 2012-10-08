@@ -91,7 +91,7 @@ code { display: block; }
 
 /* Menu Primary
 ================================================*/
-.skipLink {float:left; font-size: 10px; text-transform:lowercase;color:#fff;margin:0 0 0 10px;line-height:36px;}
+.skipLink {float:left; font-size: 10px; text-transform:lowercase;color:#fff;margin:0 0 0 10px;line-height:36px; display: none;}
 .skipLink:hover {text-decoration:underline;color:#fff;}
 #header .navbar { }
 #header .navbar .navbar-inner { }
