@@ -75,10 +75,9 @@ function front_page_map() {
 ?>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript">
-	var map;
 	function initialize() {
         var myOptions = { zoom: 4, center: new google.maps.LatLng(-31.84023266790935, 147.6123046875), scrollwheel: false, mapTypeId: google.maps.MapTypeId.ROADMAP };
-        map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+        var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
         var brisbane = new google.maps.LatLng(-27.4709331,153.0235024);
         var bathurst = new google.maps.LatLng(-33.4176529,149.5810314);
         var canberra = new google.maps.LatLng(-35.2819998,149.1286843);
@@ -86,7 +85,13 @@ function front_page_map() {
        	var marker2 = new google.maps.Marker({ position: bathurst, map: map, title:"Bathurst" }); 
        	var marker3 = new google.maps.Marker({ position: canberra, map: map, title:"Canberra" }); 
     }
-    google.maps.event.addDomListener(window, 'load', initialize);
+	function loadScript() {
+	  var script = document.createElement("script");
+	  script.type = "text/javascript";
+	  script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyDwHzG6nLXCgE4hivaFjnX-sikft3Gmrmg&sensor=false&callback=initialize";
+	  document.body.appendChild(script);
+	}
+	window.onload = loadScript;    
 </script>
 <?php
 }
