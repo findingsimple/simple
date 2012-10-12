@@ -73,7 +73,6 @@ class FSCore {
  */
 function front_page_map() {
 ?>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript">
 	function initialize() {
         var myOptions = { zoom: 4, center: new google.maps.LatLng(-31.84023266790935, 147.6123046875), scrollwheel: false, mapTypeId: google.maps.MapTypeId.ROADMAP };
