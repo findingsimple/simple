@@ -23,7 +23,7 @@
 /* Body type & links
 ================================================*/
  
-body{ padding-top: 40px; margin:0; font-family: "proxima-nova-1", "proxima-nova-2", "Helvetica Neue", Helvetica, Arial, sans-serif; color:#333333; background: #ffffff url(img/bg-banner.png) repeat scroll top center;  font-size: 1em; line-height: 1.4em; }
+body{ padding-top: 40px; margin:0; font-family: "source-sans-pro-1","source-sans-pro-2", "Helvetica Neue", Helvetica, Arial, sans-serif; color:#333333; background: #ffffff url(img/bg-banner.png) repeat scroll top center;  font-size: 1em; line-height: 1.4em; }
 a{ color: #40AD84; text-decoration: none;}
 a:hover{ color: #40AD84; text-decoration: none; }
 
@@ -82,10 +82,10 @@ code { display: block; }
 
 #header {}
 #branding {}	
-#site-title { font-size: 20px; line-height: 36px; font-weight: 300; float: left; font-style: normal; font-family: "proxima-nova-1", "proxima-nova-2", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+#site-title { font-size: 20px; line-height: 36px; font-weight: 300; float: left; font-style: normal; font-family: "source-sans-pro-1","source-sans-pro-2", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 #site-title a { color: #fff; text-decoration: none; }
 #site-title a:hover { color: #fff; text-decoration: none; }
-#site-title span { font-weight: 600; } 
+#site-title span { font-weight: normal; } 
 
 #site-description { display:  none; }
 
