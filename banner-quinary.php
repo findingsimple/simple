@@ -39,6 +39,12 @@
 							<span class="pictos">&#57349;</span>
 						</div><!-- .contact-method -->
 						
+						<div class="contact-method facebook">
+							<h3>Facebook</h3>
+							<a href="https://www.facebook.com/FindingSimple" title="findingsimple facebook profile">facebook.com/FindingSimple</a>
+							<span class="pictos">&#57351;</span>
+						</div><!-- .contact-method -->
+						
 						<div class="contact-method postal">
 							<h3>Postal</h3>
 							<span>PO Box 7314 Kaleen ACT 2617</span>
