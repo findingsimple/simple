@@ -47,6 +47,30 @@ function fs_register_custom_post_types() {
 			),
 		)
 	);
+	
+	register_post_type( 'fs_team_members',
+		array(
+			'description'       => __( 'Information about team members.', hybrid_get_parent_textdomain() ),
+			'public'            => true,
+			'has_archive'       => false,
+			'supports'          => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+			'rewrite'           => array( 'slug' => 'team-member', 'with_front' => false ),
+			'show_in_nav_menus' => false,
+			'label'             => __( 'Team', hybrid_get_parent_textdomain() ),
+			'labels'            => array(
+				'name'               => __( 'Team Members', hybrid_get_parent_textdomain() ),
+				'singular_name'      => __( 'Member', hybrid_get_parent_textdomain() ),
+				'all_items'          => __( 'All Team Members', hybrid_get_parent_textdomain() ),
+				'add_new_item'       => __( 'Add New Team Members', hybrid_get_parent_textdomain() ),
+				'edit_item'          => __( 'Edit Team Member', hybrid_get_parent_textdomain() ),
+				'new_item'           => __( 'New Team Member', hybrid_get_parent_textdomain() ),
+				'view_item'          => __( 'View Team Member', hybrid_get_parent_textdomain() ),
+				'search_items'       => __( 'Search Team Member', hybrid_get_parent_textdomain() ),
+				'not_found'          => __( 'No team members found', hybrid_get_parent_textdomain() ),
+				'not_found_in_trash' => __( 'No team members found in trash', hybrid_get_parent_textdomain() ),
+			),
+		)
+	);
 
 }
 add_action( 'init', 'fs_register_custom_post_types' );
@@ -85,5 +109,66 @@ function fs_cpt_update_messages( $messages ) {
 	return $messages;
 }
 add_filter( 'post_updated_messages', 'fs_cpt_update_messages' );
+
+
+function fs_team_members_meta_box( $post ) {
+
+	$role = get_post_meta( $post->ID, 'fs_team_members_role', true );
+	$email = get_post_meta( $post->ID, 'fs_team_members_email', true );
+	$twitter = get_post_meta( $post->ID, 'fs_team_members_twitter', true );
+
+	if( empty( $start_date ) )
+		$start_date = date( 'Y-m-d' );
+
+	if( empty( $end_date ) )
+		$end_date = date( 'Y-m-d',  strtotime('+2 days') );
+
+	wp_nonce_field( __FILE__, 'fs_team_members_meta_nonce' ); ?>
+
+	<p>
+		<label for='fs-team-members-role'>
+			<?php _e( 'Role:', hybrid_get_parent_textdomain() ); ?>
+			<input type='date' id='fs-team-members-role' name='fs-team-members-role' value='<?php echo $role ?>' />
+		</label>
+	</p>
+	<p>
+		<label for='fs-team-members-email'>
+			<?php _e( 'Email:', hybrid_get_parent_textdomain() ); ?>
+			<input type='date' id='fs-team-members-email' name='fs-team-members-email' value='<?php echo $email ?>' />
+		</label>
+	</p>
+	<p>
+		<label for='fs-team-members-twitter'>
+			<?php _e( 'Twitter:', hybrid_get_parent_textdomain() ); ?>
+			<input type='date' id='fs-team-members-twitter' name='fs-team-members-twitter' value='<?php echo $twitter ?>' />
+		</label>
+	</p>
+
+<?php 
+}
+
+function fs_team_members_save_event_meta( $post_id, $post ) {
+
+	if ( ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) || $post->post_type != 'fs_team_members' || $post->post_status == 'auto-draft' || ! isset( $_POST['fs_team_members_meta_nonce'] ) )
+		return;
+
+	if ( ! wp_verify_nonce( $_POST['fs_team_members_meta_nonce'], __FILE__ ) )
+		wp_die( __( 'Error: Event meta nonce is not valid.', hybrid_get_parent_textdomain() ) );
+
+	if ( ! current_user_can( 'edit_post', $post_id ) )
+		wp_die( __( 'Error: You do not have permission to edit this event.', hybrid_get_parent_textdomain() ) );
+
+	update_post_meta( $post_id, 'fs_team_members_role', $_POST['fs-team-members-role'] );
+	update_post_meta( $post_id, 'fs_team_members_email', $_POST['fs-team-members-email'] );
+	update_post_meta( $post_id, 'fs_team_members_twitter', $_POST['fs-team-members-twitter'] );
+
+}
+add_action( 'save_post', 'fs_team_members_save_event_meta', 10, 2 );
+
+function fs_add_team_member_meta_box() {
+	add_meta_box( 'fs_team_members_meta', __( 'Team Member details:', hybrid_get_parent_textdomain() ), 'fs_team_members_meta_box', 'fs_team_members', 'side', 'default' );
+}
+add_action( 'add_meta_boxes', 'fs_add_team_member_meta_box' );
+
 
 ?>
