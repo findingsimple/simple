@@ -91,6 +91,8 @@ function base_theme_setup() {
 
 	add_action( 'add_meta_boxes', 'base_remove_meta_boxes', 11 );
 	
+	add_filter( "{$prefix}_meta_robots", 'edit_meta_robots' );
+	
 	/* Add theme support for simple-core extensions. */
 //	add_theme_support( 'facebook-init' );
 
@@ -393,6 +395,19 @@ function wp_link_pages_extended($args = '') {
 		echo $output;
 
 	return $output;
+}
+
+/**
+ * Edit Robots meta
+ *
+ */
+function edit_meta_robots( $robots ) {
+
+	if ( is_archive() || is_tag() || is_search() ) )
+		$robots = '<meta name="robots" content="noindex, follow" />' . "\n";
+
+	return $robots;
+	
 }
 
 
