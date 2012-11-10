@@ -403,7 +403,7 @@ function wp_link_pages_extended($args = '') {
  */
 function edit_meta_robots( $robots ) {
 
-	if ( is_archive() || is_tag() || is_search() ) )
+	if ( is_archive() || is_tag() || is_search() )
 		$robots = '<meta name="robots" content="noindex, follow" />' . "\n";
 
 	return $robots;
