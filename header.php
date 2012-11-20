@@ -32,8 +32,8 @@
   })();
 </script>
 <link href="//get.pictos.cc/fonts/2351/1" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/css/bootstrap.min.css" type="text/css" />
-<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(). '/css/bootstrap.min.css?' . filemtime( get_template_directory() . '/css/bootstrap.min.css' ); ?>" type="text/css" />
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style.css?' . filemtime( get_stylesheet_directory() . '/style.css' ); ?>" type="text/css" />
 <link rel="shortcut icon" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/favicon.ico" />
 <?php wp_head(); ?>
 </head>
