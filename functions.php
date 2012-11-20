@@ -23,7 +23,7 @@
  * @version 0.2.0
  * @author Jason Conroy <jason@findingsimple.com>
  * @copyright Copyright (c) 2010 - 2012, Jason Conroy
- * @link http://base.findingsimple.com/
+ * @link http://findingsimple.com/
  * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -36,7 +36,7 @@ require_once( trailingslashit( TEMPLATEPATH ) . 'fs-core/fs-core.php' );
 $theme_simple = new FSCore();
 
 /* Do theme setup on the 'after_setup_theme' hook. */
-add_action( 'after_setup_theme', 'base_theme_setup' );
+add_action( 'after_setup_theme', 'fs_theme_setup' );
 
 /**
  * Theme setup function.  This function adds support for theme features and defines the default theme
@@ -44,7 +44,7 @@ add_action( 'after_setup_theme', 'base_theme_setup' );
  *
  * @since 0.1.0
  */
-function base_theme_setup() {
+function fs_theme_setup() {
 
 	/* Get action/filter hook prefix. */
 	$prefix = hybrid_get_prefix();
@@ -89,7 +89,7 @@ function base_theme_setup() {
 	remove_action( 'wp_head', 'start_post_rel_link_wp_head ', 10, 0 ); // start link
 	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 ); // Display relational links for the posts adjacent to the current post.
 
-	add_action( 'add_meta_boxes', 'base_remove_meta_boxes', 11 );
+	add_action( 'add_meta_boxes', 'fs_remove_meta_boxes', 11 );
 	
 	add_filter( "{$prefix}_meta_robots", 'edit_meta_robots' );
 	
@@ -107,7 +107,7 @@ function base_theme_setup() {
  * Add new scripts and remove unused scripts
  *
  */
-function base_add_remove_scripts(){
+function fs_add_remove_scripts(){
 
    /* Additional Theme JS */
     if (!is_admin()) {
@@ -136,14 +136,14 @@ function base_add_remove_scripts(){
 		add_action( 'wp_head' , 'front_page_map' );
 	
 }
-add_action( 'wp_print_scripts', 'base_add_remove_scripts', 100 );
+add_action( 'wp_print_scripts', 'fs_add_remove_scripts', 100 );
 
 /**
  * Remove unwanted template meta box
  *
  * @since 0.1.0
  */
-function base_remove_meta_boxes() {
+function fs_remove_meta_boxes() {
 	
 	remove_meta_box( 'hybrid-core-post-template', 'post', 'side' );
 
