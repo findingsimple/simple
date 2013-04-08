@@ -9,7 +9,7 @@
  * License: GNU General Public License v2.0
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Copyright (c) 2008 - 2012 Finding Simple.  All rights reserved.
+ * Copyright (c) 2008 - 2013 Finding Simple.  All rights reserved.
  * http://findingsimple.com
  */
 
@@ -306,7 +306,7 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 /* Content
 ================================================*/
 
-#content {  padding-top: 20px; }
+#content {  padding: 20px 0; }
 
 /* Posts
 ================================================*/
