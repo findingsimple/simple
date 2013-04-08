@@ -68,14 +68,6 @@
 
 			<h1 class="loop-title fn n"><?php the_author_meta( 'display_name', $id ); ?></h1>
 
-			<div class="loop-description">
-				<?php echo get_avatar( get_the_author_meta( 'user_email', $id ), '100', '', get_the_author_meta( 'display_name', $id ) ); ?>
-
-				<p class="user-bio">
-					<?php the_author_meta( 'description', $id ); ?>
-				</p><!-- .user-bio -->
-			</div><!-- .loop-description -->
-
 		</div><!-- .loop-meta -->
 
 	<?php elseif ( is_search() ) : ?>
