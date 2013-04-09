@@ -579,7 +579,10 @@ html[xmlns] .slides {display: block;}
 /* LastFM
 ================================================*/
 
+.widget_lastfm { padding-top:20px; }
 .lastfm-timestamp abbr { color: #777777; font-size: 11px; }
+.lastfm { list-style: none; padding: 0; margin: 0; }
+.lastfm li:before { content: '\266B'; margin-right:0.5em; }
 
 /* Conatiner Mods
 ================================================*/
