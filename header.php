@@ -57,7 +57,7 @@
 			get_template_part( 'banner', 'primary' );  /* Loads the banner-primary.php template */ 
 			get_template_part( 'banner', 'secondary' ); /* Loads the banner-secondary.php template */
 			get_template_part( 'banner', 'tertiary' ); /* Loads the banner-tertiary.php template */
-			get_template_part( 'banner', 'quaternary' ); /* Loads the banner-quaternary.php template */
+			//get_template_part( 'banner', 'quaternary' ); /* Loads the banner-quaternary.php template */
 			get_template_part( 'banner', 'quinary' ); /* Loads the banner-quinary.php template */
 		
 		} 
