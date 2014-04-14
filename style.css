@@ -23,7 +23,7 @@
 /* Body type & links
 ================================================*/
  
-body{ padding-top: 40px; margin:0; font-family: "source-sans-pro-1","source-sans-pro-2", "Helvetica Neue", Helvetica, Arial, sans-serif; color:#333333; background: #ffffff url(img/bg-banner.png) repeat scroll top center;  font-size: 1em; line-height: 1.4em; }
+body{ padding-top: 40px; margin:0; font-family: "source-sans-pro-1","source-sans-pro-2", "Helvetica Neue", Helvetica, Arial, sans-serif; color:#333333; background: #e1e1e1 url(img/bg-banner.png) repeat scroll top center;  font-size: 1em; line-height: 1.4em; }
 a{ color: #40AD84; text-decoration: none;}
 a:hover{ color: #40AD84; text-decoration: none; }
 
@@ -113,6 +113,7 @@ code { display: block; }
 	position: relative;
 	zoom: 1;
 	overflow: hidden;
+	background: #fff url(img/bg-banner.png) repeat scroll top center;
 }
 
 .banner .wrap {
@@ -248,7 +249,7 @@ code { display: block; }
 /* Main Content
 ================================================*/
 
-#main { clear: both; overflow: hidden; width: 100%; padding: 10px 0 0 0;}
+#main { clear: both; overflow: hidden; width: 100%; padding: 10px 0 0 0; background: #fff url(img/bg-banner.png) repeat scroll top center;}
 .home #main { display:none; }
 	
 /* Alignment */
@@ -508,7 +509,7 @@ img.wp-smiley {max-width: 12px;padding: 0;background: transparent;border: none;}
 /* Footer
 ================================================*/
 
-#footer { overflow: hidden;clear: both;width: 100%; padding: 30px 0; background: #e1e1e1 url(img/bg-banner.png) repeat scroll top center; }
+#footer { overflow: hidden;clear: both;width: 100%; padding: 30px 0; }
 #footer p { margin-bottom: 0; }
 #footer a { color: #333; font-weight: bold;}
 #footer a:hover { color: #333; text-decoration: underline; }

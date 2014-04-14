@@ -19,7 +19,7 @@
 				
 					<div class="span4">
 					
-						<h2 data-icon="&#57344;" >Design</h2>
+						<h2>Design</h2>
 						
 						<ul>
 							<li>Custom site designs <span class="amp">&amp;</span> redesigns</li>
@@ -30,7 +30,7 @@
 
 					<div class="span4">	
 					
-						<h2 data-icon="&#57345;" >Build</h2>
+						<h2>Build</h2>
 								
 						<ul>
 							<li>Theme development <span class="amp">&amp;</span> customisation</li>
@@ -41,7 +41,7 @@
 					
 					<div class="span4">	
 					
-						<h2 data-icon="&#57346;" >Support</h2>
+						<h2>Support</h2>
 						
 						<ul>
 							<li>Troubleshooting <span class="amp">&amp;</span> support</li>

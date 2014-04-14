@@ -132,8 +132,8 @@ function fs_add_remove_scripts(){
 		
 	}	
 	
-	if ( is_front_page() )
-		add_action( 'wp_head' , 'front_page_map' );
+	//if ( is_front_page() )
+	//	add_action( 'wp_head' , 'front_page_map' );
 	
 }
 add_action( 'wp_print_scripts', 'fs_add_remove_scripts', 100 );

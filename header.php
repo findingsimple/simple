@@ -31,7 +31,6 @@
     var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
   })();
 </script>
-<link href="//get.pictos.cc/fonts/2351/1" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(). '/css/bootstrap.min.css?' . filemtime( get_template_directory() . '/css/bootstrap.min.css' ); ?>" type="text/css" />
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/style.css?' . filemtime( get_stylesheet_directory() . '/style.css' ); ?>" type="text/css" />
 <link rel="shortcut icon" href="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/favicon.ico" />
@@ -58,7 +57,7 @@
 			get_template_part( 'banner', 'secondary' ); /* Loads the banner-secondary.php template */
 			//get_template_part( 'banner', 'tertiary' ); /* Loads the banner-tertiary.php template */
 			//get_template_part( 'banner', 'quaternary' ); /* Loads the banner-quaternary.php template */
-			get_template_part( 'banner', 'quinary' ); /* Loads the banner-quinary.php template */
+			//get_template_part( 'banner', 'quinary' ); /* Loads the banner-quinary.php template */
 		
 		} 
 
