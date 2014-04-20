@@ -168,6 +168,17 @@ blockquote:last-child {
 
 	h1 {
 		font-size: 5em;
+
+		@media (max-width:$screen-sm - 1){
+			& {
+				font-size: 3em;
+			}
+		}
+		@media (min-width:$screen-sm) and (max-width:$screen-md){
+			& {
+				font-size: 4em;
+			}
+		}
 	}
 	a {
 		border-bottom: 1px dotted #77cca4;
@@ -178,6 +189,7 @@ blockquote:last-child {
 			text-decoration: none;
 		}
 	}
+
 }
 
 /* Breadcrumb
