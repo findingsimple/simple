@@ -153,7 +153,7 @@ function simple_add_remove_scripts(){
 	//wp_register_style( 'opensans', '//fonts.googleapis.com/css?family=Open+Sans:600,600italic,400,300,400italic,700,700italic,300italic', array(), null, 'all' );
 
 	/* Add the main stylesheet */
-	wp_enqueue_style( 'simple', get_template_directory_uri() . '/style.css' , array('opensans'), $parent['Version'] ); 
+	wp_enqueue_style( 'simple', get_template_directory_uri() . '/style.css' , array(), $parent['Version'] ); 
 
 	/* Make sure jQuery is added */
 	wp_enqueue_script( 'jquery' );	
