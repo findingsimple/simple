@@ -1,15 +1,11 @@
 <?php
 /**
- * Loop Nav Template
- *
- * This template is used to show your your next/previous post links on singular pages and
- * the next/previous posts links on the home/posts page and archive pages.
- *
- * @package fs
- * @subpackage Template
+ * File Security Check
  */
+if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+    die ( 'You do not have sufficient permissions to access this page!' );
+}
 ?>
-
 	<?php if ( is_attachment() ) : ?>
 
 		<div class="loop-nav">
@@ -27,11 +23,11 @@
 			</ul>
 		</div><!-- .loop-nav -->
 
-	<?php elseif ( !is_singular() && current_theme_supports( 'loop-pagination' ) ) : ?>
+	<?php elseif ( !is_singular() && current_theme_supports( 'loop-pagination' ) && $nav = bootstrap_loop_pagination( array( 'type' => 'list', 'before' => '', 'after' => '', 'prev_text' => '&larr; Previous', 'next_text' => 'Next &rarr;', 'echo' => false ) ) ) : ?>
 		
-		<div class="pagination pagination-centered">
-			<?php loop_pagination( array( 'type' => 'list', 'before' => '', 'after' => '' ) ); ?>
-		</div>
+		<div class="loop-nav pagination-centered">
+			<?php echo $nav; ?>
+		</div><!-- .loop-nav -->
 
 	<?php elseif ( !is_singular() && $nav = get_posts_nav_link( array( 'sep' => '', 'prelabel' => '<li class="previous">' . __( '&larr; Previous', hybrid_get_parent_textdomain() ) . '</li>', 'nxtlabel' => '<li class="next">' . __( 'Next &rarr;', hybrid_get_parent_textdomain() ) . '</li>' ) ) ) : ?>
 

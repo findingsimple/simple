@@ -1,69 +1,32 @@
 <?php
 /**
- * Comments Template
- *
- * Lists comments and calls the comment form.  Individual comments have their own templates.  The 
- * hierarchy for these templates is $comment_type.php, comment.php.
- *
- * @package fs
- * @subpackage Template
+ * File Security Check
  */
-
-/* Kill the page if trying to access this template directly. */
-if ( 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) )
-	die( __( 'Please do not load this page directly. Thanks!', hybrid_get_parent_textdomain() ) );
+if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+    die ( 'You do not have sufficient permissions to access this page!' );
+}
 
 /* If a post password is required or no comments are given and comments/pings are closed, return. */
 if ( post_password_required() || ( !have_comments() && !comments_open() && !pings_open() ) )
 	return;
 ?>
 
-<div id="comments-template">
+<section id="comments">
 
-	<div class="comments-wrap">
+	<?php get_template_part( 'comments-loop' ); // Loads the comments-loop.php template. ?>
 
-		<div id="comments">
+	<?php 
 
-			<?php if ( have_comments() ) : ?>
+	ob_start();
 
-				<h3 id="comments-number" class="comments-header"><?php comments_number( __( 'No Responses', hybrid_get_parent_textdomain() ), __( 'One Response', hybrid_get_parent_textdomain() ), __( '% Responses', hybrid_get_parent_textdomain() ) ); ?></h3>
+	comment_form(); // Loads the comment form.
 
-				<?php do_atomic( 'before_comment_list' ); /* fs_before_comment_list */ ?>
+	$form = ob_get_clean(); 
 
-				<ol class="comment-list">
-					<?php wp_list_comments( hybrid_list_comments_args() ); ?>
-				</ol><!-- .comment-list -->
+	echo str_replace('id="submit"','class="btn btn-default"', $form );
+	
+	ob_flush();
+	
+	?>
 
-				<?php do_atomic( 'after_comment_list' ); /* fs_after_comment_list */ ?>
-
-				<?php if ( get_option( 'page_comments' ) ) : ?>
-				<div class="pagination pagination-centered">
-					<ul class="comment-navigation comment-pagination">
-						<?php paginate_comments_links( array('type' => 'list') ); ?>
-					</ul><!-- .comment-navigation -->
-				</div>
-				<?php endif; ?>
-
-			<?php endif; ?>
-
-			<?php if ( pings_open() && !comments_open() ) : ?>
-
-				<p class="comments-closed pings-open">
-					<?php printf( __( 'Comments are closed, but <a href="%1$s" title="Trackback URL for this post">trackbacks</a> and pingbacks are open.', hybrid_get_parent_textdomain() ), get_trackback_url() ); ?>
-				</p><!-- .comments-closed .pings-open -->
-
-			<?php elseif ( !comments_open() ) : ?>
-
-				<p class="comments-closed">
-					<?php _e( 'Comments are closed.', hybrid_get_parent_textdomain() ); ?>
-				</p><!-- .comments-closed -->
-
-			<?php endif; ?>
-
-		</div><!-- #comments -->
-
-		<?php comment_form(); /* Loads the comment form */ ?>
-
-	</div><!-- .comments-wrap -->
-
-</div><!-- #comments-template -->
+</section><!-- #comments -->

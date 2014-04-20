@@ -1,67 +1,34 @@
 <?php
-/**
- * Index Template
- *
- * This is the default template.  It is used when a more specific template can't be found to display
- * posts.  It is unlikely that this template will ever be used, but there may be rare cases.
- *
- * @package fs
- * @subpackage Template
- */
+// File Security Check
+if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+    die ( 'You do not have sufficient permissions to access this page!' );
+}
 
-get_header(); /* Loads the header.php template */ ?>
+get_header(); // Loads the header.php template. ?>
 
-	<?php do_atomic( 'before_content' ); /* fs_before_content */ ?>
+		<?php get_template_part( 'loop-meta' ); // Loads the loop-meta.php template. ?>
 
-	<div id="content">
+		<?php get_template_part( 'breadcrumbs' ); // Loads the loop-meta.php template. ?>
 
-		<?php do_atomic( 'open_content' ); /* fs_open_content */ ?>
+		<div class="container">
 
-		<div class="hfeed">
+			<div id="content" <?php if ( !is_single() && !is_page() && !is_attachment() ) echo 'class="hfeed"'; ?>>
 
-			<?php get_template_part( 'loop-meta' ); /* Loads the loop-meta.php template */ ?>
+				<?php get_template_part( 'loop' ); // Loads the loop.php template. ?>
 
-			<?php if ( have_posts() ) : ?>
+				<?php get_template_part( 'loop-nav' ); // Loads the loop-nav.php template. ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+			</div><!-- #content -->
 
-					<?php do_atomic( 'before_entry' ); /* fs_before_entry */ ?>
+		<?php 
 
-					<div id="post-<?php the_ID(); ?>" class="<?php hybrid_entry_class(); ?>">
+		if ( maybe_woocommerce() )
+			get_sidebar( 'woocommerce' ); // Loads the sidebar-woocommerce.php template.
+		else 
+			get_sidebar( 'primary' ); // Loads the sidebar-primary.php template. 
 
-						<?php do_atomic( 'open_entry' ); /* fs_open_entry */ ?>
+		?>
 
-						<?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
+		</div><!-- .container -->
 
-						<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __( 'By [entry-author] on [entry-published] [entry-edit-link before=" | "]', hybrid_get_parent_textdomain() ) . '</div>' ); ?>
-
-						<div class="entry-content">
-							<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', hybrid_get_parent_textdomain() ) ); ?>
-							<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', hybrid_get_parent_textdomain() ), 'after' => '</p>' ) ); ?>
-						</div><!-- .entry-content -->
-
-						<?php do_atomic( 'close_entry' ); /* fs_close_entry */ ?>
-
-					</div><!-- .hentry -->
-
-					<?php do_atomic( 'after_entry' ); /* fs_after_entry */ ?>
-
-				<?php endwhile; ?>
-
-			<?php else : ?>
-
-				<?php get_template_part( 'loop-error' ); /* Loads the loop-error.php template */ ?>
-
-			<?php endif; ?>
-
-		</div><!-- .hfeed -->
-
-		<?php do_atomic( 'close_content' ); /* fs_close_content */ ?>
-
-		<?php get_template_part( 'loop-nav' ); /* Loads the loop-nav.php template */ ?>
-
-	</div><!-- #content -->
-
-	<?php do_atomic( 'after_content' ); /* fs_after_content */ ?>
-
-<?php get_footer(); /* Loads the footer.php template */ ?>
+<?php get_footer(); // Loads the footer.php template. ?>

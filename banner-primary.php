@@ -1,24 +1,24 @@
 <?php
 /**
- * Primary Banner Template
- *
- * Displays the Banner area after the theme navigation.
- *
- * @package fs
- * @subpackage Template
+ * File Security Check
  */
+if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+    die ( 'You do not have sufficient permissions to access this page!' );
+}
+
+$headline = ( ! hybrid_get_setting( 'banner-headline' ) ) ? get_bloginfo('name') : hybrid_get_setting( 'banner-headline' );
+
+$subtext = ( ! hybrid_get_setting( 'banner-subtext' ) ) ? get_bloginfo('description')  : hybrid_get_setting( 'banner-subtext' ) ;
+
 ?>
+<div class="banner jumbotron" role="banner">
 
-	<div id="banner-primary" class="banner">
+	<div class="container">
 
-		<div class="wrap">
-		
-			<div class="banner-content">
-		
-			We design, build <span class="amp">&amp;</span> support WordPress websites. <a href="/contact/" title="Contact Us for WordPress Help">Contact us</a>, we love to help. 
-			
-			</div><!-- .banner-content -->
-			
-		</div><!-- .wrap -->
+  		<h1><?php echo $headline; ?></h1>
 
-	</div><!-- #banner-primary .banner -->
+  		<p><?php echo $subtext; ?></p> 
+
+	</div><!-- .container -->
+
+</div><!-- .banner -->

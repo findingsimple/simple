@@ -1,19 +1,13 @@
 <?php
 /**
- * Loop Error Template
- *
- * Displays an error message when no posts are found.
- *
- * @package fs
- * @subpackage Template
+ * File Security Check
  */
+if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+    die ( 'You do not have sufficient permissions to access this page!' );
+}
 ?>
-	<div id="post-0" class="<?php hybrid_entry_class(); ?>">
+	<div <?php hybrid_post_attributes(); ?>>
 
-		<div class="entry-content">
-
-			<p><?php _e( 'Apologies, but no entries were found.', hybrid_get_parent_textdomain() ); ?></p>
-
-		</div><!-- .entry-content -->
-
+		<div class="alert alert-warning"><?php _e( 'Apologies, but no entries were found.', hybrid_get_parent_textdomain() ); ?></div>
+		
 	</div><!-- .hentry .error -->
