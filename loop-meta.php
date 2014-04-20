@@ -136,6 +136,28 @@ if ( ( is_home() && is_front_page() ) || ( is_page() && is_front_page() )  )
 
 			<?php } ?>
 
+		<?php } elseif ( is_singular('fs_work') ) { ?>
+
+			<?php $work_page = get_page_by_title( 'Work' ); ?>
+
+			<?php if ( empty( $work_page ) ) { ?>
+
+			<span class="h1 loop-title">Work</span>
+
+			<div class="loop-description">
+				<p>You are browsing our portfolio.</p>
+			</div><!-- .loop-description -->
+
+			<?php } else { ?>
+
+			<span class="h1 loop-title"><?php echo get_the_title( $work_page ); ?></span>
+
+			<div class="loop-description">
+				<?php echo wpautop( get_excerpt_by_id( $work_page ) ); ?>
+			</div><!-- .loop-description -->
+
+			<?php } ?>
+
 		<?php } elseif ( is_404() ) { ?>
 
 			<h1 class="loop-title"><?php _e( 'Nothing found', 'simple' ); ?></h1>
