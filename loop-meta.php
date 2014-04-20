@@ -150,10 +150,10 @@ if ( ( is_home() && is_front_page() ) || ( is_page() && is_front_page() )  )
 
 			<?php } else { ?>
 
-			<span class="h1 loop-title"><?php echo get_the_title( $work_page ); ?></span>
+			<span class="h1 loop-title"><?php echo get_the_title( $work_page->ID  ); ?></span>
 
 			<div class="loop-description">
-				<?php echo wpautop( get_excerpt_by_id( $work_page ) ); ?>
+				<?php echo wpautop( get_excerpt_by_id( $work_page->ID  ) ); ?>
 			</div><!-- .loop-description -->
 
 			<?php } ?>

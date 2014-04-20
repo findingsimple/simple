@@ -158,4 +158,32 @@ function fs_cpt_update_messages( $messages ) {
 }
 add_filter( 'post_updated_messages', 'fs_cpt_update_messages' );
 
+/**
+ * Don't highlight blog for work items
+ */
+function custom_fix_blog_tab_on_cpt($classes,$item,$args) {
+    if(!is_singular('post') && !is_category() && !is_tag()) {
+        $blog_page_id = intval(get_option('page_for_posts'));
+        if($blog_page_id != 0) {
+            if($item->object_id == $blog_page_id) {
+				unset($classes[array_search('current_page_parent',$classes)]);
+			}
+        }
+    }
+    if(is_singular('fs_work')) {
+        $work_page = get_page_by_title( 'Work' );
+
+        if($work_page->ID  != 0) {
+            if($item->object_id == $work_page->ID ) {
+				$classes[] = 'current_page_parent';
+			}
+        }
+    }
+
+    return $classes;
+}
+add_filter('nav_menu_css_class','custom_fix_blog_tab_on_cpt',10,3);
+
+
+
 ?>
