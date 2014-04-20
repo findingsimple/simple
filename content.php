@@ -50,6 +50,33 @@ if ( is_singular( 'page' ) ) { ?>
 
 </article><!-- .hentry -->
 
+<?php } elseif ( is_singular( 'fs_work' ) ) { ?>
+
+<article <?php hybrid_post_attributes(); ?>>
+
+	<header class="entry-header page-header">
+		<h1 class="entry-title"><?php single_post_title(); ?></h1>
+	</header><!-- .entry-header -->
+
+	<?php echo apply_atomic_shortcode( 'entry_byline', '<div class="entry-byline">' . __( 'Published by [entry-author] on [entry-published] [entry-comments-link before=" | "] [entry-edit-link before=" | "]', 'simple' ) . '</div>' ); ?>
+
+	<div class="entry-content">
+		<?php the_content(); ?>
+		<?php 
+		if ( function_exists( 'wp_link_pages_extended' ) ) {
+			wp_link_pages_extended( array( 'before' => '<div class="pagination-wrapper pagination-centered"><ul class="pagination">', 'after' => '</ul></div>', 'before_page' => '<li>', 'before_current_page' => '<li class="active">', 'after_page' => '</li>'  ) ); 
+		} else {
+			wp_link_pages();
+		}
+		?>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[entry-terms before="Posted in " taxonomy="category"] [entry-terms before="| Tagged "] [entry-updated]', 'simple' ) . '</div>' ); ?>
+	</footer><!-- .entry-footer -->
+
+</article><!-- .hentry -->
+
 <?php } else { ?>
 
 <article <?php hybrid_post_attributes(); ?>>
