@@ -676,6 +676,35 @@ img.wp-smiley {
 	outline: none;
 }
 
+/* Front Page Logos
+================================================*/
+.front-logos {
+	padding: 20px 0;
+
+	.logo {
+
+		a {
+			display: block;
+			width: 100%;
+			height: auto;
+
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+				max-width: 170px;
+				margin: 0 auto;
+			}
+
+			&:hover {
+				zoom: 1;
+				filter: alpha(opacity=80);
+				opacity: 0.8;
+			}
+		}
+	}
+}
+
 /* Layouts
 ================================================*/
 
