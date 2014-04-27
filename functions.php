@@ -126,6 +126,14 @@ function simple_theme_setup() {
 	
 }
 
+/**
+ * Tell WP Customizer to refresh when layout is changed
+ */
+function theme_layout_customize_refresh( $wp_customize ) {
+
+	$wp_customize->get_setting( 'theme_layout' )->transport = 'refresh';
+
+}
 
 /**
  * Remove the nasty inline styles added by WP when the default recent comments widget is used
