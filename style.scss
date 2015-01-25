@@ -42,7 +42,7 @@ body {
 
 .amp {
   font-family: "goudy-bookletter-1911-1","goudy-bookletter-1911-2" , serif ;
-  font-style: normal;
+  font-style: normal !important;
   font-weight: 400;
 }
  
@@ -432,7 +432,7 @@ img.wp-smiley {
 	margin: 0 0 30px 0;
 	padding-bottom: 30px;
 }
-.hfeed .hentry {
+.archive .hentry {
 	margin: 0 0 25px 0;
 	padding-bottom: 30px;
 	border-bottom: 1px solid #eee;
@@ -473,11 +473,9 @@ img.wp-smiley {
 	font-size: 12px;
 	color: #999;
 }
+.blog .entry-byline,
 .singular .entry-byline {
 	margin: 0 0 25px 0;
-}
-.home .entry-byline {
-	margin: 0 0 10px 0;
 }
 
 /* Post excerpts */
@@ -498,6 +496,7 @@ img.wp-smiley {
 	font-size: 12px; 
 	color: #999;
 }
+.blog .entry-meta,
 .singular .entry-meta { 
 	margin: 35px 0 0 0;
 }
