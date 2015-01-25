@@ -209,3 +209,26 @@ function maybe_woocommerce() {
 
 }
 
+/**
+ * Temporary clean up blog
+ */
+function blog_clean_by_date( $query ) {
+
+    if ( is_admin() || ! $query->is_main_query() )
+        return;
+
+    if ( is_home() ) {
+
+		$query->set('date_query', array( 
+
+			array( 'after' => '1 May 2014' ),
+
+		) );
+
+        return;
+
+    }
+}
+
+add_action( 'pre_get_posts', 'blog_clean_by_date' );
+
