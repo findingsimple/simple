@@ -17,17 +17,25 @@ $grid-gutter-width: 20px;
 $container-tablet: 744px;
 $container-desktop: 960px;
 $container-large-desktop: 1140px;
-$brand-primary: #40AD84;
+
+$brand-primary: #0869b4;
+
+$body-bg: #051a2b;
+
 $font-family-sans-serif: 'source-sans-pro-1','source-sans-pro-2', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-size-base: 16px;
+$font-size-base: 18px;
 $headings-font-weight: 600;
+
 $badge-color: #999;
 $badge-link-hover-color: #999;
 $badge-bg: #f1f1f1;
+
 $navbar-default-toggle-icon-bar-bg: #fff;
 $navbar-default-toggle-hover-bg: darken($brand-primary, 10%);
+
 $jumbotron-color: lighten($brand-primary, 40%);
 $jumbotron-heading-color: #fff;
+
 $icon-font-path: 'fonts/';
 
 @import "css/bootstrap.scss";
@@ -37,7 +45,6 @@ $icon-font-path: 'fonts/';
  
 body {
 	padding-top: 50px;
-	background: #fff;
 }
 
 .amp {
@@ -76,8 +83,15 @@ blockquote:last-child {
 .admin-bar #header {
 	top: 32px;
 }
+#header a {
+	outline: none;
+}
 .navbar-brand {
 	margin-right: 20px;
+}
+#header .navbar-form {
+	border: none !important;
+	box-shadow: none !important;
 }
 .wordpress .navbar-brand #site-title {
 	display: inline-block;
@@ -155,11 +169,17 @@ blockquote:last-child {
 .jumbotron {
 	h1,
 	.h1 {
-		margin-top: 0;
+		margin: 0;
 		display: block;
 	}
 	a {
 		color: #fff;
+	}
+	@media (max-width:$screen-sm - 1){
+		& {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 }
 .banner.jumbotron {
@@ -221,7 +241,7 @@ blockquote:last-child {
 	background: #fff;
 
 	.home & {
-		padding-top: 20px;
+		padding-top: 40px;
 	}
 }
 	
@@ -422,7 +442,7 @@ img.wp-smiley {
 ================================================*/
 
 #content {
-	padding-top: 20px;
+	padding-top: 40px;
 }
 
 /* Posts
@@ -648,8 +668,8 @@ img.wp-smiley {
 	clear: both;
 	width: 100% !important;
 	padding: 20px 0;
-	color: #333;
-	border-top: 1px solid #f1f1f1;
+	color: #fff;
+	background: $body-bg;
 	
 	.footer-content {
 		width: 50%;
@@ -662,7 +682,12 @@ img.wp-smiley {
 			padding-bottom: 10px;
 		}
 		a {
-			color: #333;
+			color: #fff;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
 		}
 	}
 }
@@ -830,14 +855,13 @@ img.wp-smiley {
 			position: absolute;
 			top: 0;
 			right: 0;
-			background-color: $brand-primary;
 		}
 		.search-form {
 			.search-toggle a {
 				color: lighten($brand-primary, 30%);
 				font-size: 22px;
 				text-decoration: none;
-				padding: 4px;
+				padding: 8px 4px;
 				
 				&:hover {
 					color:#fff;
