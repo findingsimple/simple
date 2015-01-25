@@ -11,7 +11,7 @@ if ( is_home() ) { ?>
 <article <?php hybrid_post_attributes(); ?>>
 
 	<header class="entry-header page-header">
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php single_post_title(); ?>"><?php single_post_title(); ?></a></h1>
+		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
 	</header><!-- .entry-header -->
 
 	<?php echo apply_atomic_shortcode( 'entry_byline', '<div class="entry-byline">' . __( 'Published by [entry-author] on [entry-published] [entry-comments-link before=" | "] [entry-edit-link before=" | "]', 'simple' ) . '</div>' ); ?>
