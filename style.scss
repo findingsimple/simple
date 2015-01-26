@@ -54,6 +54,10 @@ body {
   line-height: 1;
   margin: 0;
 }
+
+a {
+	outline: none;
+}
  
 /* Headings, body, etc. adjustments
 ================================================*/
@@ -84,9 +88,6 @@ blockquote:last-child {
 }
 .admin-bar #header {
 	top: 32px;
-}
-#header a {
-	outline: none;
 }
 .navbar-brand {
 	margin-right: 20px;
