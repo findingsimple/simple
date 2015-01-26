@@ -120,9 +120,14 @@ if ( ( is_home() && is_front_page() ) || ( is_page() && is_front_page() )  )
 
 			<h1 class="loop-title"><?php single_post_title(); ?></h1>
 
+			<?php 
+			$excerpt = get_the_excerpt(); echo get_the_excerpt();
+			if ( ! empty($excerpt) ) {
+			?>
 			<div class="loop-description">
-				<?php //the_excerpt(); ?>
+				<?php echo $excerpt; ?>
 			</div><!-- .loop-description -->
+			<?php } ?>
 
 		<?php } elseif ( is_singular('fs_work') ) { ?>
 
