@@ -38,7 +38,7 @@ if ( is_home() ) { ?>
 <article <?php hybrid_post_attributes(); ?>>
 
 	<header class="entry-header page-header" style="display: none;">
-		<h1 class="entry-title"><?php single_post_title(); ?></h1>
+		<span class="h1 entry-title"><?php single_post_title(); ?></span>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
