@@ -143,7 +143,7 @@ blockquote:last-child {
 .navbar-default {
 
 	.navbar-nav > li > a {
-		color: lighten($brand-primary, 30%);
+		color: mix( #fff, $brand-primary, 70% );
 
 		&:hover, 
 		&:focus {
