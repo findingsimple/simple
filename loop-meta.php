@@ -118,23 +118,11 @@ if ( ( is_home() && is_front_page() ) || ( is_page() && is_front_page() )  )
 
 			<?php $posts_page = get_option('page_for_posts'); ?>
 
-			<?php if ( empty( $posts_page ) ) { ?>
-
-			<span class="h1 loop-title">Blog</span>
+			<h1 class="loop-title"><?php single_post_title(); ?></h1>
 
 			<div class="loop-description">
-				<p>You are browsing the blog.</p>
+				<?php the_excerpt(); ?>
 			</div><!-- .loop-description -->
-
-			<?php } else { ?>
-
-			<span class="h1 loop-title"><?php echo get_the_title( $posts_page ); ?></span>
-
-			<div class="loop-description">
-				<?php echo wpautop( get_excerpt_by_id( $posts_page ) ); ?>
-			</div><!-- .loop-description -->
-
-			<?php } ?>
 
 		<?php } elseif ( is_singular('fs_work') ) { ?>
 
