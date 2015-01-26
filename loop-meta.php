@@ -116,8 +116,6 @@ if ( ( is_home() && is_front_page() ) || ( is_page() && is_front_page() )  )
 
 		<?php } elseif ( is_singular('post') ) { ?>
 
-			<?php $posts_page = get_option('page_for_posts'); ?>
-
 			<h1 class="loop-title"><?php single_post_title(); ?></h1>
 
 			<?php if( $post->post_excerpt ) { ?>
