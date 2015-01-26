@@ -216,7 +216,7 @@ function simple_add_remove_scripts(){
 	wp_enqueue_script( 'jquery' );	
 
 	/* Modernizr */
-	wp_enqueue_script( 'modernizr', THEME_URI . '/js/modernizr.min.js',array(),'2.7.1',false);
+	wp_enqueue_script( 'modernizr', THEME_URI . '/js/modernizr.min.js',array(),'2.8.3',false);
 
 	/* FitVids JS */
 	wp_enqueue_script( 'fitvids', THEME_URI . '/js/jquery.fitvids.min.js','jquery','1.0.3',true);
