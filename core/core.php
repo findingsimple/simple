@@ -10,14 +10,6 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 class Core {
 
 	/**
-	 * PHP4 constructor method.  This simply provides backwards compatibility for users with setups
-	 * on older versions of PHP.  Once WordPress no longer supports PHP4, this method will be removed.
-	 */
-	function Core() {
-		$this->__construct();
-	}
-
-	/**
 	 * Constructor method for the Core class.  This method adds other methods of the class to 
 	 * specific hooks within WordPress.  It controls the load order.
 	 */
@@ -43,14 +35,11 @@ class Core {
 
 	function core_extensions() {
 
+		/* Utility functions */
+		require_once( CORE_DIR . '/extensions/utilities.php' );
+
 		/* Implement Bootstrap Nav Structure */
 		require_once( CORE_DIR . '/extensions/bootstrap-nav-walker.php' );
-
-		/* Implement Bootstrap Breadcrumb Structure */
-		require_once( CORE_DIR . '/extensions/bootstrap-breadcrumbs.php' );
-
-		/* Implement Bootstrap bbPress Breadcrumb Structure */
-		//require_once( CORE_DIR . '/extensions/bootstrap-bbpress-breadcrumbs.php' );
 
 		/* Modified Pagination functions for Bootstrap */
 		require_once( CORE_DIR . '/extensions/bootstrap-pagination.php' );
@@ -70,17 +59,11 @@ class Core {
 		/* Additional Function for Getting the excerpt by ID */
 		require_once( CORE_DIR . '/extensions/get-excerpt-by-id.php' );
 
-		/* Bootstrap tweaks for woocommerce */
-		//require_once( CORE_DIR . '/extensions/bootstrap-woocommerce.php' );
-
 		/* Bootstrap tweaks for gravity forms */
 		require_once( CORE_DIR . '/extensions/bootstrap-gravity-forms.php' );
 
 		/* Bootstrap editor styles */
 		require_once( CORE_DIR . '/extensions/bootstrap-editor-styles.php' );
-
-		/* Entry Updated Shortcode */
-		require_once( CORE_DIR . '/extensions/entry-updated.php' );
 
 	}
 
@@ -184,6 +167,20 @@ function custom_fix_blog_tab_on_cpt($classes,$item,$args) {
 }
 add_filter('nav_menu_css_class','custom_fix_blog_tab_on_cpt',10,3);
 
+function set_fs_logo( $title ) {
+
+   /* If viewing the front page of the site, use an <h1> tag.  Otherwise, use a <div> tag. */
+    $tag = ( is_front_page() ) ? 'h1' : 'div';
+
+    /* Get the site title.  If it's not empty, wrap it with the appropriate HTML. */
+    if ( $title = get_bloginfo( 'name' ) )
+        $title = sprintf( '<%1$s id="site-title"><a href="%2$s" title="%3$s" rel="home">%4$s</a></%1$s>', tag_escape( $tag ), home_url(), esc_attr( $title ), '<span>finding</span>simple' );
+
+    return $title;
+
+}
+
+add_filter( 'hybrid_site_title', 'set_fs_logo', 99 );
 
 
 ?>

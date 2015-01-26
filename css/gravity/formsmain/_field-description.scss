@@ -1,0 +1,25 @@
+.gform_wrapper {
+
+	.left_label .gfield_description,
+	.right_label .gfield_description {
+		width: 63%;
+		margin-left: 31%;
+	}
+
+	.gfield_date_year+.gfield_description {
+		padding: 0;
+	}
+
+	/**
+	 * Used on phone field
+	 */
+	.instruction {
+		@extend .help-block;
+	}
+
+	.left_label .instruction,
+	.right_label .instruction {
+		margin-left: 31%;
+	}
+
+}

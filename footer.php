@@ -10,21 +10,21 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 
 	<?php get_sidebar( 'subsidiary' ); // Loads the sidebar-primary.php template. ?>
 
-	<footer id="footer">
+	<footer <?php hybrid_attr( 'footer' ); ?>>
 
 		<div class="container">
 
 			<?php get_template_part( 'menu', 'subsidiary' ); // Loads the menu-subsidiary.php template. ?>
 
 			<div class="footer-content">
-				<?php echo apply_atomic_shortcode( 'footer_content', hybrid_get_setting( 'footer_insert' ) ); ?>
+
+				<p class="credit"><?php printf( __( 'Copyright &#169; %1$s %2$s', hybrid_get_parent_textdomain() ), date_i18n( 'Y' ), hybrid_get_site_link() ); ?></p><!-- .credit -->
+
 			</div><!-- .footer-content -->
 
 		</div><!-- .container -->
 
 	</footer><!-- #footer -->
-
-	<!-- <a href="#" class="scrollToTop">&uarr;</a> -->
 
 	<?php wp_footer(); // wp_footer ?>
 

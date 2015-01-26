@@ -14,7 +14,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 
 		<?php hybrid_get_content_template(); // Loads the content template. ?>
 
-		<?php if ( is_singular() && ! is_singular('page') ) { ?>
+		<?php if ( is_singular() && ! is_page() ) { ?>
 
 			<?php comments_template(); // Loads the comments.php template. ?>
 

@@ -1,0 +1,86 @@
+.gform_wrapper {
+
+	.ginput_complex {
+		@include clearfix();
+
+		input[type=text],
+		input[type=url],
+		input[type=email],
+		input[type=tel],
+		input[type=number],
+		input[type=password],
+		select {
+			width: 100% !important;
+		}
+
+		.name_prefix {
+			float: left;
+			width: 30px !important;
+			margin-right: 14px;
+		}
+
+		.name_suffix {
+			float: left;
+			width: 30px !important;
+		}
+
+		.name_first,
+		.name_last {
+			float: left;
+			width: 100px;
+			margin-right: 8px;
+		}
+
+		.ginput_left  {
+			width: 50%;
+			float: left;
+			padding-right: 10px;
+		}
+
+		.ginput_right {
+			width: 50%;
+			float: right;
+			padding-left: 10px;
+
+			input[type=text],
+			input[type=url],
+			input[type=email],
+			input[type=tel],
+			input[type=number],
+			input[type=password],
+			select {
+				width: 100% !important;
+			}
+
+		}
+
+		.ginput_left,
+		.ginput_right,
+		.ginput_full {
+			display: block;
+		}
+
+		.ginput_full input[type=text],
+		.ginput_full input[type=url],
+		.ginput_full input[type=email],
+		.ginput_full input[type=tel],
+		.ginput_full input[type=number],
+		.ginput_full input[type=password] {
+			width: 100% !important;
+		}
+
+	}
+	
+	.left_label .ginput_complex,
+	.right_label .ginput_complex {
+		width: 65%;
+		margin-left: 31%;
+
+		.ginput_left,
+		.ginput_right {
+			width: 49%;
+		}
+
+	}
+
+}

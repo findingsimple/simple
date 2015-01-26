@@ -147,8 +147,8 @@ function bootstrap_paginate_links( $args = '' ) {
 		'current' => 0,
 		'show_all' => false,
 		'prev_next' => true,
-		'prev_text' => __('&laquo; Previous', 'simple'),
-		'next_text' => __('Next &raquo;', 'simple'),
+		'prev_text' => __('&laquo; Previous', hybrid_get_parent_textdomain() ),
+		'next_text' => __('Next &raquo;', hybrid_get_parent_textdomain() ),
 		'end_size' => 1,
 		'mid_size' => 2,
 		'add_args' => false, // array of query args to add
@@ -201,7 +201,7 @@ function bootstrap_paginate_links( $args = '' ) {
 				$page_links[] = "<li><a href='" . esc_url( apply_filters( 'paginate_links', $link ) ) . "'>$n_display</a></li>";
 				$dots = true;
 			elseif ( $dots && !$show_all ) :
-				$page_links[] = '<li class="disabled dots"><span>' . __( '&hellip;', 'simple' ) . '</span></li>';
+				$page_links[] = '<li class="disabled dots"><span>' . __( '&hellip;', hybrid_get_parent_textdomain() ) . '</span></li>';
 				$dots = false;
 			endif;
 		endif;

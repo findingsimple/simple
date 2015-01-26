@@ -1,0 +1,64 @@
+.gform_wrapper {
+
+	.gfield_time_hour,
+	.gfield_time_minute,
+	.gfield_date_month,
+	.gfield_date_day,
+	.gfield_date_year {
+		width: 65px;
+		vertical-align: top;
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+
+		input {
+			width: 85% !important;
+			display: inline-block;
+		}
+	}
+
+	.gfield_date_month,
+	.gfield_date_day,
+	.gfield_date_year {
+		margin-right: 12px;
+		width: 50px;
+		float: left;
+
+		input {
+			width: 85% !important;
+		}
+	}
+
+	.gfield_date_dropdown_month,
+	.gfield_date_dropdown_day,
+	.gfield_date_dropdown_year {
+		vertical-align: top;
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+		margin-right: 6px;
+	}
+
+	.gfield_time_ampm {
+		vertical-align: top;
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+
+		select {
+			width: 80px !important;
+		}
+	}
+
+	.datepicker {
+		width: 25% !important;
+	}
+
+	input.datepicker.datepicker_with_icon {
+		margin-right: 4px !important;
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+	}
+
+}

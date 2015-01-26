@@ -25,8 +25,6 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 
 	echo str_replace('id="submit"','class="btn btn-default"', $form );
 	
-	ob_flush();
-	
 	?>
 
 </section><!-- #comments -->

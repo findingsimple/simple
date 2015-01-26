@@ -1,0 +1,42 @@
+.gform_wrapper {
+
+	.gf_page_steps {
+		width: 99%;
+		margin: 0 0 8px 0;
+		padding: 0 0 4px 0;
+		border-bottom: 1px dotted #CCC;
+	}
+	.gf_step {
+		width: auto !important;
+		margin: 0 10px 10px 0;
+		font-size: 14px;
+		height: 20px;
+		line-height: 20px !important;
+		filter: alpha(opacity=20);
+		-moz-opacity: 0.2;
+		-khtml-opacity: 0.2;
+		opacity: 0.2;
+		font-family: arial,sans-serif;
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+
+		span.gf_step_number {
+			font-size: 20px;
+			float: left;
+			font-family: arial,sans-serif;
+		}
+		&.gf_step_active {
+			filter: alpha(opacity=100);
+			-moz-opacity: 1.0;
+			-khtml-opacity: 1.0;
+			opacity: 1.0;
+		}
+	}
+	.gf_step_clear {
+		display: block;
+		clear: both;
+		height: 1px;
+		overflow: hidden;
+	}
+}

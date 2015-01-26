@@ -9,7 +9,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 
 if ( ( is_front_page() && is_paged() ) || ( !is_front_page() )  ) { ?>
 <div class="breadcrumb-bar">
-	<div class="container">
+	<nav class="container">
 
 	<?php
 
@@ -25,7 +25,7 @@ if ( ( is_front_page() && is_paged() ) || ( !is_front_page() )  ) { ?>
 
 	?>
 
-	</div>
+	</nav>
 </div>
 <?php }
 

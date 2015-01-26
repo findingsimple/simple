@@ -1,0 +1,24 @@
+.gform_wrapper {
+
+	.math_small input {
+		width: 69px;
+	}
+
+	.math_medium input {
+		width: 90px;
+	}
+
+	.math_large input {
+		width: 108px;
+	}
+
+	.left_label .math_small,
+	.right_label .math_small,
+	.left_label .math_medium,
+	.right_label .math_medium,
+	.left_label .math_large,
+	.right_label .math_large {
+		margin-left: 32%;
+	}
+
+}

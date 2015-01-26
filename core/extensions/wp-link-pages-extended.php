@@ -19,13 +19,13 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 function wp_link_pages_extended($args = '') {
 
 	$defaults = array(
-		'before' => '<p>' . __('Pages:', 'simple'), 
+		'before' => '<p>' . __('Pages:', hybrid_get_parent_textdomain() ), 
 		'after' => '</p>',
 		'link_before' => '', 
 		'link_after' => '',
 		'next_or_number' => 'number', 
-		'nextpagelink' => __('Next page', 'simple'),
-		'previouspagelink' => __('Previous page', 'simple'), 
+		'nextpagelink' => __('Next page', hybrid_get_parent_textdomain() ),
+		'previouspagelink' => __('Previous page', hybrid_get_parent_textdomain() ), 
 		'pagelink' => '%',
 		'before_page' => '' , 
 		'before_current_page' => '', 

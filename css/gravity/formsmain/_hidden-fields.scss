@@ -1,0 +1,18 @@
+.gform_wrapper {
+
+	input[type=hidden],
+	input.gform_hidden,
+	.gform_hidden,
+	.gf_hidden {
+		display: none !important;
+		max-height: 1px !important;
+		overflow: hidden;
+	}
+
+	.ginput_full br,
+	.ginput_left br,
+	.ginput_right br {
+		display: none !important;
+	}
+
+}

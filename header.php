@@ -12,20 +12,15 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 <!--[if IE 8 ]>    <html class="no-js lt-ie9 ie8" <?php language_attributes(); ?>> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
-<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
-<title><?php hybrid_document_title(); ?></title>
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri() . '/img/favicon.ico'; ?>" />
 <script type="text/javascript" src="//use.typekit.net/wrz4rtj.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <?php wp_head(); // wp_head ?>
 </head>
 
-<body <?php hybrid_body_attributes(); ?>>
+<body <?php hybrid_attr( 'body' ); ?>>
 
-	<header id="header" class="menu-container navbar navbar-default" role="banner">
+	<header class="menu-container navbar navbar-default" <?php hybrid_attr( 'header' ); ?>>
 
 		<div class="container">
 
@@ -53,4 +48,4 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 
 	<?php if ( is_front_page() ) get_template_part( 'banner', 'primary' ); /* Loads the banner-primary.php template */ ?>
 
-	<main id="main">
+	<main <?php hybrid_attr( 'content' ); ?>>

@@ -12,9 +12,12 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
  */
 function get_the_image_anchor_class( $html, $post_id, $post_thumbnail_id ) {
 
+    if ( ! $html )
+        return;
+
     $dom = new DOMDocument();
 
-    @$dom->loadHTML($html);
+    @$dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
 
     $x = new DOMXPath($dom);
 
@@ -23,7 +26,25 @@ function get_the_image_anchor_class( $html, $post_id, $post_thumbnail_id ) {
     }
 
     foreach($x->query("//img") as $node) {   
-        $node->removeAttribute("class");
+
+        $classes = explode(" ", $node->attributes->getNamedItem("class")->nodeValue);
+
+        $new_classes = array();
+
+        if ( ! empty( $classes ) ) {
+
+            $new_classes = array_diff( $classes, array('thumbnail') );
+
+        }
+
+        if ( ! empty ( $new_classes ) ) {
+
+            $new_classes = implode(" ", $new_classes );
+
+            $node->setAttribute("class", $new_classes );
+
+        }
+
     }
 
     $newHtml = preg_replace('~<(?:!DOCTYPE|/?(?:html|body))[^>]*>\s*~i', '', $dom->saveHTML());
@@ -39,9 +60,12 @@ add_filter( 'post_thumbnail_html', 'get_the_image_anchor_class', 99, 3);
  */
 function avatar_img_circle_class( $html ) {
 
+    if ( ! $html )
+        return;
+
     $dom = new DOMDocument();
 
-    @$dom->loadHTML($html);
+    @$dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
 
     $x = new DOMXPath($dom);
 
@@ -64,9 +88,12 @@ add_filter('get_avatar', 'avatar_img_circle_class', 10, 1 );
  */
 function add_bootstrap_btn_class( $html, $args, $comment, $post ) {
 
+    if ( ! $html )
+        return;
+
     $dom = new DOMDocument();
 
-    @$dom->loadHTML($html);
+    @$dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
 
     $x = new DOMXPath($dom);
 
@@ -89,9 +116,12 @@ add_filter('comment_reply_link', 'add_bootstrap_btn_class', 10, 4 );
  */
 function cleaner_gallery_anchor_class( $html, $attachment_id, $attr, $cleaner_gallery_instance ) {
 
+    if ( ! $html )
+        return;
+
     $dom = new DOMDocument();
 
-    @$dom->loadHTML($html);
+    @$dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
 
     $x = new DOMXPath($dom);
 
@@ -121,27 +151,28 @@ function bootstrap_comment_form_args( $args ) {
     $html5    = 'html5';
 
     $fields   =  array(
-        'author' => '<div class="form-group comment-form-author">' . '<label for="author">' . __( 'Name', 'simple' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+        'author' => '<div class="form-group comment-form-author">' . '<label for="author">' . __( 'Name', hybrid_get_parent_textdomain() ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
                     '<input id="author" class="form-control" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div>',
-        'email'  => '<div class="form-group comment-form-email"><label for="email">' . __( 'Email', 'simple' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+        'email'  => '<div class="form-group comment-form-email"><label for="email">' . __( 'Email', hybrid_get_parent_textdomain() ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
                     '<input id="email" class="form-control" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div>',
-        'url'    => '<div class="form-group comment-form-url"><label for="url">' . __( 'Website', 'simple' ) . '</label> ' .
+        'url'    => '<div class="form-group comment-form-url"><label for="url">' . __( 'Website', hybrid_get_parent_textdomain() ) . '</label> ' .
                     '<input id="url" class="form-control" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div>',
     );
 
     $args = array(
         'fields'               => $fields,
-        'comment_field'        => '<div class="form-group comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun', 'simple' ) . '</label> <textarea id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></div>',
+        'comment_field'        => '<div class="form-group comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun', hybrid_get_parent_textdomain() ) . '</label> <textarea id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></div>',
         'must_log_in'          => '<p class="must-log-in">' . sprintf( __( 'You must be <a href="%s">logged in</a> to post a comment.' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
         'logged_in_as'         => '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ), get_edit_user_link(), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
         'comment_notes_before' => '',
         'comment_notes_after'  => '',
         'id_form'              => 'commentform',
         'id_submit'            => 'submit',
-        'title_reply'          => __( 'Leave a Reply', 'simple' ),
-        'title_reply_to'       => __( 'Leave a Reply to %s', 'simple' ),
-        'cancel_reply_link'    => __( 'Cancel reply', 'simple' ),
-        'label_submit'         => __( 'Post Comment', 'simple' ),
+        'name_submit'          => 'submit',
+        'title_reply'          => __( 'Leave a Reply', hybrid_get_parent_textdomain() ),
+        'title_reply_to'       => __( 'Leave a Reply to %s', hybrid_get_parent_textdomain() ),
+        'cancel_reply_link'    => __( 'Cancel reply', hybrid_get_parent_textdomain() ),
+        'label_submit'         => __( 'Post Comment', hybrid_get_parent_textdomain() ),
         'format'               => 'html5',
     );
 
@@ -160,7 +191,7 @@ function bootstrap_password_form() {
 
     $label = 'pwbox-' . ( empty($post->ID) ? rand() : $post->ID );
 
-    $output = '<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" class="post-password-form form-inline" method="post" role="form"><p>' . __( 'This content is password protected. To view it please enter your password below:', 'simple' ) . '</p><div class="form-group"><label for="' . $label . '" class="sr-only">' . __( 'Password:', 'simple' ) . '</label><input name="post_password" id="' . $label . '" type="password" class="form-control" size="20" placeholder="' . __( 'Password:', 'simple' ) . '" /></div><div class="form-group"><button type="submit" class="btn btn-default" name="Submit" >' . esc_attr__( 'Submit', 'simple' ) . '</button></div></form>';
+    $output = '<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" class="post-password-form form-inline" method="post" role="form"><p>' . __( 'This content is password protected. To view it please enter your password below:', hybrid_get_parent_textdomain() ) . '</p><div class="form-group"><label for="' . $label . '" class="sr-only">' . __( 'Password:', hybrid_get_parent_textdomain() ) . '</label><input name="post_password" id="' . $label . '" type="password" class="form-control" size="20" placeholder="' . __( 'Password:', hybrid_get_parent_textdomain() ) . '" /></div><div class="form-group"><button type="submit" class="btn btn-default" name="Submit" >' . esc_attr__( 'Submit', hybrid_get_parent_textdomain() ) . '</button></div></form>';
 
     return $output;
 
@@ -174,9 +205,12 @@ add_filter( 'the_password_form', 'bootstrap_password_form' );
  */
 function bootstrap_caledar_widget( $html ) {
 
+    if ( ! $html )
+        return;
+
     $dom = new DOMDocument();
 
-    @$dom->loadHTML($html);
+    @$dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
 
     $x = new DOMXPath($dom);
 
@@ -238,6 +272,7 @@ if ( in_array( 'bbpress/bbpress.php', apply_filters( 'active_plugins', get_optio
 
     add_filter( 'bbp_get_forum_pagination_links', 'bootstrap_bbpress_pagination_links', 10, 2);
     add_filter( 'bbp_get_topic_pagination_links', 'bootstrap_bbpress_pagination_links', 10, 2);
+    add_filter( 'bbp_get_search_pagination_links', 'bootstrap_bbpress_pagination_links', 10, 2);
 
     add_filter( 'bbp_get_topic_pagination', 'bootstrap_bbpress_pagination_links_topics', 10, 2);
 
@@ -248,9 +283,12 @@ if ( in_array( 'bbpress/bbpress.php', apply_filters( 'active_plugins', get_optio
 
 function bootstrap_bbpress_pagination_links( $html, $r = '' ) {
 
+    if ( ! $html )
+        return;
+
     $dom = new DOMDocument();
 
-    @$dom->loadHTML($html);
+    @$dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
 
     $x = new DOMXPath($dom);
 
@@ -299,9 +337,12 @@ function bootstrap_bbpress_pagination_links( $html, $r = '' ) {
 
 function bootstrap_bbpress_pagination_links_topics( $html, $r = '' ) {
 
+    if ( ! $html )
+        return;
+
     $dom = new DOMDocument();
 
-    @$dom->loadHTML($html);
+    @$dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
 
     $x = new DOMXPath($dom);
 
@@ -327,9 +368,12 @@ function bootstrap_bbpress_pagination_links_topics( $html, $r = '' ) {
 
 function bootstrap_bbpress_dropdowns( $html, $r ) {
 
+    if ( ! $html )
+        return;
+
     $dom = new DOMDocument();
 
-    @$dom->loadHTML($html);
+    @$dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
 
     $x = new DOMXPath($dom);
 

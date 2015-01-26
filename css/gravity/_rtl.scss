@@ -1,0 +1,371 @@
+html[dir="rtl"] {
+
+	.gform_wrapper {
+
+		*,
+		form,
+		.gform_body, 
+		ul li,
+		ul li.gfield,
+		ul li.gfield.gfield_html,
+		ul li.gfield input,
+		ul li.gfield textarea,
+		textarea,
+		ul li.gfield select,
+		select,
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		input[type="url"],
+		input[type="tel"],
+		input[type="submit"],
+		input[type="button"],
+		button,
+		table tr td.gfield_list_icons,
+		div.validation_error,
+		h3.gform_title,
+		span.gform_description,
+		.gform_footer {
+			text-align: right !important;
+			direction: rtl !important;
+		}
+
+		ul {
+			li {
+				margin-right: 0 !important;
+				padding-right: 0 !important;
+			}
+		}
+
+		.gfield_checkbox li input[type="checkbox"],
+		.gfield_radio li input[type="radio"],
+		.gfield_checkbox li input {
+		    float: right !important;
+		}
+
+		div.gform_body ul.gform_fields li.gfield.gfield_html ol li,
+		form div.gform_body ul.gform_fields li.gfield.gfield_html ol li,
+		div.gform_body ul.gform_fields li.gfield.gfield_html ul li,
+		form div.gform_body ul.gform_fields li.gfield.gfield_html ul li {
+		    margin: 0 0 0 0 !important;
+		    direction: rtl !important;
+		}
+
+		table.gfield_list th,
+		table.gfield_list td {
+		    padding: 0 !important;
+		}
+
+		table input {
+		    float: right !important;
+		}
+
+		&.gf_browser_gecko .top_label input[type="file"],
+		&.gf_browser_gecko .left_label input[type="file"],
+		&.gf_browser_gecko .right_label input[type="file"] {
+		    width: 55% !important;
+		    direction: rtl !important;
+		}
+
+		&.recaptchatable #recaptcha_response_field {
+		    position: static !important;
+		}
+
+		.chzn-container-multi ul.chzn-choices li.search-choice {
+			float: right !important;
+			margin: 3px 5px 3px 0 !important;
+		}
+
+		.chzn-container ul.chzn-choices li.search-field {
+			float: right !important;
+		}
+
+		.left_label,
+		.right_label {
+
+			.gfield_label {
+			    	float: right !important;
+			    	margin: 0 0 0 15px !important;
+			}
+
+			.gfield_description,
+			.instruction {
+			    margin-right: 31% !important;
+			    margin-left: 0 !important;
+			}
+
+			div.ginput_complex {
+			    margin-right: 31% !important;
+			    margin-left: 0 !important;
+			}
+
+			.gfield_description {
+			    padding: 10px 0 10px 0 !important;
+			}
+
+			li.gfield_html_formatted {
+			    margin-left: 0 !important;
+			    margin-right: 32% !important;
+			}
+
+		}
+
+		.right_label .gfield_label {
+			text-align: left !important;
+		}
+
+		.gform_footer.right_label,
+		.gform_footer.left_label {
+		    padding: 16px 31% 10px 0 !important;
+		}
+
+		input.button.gform_next_button,
+		input.button.gform_button[type="submit"] {
+			float: left;
+		}
+
+		div#preview_hdr {
+			span.actionlinks {
+				float: left !important;
+				text-align: left !important;
+			}
+			div:first-child {
+				background-position: right center !important;
+				padding-left: 10px !important;
+				padding-right: 26px !important;
+			}
+		}
+
+	} /* .gform_wrapper */
+
+} /* html */
+
+body.rtl .gform_wrapper,
+body .gform_wrapper.gf_rtl_wrapper {
+
+	*,
+	form,
+	.gform_body,
+	ul li,
+	ul li.gfield,
+	ul li.gfield.gfield_html,
+	ul li.gfield input,
+	ul li.gfield textarea,
+	textarea,
+	ul li.gfield select,
+	select,
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="url"],
+	input[type="tel"],
+	input[type="submit"],
+	input[type="button"],
+	button,
+	table tr td.gfield_list_icons,
+	div.validation_error,
+	h3.gform_title,
+	span.gform_description,
+	.gform_footer,
+	ul li,
+	ul li.gfield,
+	ul li.gfield.gfield_html,
+	ul li.gfield input,
+	ul li.gfield textarea,
+	textarea,
+	ul li.gfield select,
+	select,
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="url"],
+	input[type="tel"],
+	input[type="submit"],
+	input[type="button"],
+	button,
+	table tr td.gfield_list_icons,
+	div.validation_error,
+	.gform_heading,
+	h3.gform_title,
+	span.gform_description,
+	.gform_footer {
+		text-align: right !important;
+		direction: rtl !important;
+	}
+
+	ul,
+	ul li {
+		margin-right: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	.gfield_checkbox,
+	.gfield_radio {
+		li input[type="checkbox"],
+		li input[type="radio"],
+		li input {
+	    	float: right !important;
+	    }
+	}
+
+	div.gform_body ul.gform_fields li.gfield.gfield_html ol li,
+	form div.gform_body ul.gform_fields li.gfield.gfield_html ol li,
+	div.gform_body ul.gform_fields li.gfield.gfield_html ul li,
+	form div.gform_body ul.gform_fields li.gfield.gfield_html ul li {
+	    margin: 0 1.5em 0 0 !important;
+	    direction: rtl !important;
+	}
+
+	div.gform_body ul.gform_fields li.gfield.gfield_html {
+
+		table {
+			direction: rtl !important;
+		}
+
+		table th,
+		table td,
+		p,
+		span,
+		blockquote {
+			text-align: right !important;
+			direction: rtl !important;
+		}
+
+	}
+
+	table.gfield_list th,
+	table.gfield_list td {
+	    padding: 0 !important;
+	}
+
+	table.gfield_list {
+		direction: rtl !important;
+	}
+
+	table.gfield_list thead th {
+		text-align: right !important;
+	}
+
+	table input {
+	    float: right !important;
+	}
+
+	&.recaptchatable #recaptcha_response_field,
+	.recaptchatable #recaptcha_response_field {
+	    position: static !important;
+	}
+
+	.chzn-container-multi ul.chzn-choices li.search-choice {
+		float: right !important;
+		margin: 3px 5px 3px 0 !important;
+	}
+
+	.chzn-container ul.chzn-choices li.search-field {
+		float: right !important;
+	}
+
+	.left_label,
+	.right_label {
+
+		.gfield_label {
+		    	float: right !important;
+		    	margin: 0 0 0 15px !important;
+		}
+
+		.gfield_description,
+		.instruction {
+		    margin-right: 31% !important;
+		    margin-left: 0 !important;
+		}
+
+		div.ginput_complex {
+		    margin-right: 31% !important;
+		    margin-left: 0 !important;
+		}
+
+		.gfield_description {
+		    padding: 10px 0 10px 0 !important;
+		}
+
+		li.gfield_html_formatted {
+		    margin-left: 0 !important;
+		    margin-right: 32% !important;
+		}
+
+	}
+
+	.right_label .gfield_label {
+		text-align: left !important;
+	}
+
+	.gform_footer.right_label,
+	.gform_footer.left_label {
+	    padding: 16px 31% 10px 0 !important;
+	}
+
+} /* body */
+
+html[dir="rtl"] .gform_wrapper,
+body.rtl .gform_wrapper,
+body .gform_wrapper.gf_rtl_wrapper {
+
+	.ginput_right select {
+		margin-right: 2px;
+	}
+
+	img.ui-datepicker-trigger {
+		margin: 4px 2px 0 0;
+	}
+
+	input[type="radio"] {
+		margin-top: 5px;
+	}
+
+	.gf_progressbar_percentage span {
+		display: block;
+		width: auto;
+		float: left !important;
+	}
+
+	.gf_step {
+		margin: 0 0 10px 10px !important;
+
+		span.gf_step_number {
+			float: right !important;
+		}
+	}
+
+	.chzn-container .chzn-results li.active-result {
+		padding-right: 24px !important;
+	}
+
+	.chzn-container-multi .chzn-choices .search-choice .search-choice-close {
+		right: 5px !important;
+	}
+
+	.chzn-container-multi ul.chzn-choices li.search-choice span {
+		display: block;
+		margin-right: 19px !important;
+	}
+
+}
+
+/* RTL tweaks for Firefox ------------------------------------------------------*/
+
+body.rtl .gform_wrapper.gf_browser_gecko .top_label input[type="file"],
+body.rtl .gform_wrapper.gf_browser_gecko .left_label input[type="file"],
+body.rtl .gform_wrapper.gf_browser_gecko .right_label input[type="file"],
+body .gform_wrapper.gf_rtl_wrapper.gf_browser_gecko .top_label input[type="file"],
+body .gform_wrapper.gf_rtl_wrapper.gf_browser_gecko .left_label input[type="file"],
+body .gform_wrapper.gf_rtl_wrapper.gf_browser_gecko .right_label input[type="file"] {
+    width: 55% !important;
+    direction: rtl !important;
+}
+
+/* RTL tweaks for Opera ------------------------------------------------------*/
+
+html[dir="rtl"] .gform_wrapper.gf_browser_opera input[type="checkbox"],
+body.rtl .gform_wrapper.gf_browser_opera input[type="checkbox"],
+body .gform_wrapper.gf_rtl_wrapper.gf_browser_opera input[type="checkbox"] {
+	margin-top: 6px;
+}

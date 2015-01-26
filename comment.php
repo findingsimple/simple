@@ -8,24 +8,24 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 
 global $comment;
 ?>
-<li <?php hybrid_comment_attributes(); ?>>
+<li <?php hybrid_attr('comment'); ?>>
 
-	<?php echo hybrid_avatar(); ?>
+	<?php echo get_avatar( $comment ); ?>
 
 	<div class="comment-content">
 
-		<?php echo apply_atomic_shortcode( 'comment_author', '<div class="comment-author">[comment-author]</div>' ); ?>
+		<div class="comment-author"><cite <?php hybrid_attr( 'comment-author' ); ?>><?php comment_author_link(); ?></cite></div>
 
-		<?php echo apply_atomic_shortcode( 'comment_meta', '<div class="comment-meta">[comment-published] [comment-permalink before=" "] [comment-edit-link before="| "]</div>' ); ?>
+		<div class="comment-meta"><time <?php hybrid_attr( 'comment-published' ); ?>><?php printf( __( '%s ago', hybrid_get_parent_textdomain() ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) ); ?></time> <a <?php hybrid_attr( 'comment-permalink' ); ?>><?php _e( 'Permalink', hybrid_get_parent_textdomain() ); ?></a> <?php edit_comment_link(); ?></div>
 
-		<div class="comment-text">
+		<div class="comment-text" itemprop="commentText">
 			<?php if ( '0' == $comment->comment_approved ) : ?>
 				<div class="moderation alert alert-warning"><?php echo __( 'Your comment is awaiting moderation.', hybrid_get_parent_textdomain() ); ?></div>
 			<?php endif; ?>
 			<?php comment_text(); ?>
 		</div><!-- .comment-content .comment-text -->
 
-		<?php echo hybrid_comment_reply_link_shortcode( array() ); ?>
+		<?php hybrid_comment_reply_link(); ?>
 
 	</div><!-- .comment-content -->
 

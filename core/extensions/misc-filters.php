@@ -94,27 +94,6 @@ function my_disable_sidebars( $sidebars_widgets ) {
 
 add_filter( 'sidebars_widgets', 'my_disable_sidebars' );
 
-
-
-/**
- * Set default footer text
- */
-function default_footer_text( $settings ) {
-
-    /* Get theme-supported meta boxes for the settings page. */
-    $supports = get_theme_support( 'hybrid-core-theme-settings' );
-
-    /* If the current theme supports the footer meta box and shortcodes, add default footer settings. */
-    if ( is_array( $supports[0] ) && in_array( 'footer', $supports[0] ) && current_theme_supports( 'hybrid-core-shortcodes' ) ) {
-
-        $settings['footer_insert'] = '<p class="copyright">' . __( 'Copyright &#169; [the-year] [site-link].', 'hybrid-core' ) . '</p>' . "\n\n";
- 
-    }
-        
-    return $settings;
-    
-}
-
 /**
  * Adjust content width if viewing single column layout
  */
@@ -131,18 +110,69 @@ function set_single_column_content_width() {
 add_action( 'the_post', 'set_single_column_content_width', 99 );
 
 /**
- * Set FS logo
+ * Add the hentry class back into the post class to maintain hatom
  */
-function set_fs_logo( $title ) {
+function add_hentry_class( $classes ) {
 
-    /* If viewing the front page of the site, use an <h1> tag.  Otherwise, use a <div> tag. */
-    $tag = ( is_front_page() ) ? 'h1' : 'div';
+    $classes[] = 'hentry';
 
-    /* Get the site title.  If it's not empty, wrap it with the appropriate HTML. */
-    if ( $title = get_bloginfo( 'name' ) )
-        $title = sprintf( '<%1$s id="site-title"><a href="%2$s" title="%3$s" rel="home">%4$s</a></%1$s>', tag_escape( $tag ), home_url(), esc_attr( $title ), '<span>finding</span>simple' );
-
-    return $title;
+    return $classes;
+    
 }
 
-add_filter( 'simple_site_title', 'set_fs_logo', 99 );
+add_filter( 'post_class', 'add_hentry_class' );
+
+/**
+ * Filer the main content hybrid attributes
+ */
+function filter_main_attr( $attr ) {
+
+    $attr['id']       = 'main';
+    $attr['class']    = 'main';
+
+    return $attr;
+}
+
+add_filter( 'hybrid_attr_content', 'filter_main_attr', 10 );
+
+/**
+ * Filer the main content hybrid attributes
+ */
+function filter_author_attr( $attr ) {
+
+    $attr['class'] = 'entry-author author vcard';
+
+    return $attr;
+}
+
+add_filter( 'hybrid_attr_entry-author', 'filter_author_attr', 10 );
+
+/**
+ * Filer the main content hybrid attributes
+ */
+function filter_loop_meta_attr( $attr ) {
+
+    $attr['class']    = 'loop-meta jumbotron';
+
+    return $attr;
+}
+
+add_filter( 'hybrid_attr_loop-meta', 'filter_loop_meta_attr', 10 );
+
+
+/**
+ * Add 1 column layout class to tiny mce body
+ */
+function add_layout_to_tinymce_body_class( $init_array ) {
+
+    if ( has_post_layout( '1c') || has_user_layout('1c') ) {
+
+        $init_array['body_class'] = 'layout-1c';
+
+    }
+
+    return $init_array;
+
+}
+
+add_filter('tiny_mce_before_init', 'add_layout_to_tinymce_body_class');

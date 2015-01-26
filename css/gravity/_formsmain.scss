@@ -1,0 +1,196 @@
+/*
+----------------------------------------------------------------
+
+Gravity Forms Front End Form Styles
+
+----------------------------------------------------------------
+*/
+
+.gform_wrapper{
+
+	img {
+		border: none !important;
+		padding: none !important;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none; 
+	}
+ 
+	form {
+		text-align: left;
+	}
+
+	input[type=image] {
+		border: none !important;
+		padding: 0 !important;
+		width: auto !important;
+	}
+
+	textarea {
+
+		&.textarea {
+			width: 65%;
+		}
+		&.small {
+			height: 80px;
+		}
+		&.medium {
+			height: 150px;
+		}
+		&.large {
+			height: 250px;
+		}
+	}
+
+	ul {
+		@extend .list-unstyled;
+	}
+
+	.inline {
+		display: inline !important;
+	}
+
+	.gform_heading {
+
+		span.gform_description {
+			font-weight: normal;
+		}
+	}
+
+	.ginput_complex label,
+	.gfield_time_hour label,
+	.gfield_time_minute label,
+	.gfield_date_month label,
+	.gfield_date_day label,
+	.gfield_date_year label {
+		display: block;
+		margin: 3px 0;
+		font-size: 11px;
+		letter-spacing: 0.5pt;
+	}
+
+	.top_label {
+
+		input,
+		select {
+			
+			&.small {
+				width: 25%;
+			}
+			&.medium {
+				width: 50%;
+			}
+			&.large {
+				width: 100%;
+			}
+		}
+
+		textarea.textarea {
+			width: 100%;
+		}
+
+	}
+
+	.left_label,
+	.right_label {
+
+		input,
+		select {
+			&.small {
+				width: 15%;
+			}
+			&.medium {
+				width: 35%;
+			}
+			&.large {
+				width: 65%;
+			}
+		}
+	}
+
+ 	.top_label .gfield_label {
+		clear: both;
+	}
+
+	.left_label .gfield_label,
+	.right_label .gfield_label {
+		float: left;
+		width: 30%;
+		margin-right: 1%;
+	}
+
+	.right_label .gfield_label {
+		text-align: right;
+	}
+
+	.gform_footer {
+		padding: 16px 0 10px 0;
+		margin: 16px 0 0 0;
+		clear: both;
+
+		&.right_label,
+		&.left_label {
+			padding: 16px 0 10px 31%;
+		}
+
+		input.button,
+		input[type=submit] {
+			font-size: 1em;
+		}
+
+		input[type=image] {
+			padding: 0;
+			width: auto !important;
+			background: none !important;
+			border: none !important;
+		}
+	}
+
+	.gform_ajax_spinner {
+		padding-left: 10px;
+	}
+
+	.gf_submission_limit_message {
+		color: #790000;
+		font-size: 1.4em;
+	}
+
+}
+@import "formsmain/field-description";
+@import "formsmain/section-fields";
+@import "formsmain/complex-fields";
+@import "formsmain/validation-and-error";
+@import "formsmain/hidden-fields";
+@import "formsmain/radio-and-checkboxes";
+@import "formsmain/html-fields";
+@import "formsmain/date-time";
+@import "formsmain/honey-pot";
+@import "formsmain/simple-captcha";
+@import "formsmain/math-challege";
+@import "formsmain/textarea-char-counter";
+@import "formsmain/pricing-fields";
+@import "formsmain/multi-page-paging";
+@import "formsmain/multi-page-progress-bar";
+@import "formsmain/multi-page-steps";
+@import "formsmain/password-strength-indicator";
+@import "formsmain/html-field-list-reset";
+@import "formsmain/list-fields";
+@import "formsmain/chosen";
+@import "formsmain/credit-card-icons";
+@import "formsmain/credit-card-fields";
+@import "formsmain/file-upload";
+
+.gform_delete {
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/* fix recaptcha line height issue ------------------------------------------------------*/
+
+body #content .entry-content .gform_wrapper form .gform_body .gform_fields .gfield .ginput_container #recaptcha_widget_div #recaptcha_area .recaptchatable tbody tr td .recaptcha_input_area,
+body .gform_wrapper form .gform_body .gform_fields .gfield .ginput_container #recaptcha_widget_div #recaptcha_area .recaptchatable tbody tr td .recaptcha_input_area {
+	line-height: 1em !important;
+}

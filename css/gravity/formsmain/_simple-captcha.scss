@@ -1,0 +1,35 @@
+.gform_wrapper {
+
+	.gfield_captcha_input_container {
+		padding-top: 3px;
+	}
+
+	.simple_captcha_small input {
+		width: 100px;
+	}
+
+	.simple_captcha_medium input {
+		width: 150px;
+	}
+
+	.simple_captcha_large input {
+		width: 200px;
+	}
+
+	.left_label .simple_captcha_small,
+	.right_label .simple_captcha_small,
+	.left_label .simple_captcha_medium,
+	.right_label .simple_captcha_medium,
+	.left_label .simple_captcha_large,
+	.right_label .simple_captcha_large {
+		margin-left: 32%;
+	}
+
+	.gfield_captcha_container img.gfield_captcha {
+		border: none !important;
+		background: none !important;
+		float: none !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+}

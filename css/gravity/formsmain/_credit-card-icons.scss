@@ -1,0 +1,173 @@
+.gform_wrapper{
+
+	.gform_card_icon_container {
+		margin: 0 0 6px 0;
+		height: 32px;
+
+		&.gform_card_icon_style1 {
+
+			div.gform_card_icon {
+
+				&.gform_card_icon_visa {
+					background-position: 0 0;
+				}
+
+				&.gform_card_icon_selected.gform_card_icon_visa {
+					background-position: 0 -32px;
+				}
+
+				&.gform_card_icon_inactive.gform_card_icon_visa {
+					background-position: 0 -64px;
+				}
+
+				&.gform_card_icon_mastercard {
+					background-position: -36px 0;
+				}
+
+				&.gform_card_icon_selected.gform_card_icon_mastercard {
+					background-position: -36px -32px;
+				}
+
+				&.gform_card_icon_inactive.gform_card_icon_mastercard {
+					background-position: -36px -64px;
+				}
+
+				&.gform_card_icon_amex {
+					background-position: -72px 0;
+				}
+
+				&.gform_card_icon_selected.gform_card_icon_amex {
+					background-position: -72px -32px;
+				}
+
+				&.gform_card_icon_inactive.gform_card_icon_amex {
+					background-position: -72px -64px;
+				}
+
+				&.gform_card_icon_discover {
+					background-position: -108px 0;
+				}
+
+				&.gform_card_icon_selected.gform_card_icon_discover {
+					background-position: -108px -32px;
+				}
+
+				&.gform_card_icon_inactive.gform_card_icon_discover {
+					background-position: -108px -64px;
+				}
+
+				&.gform_card_icon_maestro {
+					background-position: -144px 0;
+				}
+
+				&.gform_card_icon_selected.gform_card_icon_maestro {
+					background-position: -144px -32px;
+				}
+
+				&.gform_card_icon_inactive.gform_card_icon_maestro {
+					background-position: -144px -64px;
+				}
+
+				&.gform_card_icon_jcb {
+					background-position: -180px 0;
+				}
+
+				&.gform_card_icon_selected.gform_card_icon_jcb {
+					background-position: -180px -32px;
+				}
+
+				&.gform_card_icon_inactive.gform_card_icon_jcb {
+					background-position: -180px -64px;
+				}
+			}
+		}
+		&.gform_card_icon_style2 {
+
+			div.gform_card_icon {
+
+				&.gform_card_icon_visa {
+					background-position: 0 -192px;
+				}
+
+				&.gform_card_icon_selected.gform_card_icon_visa {
+					background-position: 0 -224px;
+				}
+
+				&.gform_card_icon_inactive.gform_card_icon_visa {
+					background-position: 0 -256px;
+				}
+
+				&.gform_card_icon_mastercard {
+					background-position: -36px -192px;
+				}
+
+				&.gform_card_icon_selected.gform_card_icon_mastercard {
+					background-position: -36px -224px;
+				}
+
+				&.gform_card_icon_inactive.gform_card_icon_mastercard {
+					background-position: -36px -256px;
+				}
+
+				&.gform_card_icon_amex {
+					background-position: -72px -192px;
+				}
+
+				&.gform_card_icon_selected.gform_card_icon_amex {
+					background-position: -72px -224px;
+				}
+
+				&.gform_card_icon_inactive.gform_card_icon_amex {
+					background-position: -72px -256px;
+				}
+
+				&.gform_card_icon_discover {
+					background-position: -108px -192px;
+				}
+
+				&.gform_card_icon_selected.gform_card_icon_discover {
+					background-position: -108px -224px;
+				}
+
+				&.gform_card_icon_inactive.gform_card_icon_discover {
+					background-position: -108px -256px;
+				}
+
+				&.gform_card_icon_maestro {
+					background-position: -144px -192px;
+				}
+
+				&.gform_card_icon_selected.gform_card_icon_maestro {
+					background-position: -144px -224px;
+				}
+
+				&.gform_card_icon_inactive.gform_card_icon_maestro {
+					background-position: -144px -256px;
+				}
+
+				&.gform_card_icon_jcb {
+					background-position: -180px -192px;
+				}
+
+				&.gform_card_icon_selected.gform_card_icon_jcb {
+					background-position: -180px -224px;
+				}
+
+				&.gform_card_icon_inactive.gform_card_icon_jcb {
+					background-position: -180px -256px;
+				}
+			}
+		}
+	}
+
+	div.gform_card_icon {
+		margin-right: 4px;
+		text-indent: -9000px;
+		background-image: url('#{$gravity-image-path}gf-creditcard-icons.png');
+		background-repeat: no-repeat;
+		width: 36px;
+		height: 32px;
+		float: left;
+	}
+
+}

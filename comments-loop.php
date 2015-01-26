@@ -8,9 +8,9 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 
 if ( have_comments() ) { ?>
 
-	<h2 id="comments-number"><?php comments_number( '', __( 'One Response', 'simple' ), __( '% Responses', 'simple' ) ); ?></h2>
+	<h2 id="comments-number"><?php comments_number( '', __( 'One Comment', hybrid_get_parent_textdomain() ), __( '% Comments', hybrid_get_parent_textdomain() ) ); ?></h2>
 
-	<ol class="comment-list">
+	<ol class="comment-list <?php if (get_option('show_avatars') == 1){ echo"show-avatars"; } ?>">
 		<?php wp_list_comments( hybrid_list_comments_args() ); ?>
 	</ol><!-- .comment-list -->
 

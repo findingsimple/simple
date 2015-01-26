@@ -1,0 +1,72 @@
+.gform_wrapper {
+
+	.gf_progressbar_wrapper {
+		clear: both;
+		width: 99%;
+		margin: 0 0 8px 0;
+		padding: 8px 0 8px 0;
+		border-bottom: 1px dotted #CCC;
+
+		h3.gf_progressbar_title {
+			font-size: 13px;
+			line-height: 1em !important;
+			margin: 0 0 6px 0 !important;
+			padding: 0 !important;
+			clear: both;
+			filter: alpha(opacity=60);
+			-moz-opacity: 0.6;
+			-khtml-opacity: 0.6;
+			opacity: 0.6;
+		}
+	}
+
+	.gf_progressbar {
+		@extend .progress;
+	}
+
+	.gf_progressbar_percentage {
+		@extend .progress-bar;
+		@include gradient-striped();
+  		background-size: 40px 40px;
+  		@include animation(progress-bar-stripes 2s linear infinite);
+
+		span {
+			display: block;
+			width: auto;
+			float: right;
+			margin-right: 5px;
+			margin-left: 5px;
+		}
+
+		&.percentbar_0 span {
+			color: #959595;
+			text-shadow: none;
+		}
+
+	}
+
+	.percentbar_blue {
+		@include progress-bar-variant($progress-bar-info-bg);
+	}
+
+	.percentbar_gray {
+		@include progress-bar-variant($gray);
+	}
+
+	.percentbar_green {
+		@include progress-bar-variant($progress-bar-success-bg);
+	}
+
+	.percentbar_orange {
+		@include progress-bar-variant($progress-bar-warning-bg);
+	}
+
+	.percentbar_red {
+		@include progress-bar-variant($progress-bar-danger-bg);
+	}
+
+	.percentbar_custom {
+		background-image: url('#{$gravity-image-path}gf-percentbar-custom.png');
+		background-repeat: repeat-x;
+	}
+}

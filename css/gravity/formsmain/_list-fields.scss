@@ -1,0 +1,47 @@
+.gform_wrapper {
+
+	table.gfield_list {
+
+		th,
+		td {
+			padding:0 0 0.5em 0 !important;
+			border: none !important;
+			vertical-align: middle !important;
+		}
+
+	}
+
+	.left_label,
+	.right_label {
+
+		.gfield_list {
+			width: 64%;
+		}
+		.gf_list_one_column {
+			width: 45%;
+		}
+	}
+
+	.top_label {
+
+		.gfield_list {
+			width: 99%;
+		}
+		.gf_list_one_column {
+			width: 46%;
+		}
+	}
+
+	.gfield_list input {
+		width: 98%;
+	}
+
+	.gfield_icon_disabled {
+		cursor: default !important;
+		filter: alpha(opacity=60);
+		-moz-opacity: 0.6;
+		-khtml-opacity: 0.6;
+		opacity: 0.6;
+	}
+
+}
