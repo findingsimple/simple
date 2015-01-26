@@ -173,6 +173,19 @@ blockquote:last-child {
 	.h1 {
 		margin: 0;
 		display: block;
+
+		@media (max-width:$screen-sm - 1){
+			& {
+				font-size: 2.2em;
+			}
+		}
+	}
+	p {
+		@media (max-width:$screen-sm - 1){
+			& {
+				font-size: 20px;
+			}
+		}
 	}
 	a {
 		color: #fff;
@@ -199,7 +212,7 @@ blockquote:last-child {
 
 		@media (max-width:$screen-sm - 1){
 			& {
-				font-size: 2em;
+				font-size: 2.2em;
 			}
 		}
 		@media (min-width:$screen-sm) and (max-width:$screen-md){
