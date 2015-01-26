@@ -104,14 +104,14 @@ blockquote:last-child {
 }
 .wordpress .navbar-brand #site-title {
 	display: inline-block;
+	font-size: 23px;
 	margin: 0;
-	font-size: 18px;
-	line-height: 1;
+	position: relative;
+	top: -1px;
 }
 #site-title a {
-	font-size: 20px;
+	font-size: 23px;
 	font-weight: 300;
-	line-height: 1;
 	color: #fff;
 
 	span {
