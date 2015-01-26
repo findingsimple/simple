@@ -25,7 +25,7 @@ if ( is_singular( 'page' ) ) { ?>
 		?>
 	</div><!-- .entry-content -->
 
-</article<!-- .hentry -->
+</article><!-- .hentry -->
 
 <?php } else { ?>
 
