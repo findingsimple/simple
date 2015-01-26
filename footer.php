@@ -24,7 +24,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 
 	</footer><!-- #footer -->
 
-	<a href="#" class="scrollToTop">&uarr;</a>
+	<!-- <a href="#" class="scrollToTop">&uarr;</a> -->
 
 	<?php wp_footer(); // wp_footer ?>
 
