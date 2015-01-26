@@ -30,6 +30,8 @@ $badge-color: #999;
 $badge-link-hover-color: #999;
 $badge-bg: #f1f1f1;
 
+$navbar-border-radius: 0;
+$navbar-margin-bottom: 0;
 $navbar-default-toggle-icon-bar-bg: #fff;
 $navbar-default-toggle-hover-bg: darken($brand-primary, 10%);
 
@@ -40,13 +42,9 @@ $icon-font-path: 'fonts/';
 
 @import "css/bootstrap.scss";
 
-/* Body
+/* Some defaults
 ================================================*/
  
-body {
-	padding-top: 50px;
-}
-
 .amp {
   font-family: "goudy-bookletter-1911-1","goudy-bookletter-1911-2" , serif ;
   font-style: normal !important;
@@ -95,9 +93,7 @@ blockquote:last-child {
 	background: $brand-primary;
 	margin-bottom: 0;
 	z-index: 400;
-}
-.admin-bar #header {
-	top: 32px;
+	border: none;
 }
 .navbar-brand {
 	margin-right: 20px;
@@ -133,12 +129,12 @@ blockquote:last-child {
 ================================================*/
 
 #header.navbar {
-	margin-bottom: 0;
-	border-color: rgba(255,255,255,0.3);
+	border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 #header .navbar-collapse {
 	max-height: none;
-	border-color: rgba(255,255,255,0.3);
+	border: none;
+	box-shadow: none;
 }
 .navbar-default {
 
@@ -798,13 +794,6 @@ img.wp-smiley {
 /* Responsive
 ================================================*/
 
-@media (max-width:600px) {
-
-	#header {
-		position: absolute;
-	}
-
-}
 @media (max-width:$screen-sm - 1){
 		
 	.container {
@@ -906,14 +895,6 @@ img.wp-smiley {
 		}
 	}
 	
-}
-
-@media (max-width:782px) {
-
-	.admin-bar #header {
-		top: 46px;
-	}
-
 }
 
 @media (min-width:$screen-sm) and (max-width:$screen-md){
