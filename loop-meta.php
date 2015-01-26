@@ -120,12 +120,9 @@ if ( ( is_home() && is_front_page() ) || ( is_page() && is_front_page() )  )
 
 			<h1 class="loop-title"><?php single_post_title(); ?></h1>
 
-			<?php 
-			$excerpt = get_the_excerpt(); echo get_the_excerpt();
-			if ( ! empty($excerpt) ) {
-			?>
+			<?php if( $post->post_excerpt ) { ?>
 			<div class="loop-description">
-				<?php echo $excerpt; ?>
+				<p><?php echo $post->post_excerpt; ?></p>
 			</div><!-- .loop-description -->
 			<?php } ?>
 
