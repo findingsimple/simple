@@ -56,7 +56,17 @@ body {
 }
 
 a {
-	outline: none;
+	transition: color .25s ease;
+	-moz-transition: color .25s ease;
+	-webkit-transition: color .25s ease;
+	outline: none !important;
+
+	&:focus {
+		text-decoration: none;
+	}
+	&:hover {
+		text-decoration: none;
+	}
 }
  
 /* Headings, body, etc. adjustments
