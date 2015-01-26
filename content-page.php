@@ -8,7 +8,11 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 
 if ( is_singular( 'page' ) ) { ?>
 
-<div <?php hybrid_post_attributes(); ?>>
+<article <?php hybrid_post_attributes(); ?>>
+
+	<header class="entry-header page-header" style="display: none;">
+		<span class="h1 entry-title"><?php the_title(); ?></span>
+	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
@@ -21,7 +25,7 @@ if ( is_singular( 'page' ) ) { ?>
 		?>
 	</div><!-- .entry-content -->
 
-</div><!-- .hentry -->
+</article><!-- .hentry -->
 
 <?php } else { ?>
 
