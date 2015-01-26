@@ -1,6 +1,7 @@
 @import url( 'style.css' );
 
 body#tinymce.wp-editor {
-	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	padding:  10px;
+	backgorund: #fff !important;
 }
