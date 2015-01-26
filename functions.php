@@ -225,7 +225,7 @@ function simple_add_remove_scripts(){
 	wp_enqueue_script( 'bootstrap', THEME_URI . '/js/bootstrap.min.js','jquery','3.1.0',true);
 
 	/* simple JS */
-	wp_enqueue_script( 'simple', THEME_URI . '/js/simple.js','jquery','1',true);
+	wp_enqueue_script( 'simple', THEME_URI . '/js/simple.js','jquery',$parent['Version'],true);
 	
 }
 
