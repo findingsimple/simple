@@ -121,7 +121,7 @@ if ( ( is_home() && is_front_page() ) || ( is_page() && is_front_page() )  )
 			<h1 class="loop-title"><?php single_post_title(); ?></h1>
 
 			<div class="loop-description">
-				<?php the_excerpt(); ?>
+				<?php //the_excerpt(); ?>
 			</div><!-- .loop-description -->
 
 		<?php } elseif ( is_singular('fs_work') ) { ?>
