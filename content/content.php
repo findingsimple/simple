@@ -59,9 +59,9 @@ if ( is_home() ) { ?>
 
 	<footer class="entry-footer">
 		<div class="entry-meta">
-			<div class="entry-byline">
+			<span class="entry-byline">
 				Published by <span <?php hybrid_attr( 'entry-author' ); ?>><?php the_author_posts_link(); ?></span> on <time <?php hybrid_attr( 'entry-published' ); ?>><?php echo get_the_date(); ?></time> 
-			</div>
+			</span>
 			<?php hybrid_post_terms( array( 'taxonomy' => 'category', 'text' => __( ' in %s', hybrid_get_parent_textdomain() ) ) ); ?> <?php hybrid_post_terms( array( 'taxonomy' => 'post_tag', 'text' => __( 'Tagged %s', hybrid_get_parent_textdomain() ), 'before' => ' | ' ) ); ?>
 			<time class="updated" style="display:none;" datetime="<?php echo get_the_modified_time( 'Y-m-d\TH:i:sP' ); ?>" title="<?php echo get_the_modified_time( esc_attr__( 'l, F jS, Y, g:i a', hybrid_get_parent_textdomain() ) ); ?>"><?php echo get_the_modified_time( get_option( 'date_format' ) ) ?></time>
 		</div>
