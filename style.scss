@@ -179,6 +179,7 @@ blockquote:last-child {
 	margin-bottom: 0 !important;
 }
 .jumbotron {
+	text-align: center;
 	h1,
 	.h1 {
 		margin: 0;
@@ -210,7 +211,6 @@ blockquote:last-child {
 	}
 }
 .banner.jumbotron {
-	text-align: center;
 	padding: 100px 0;
 
 	@media (max-width:$screen-sm - 1){
