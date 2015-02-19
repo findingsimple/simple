@@ -2,7 +2,13 @@
 
 body#tinymce.wp-editor,
 body.wp-autoresize  {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	padding:  10px;
+	font-family: 'source-sans-pro-1','source-sans-pro-2', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+	padding:  10px !important;
+	background: #fff !important;
+}
+
+body#tinymce.layout-1c.wp-editor,
+body.layout-1c.wp-autoresize {
+	max-width: 760px !important;
 	background: #fff !important;
 }
