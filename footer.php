@@ -18,7 +18,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 
 			<div class="footer-content">
 
-				<p class="credit"><?php printf( __( 'Copyright &#169; %1$s %2$s', hybrid_get_parent_textdomain() ), date_i18n( 'Y' ), hybrid_get_site_link() ); ?></p><!-- .credit -->
+				<p class="credit"><?php printf( __( 'Copyright &#169; 2008 - %1$s %2$s', hybrid_get_parent_textdomain() ), date_i18n( 'Y' ), hybrid_get_site_link() ); ?></p><!-- .credit -->
 
 			</div><!-- .footer-content -->
 
