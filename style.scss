@@ -771,7 +771,8 @@ img.wp-smiley {
 
 /* 1 Column Layout */
 .layout-1c #content {
-	width: 100%;
+	width: 740px;
+	margin: 0 auto;
 }
 
 /* Default / 2 Column Layout - Content on the left */
@@ -907,7 +908,11 @@ img.wp-smiley {
 }
 
 @media (min-width:$screen-sm) and (max-width:$screen-md){
-	
+
+	.layout-1c #content {
+		width: 476px;
+		width: 620px;
+	}
 	.layout-2c-l {
 		#content {
 			float: left;
@@ -938,7 +943,11 @@ img.wp-smiley {
 }
 
 @media (min-width:$screen-lg){
-	
+
+	.layout-1c #content { 
+		width: 740px;
+	}
+
 	.layout-2c-l {
 		#content {
 			float: left; 
