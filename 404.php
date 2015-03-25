@@ -8,8 +8,6 @@ get_header(); // Loads the header.php template. ?>
 
 		<?php get_template_part( 'loop-meta' ); // Loads the loop-meta.php template. ?>
 
-		<?php get_template_part( 'breadcrumbs' ); // Loads the loop-meta.php template. ?>
-
 		<div class="container">
 
 			<div id="content" <?php if ( !is_single() && !is_page() && !is_attachment() ) echo 'class="hfeed"'; ?>>
