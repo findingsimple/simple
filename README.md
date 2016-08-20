@@ -1,1 +1,1 @@
-# nudie
+# simple theme
