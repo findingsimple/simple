@@ -85,21 +85,8 @@ get_header(); // Loads the header.php template. ?>
 					</div>
 
 				</div><!--.row -->
-				
+
 			</div><!-- .front-three -->
-
-			<div class="front-logos">
-
-				<div class="row">
-					<div class="col-xs-6 col-sm-2 logo logo-1"><a href="/work/" title="Happy WordPress Clients"><img src="<?php echo get_template_directory_uri() . "/img/logo-dschool.png"; ?>" alt="" /></a></div>
-					<div class="col-xs-6 col-sm-2 logo logo-2"><a href="/work/" title="Happy WordPress Clients"><img src="<?php echo get_template_directory_uri() . "/img/logo-daylight.png"; ?>" alt="" /></a></div>
-					<div class="col-xs-6 col-sm-2 logo logo-3"><a href="/work/" title="Happy WordPress Clients"><img src="<?php echo get_template_directory_uri() . "/img/logo-tedx.png"; ?>" alt="" /></a></div>
-					<div class="col-xs-6 col-sm-2 logo logo-4"><a href="/work/" title="Happy WordPress Clients"><img src="<?php echo get_template_directory_uri() . "/img/logo-msr.png"; ?>" alt="" /></a></div>
-					<div class="col-xs-6 col-sm-2 logo logo-5"><a href="/work/" title="Happy WordPress Clients"><img src="<?php echo get_template_directory_uri() . "/img/logo-anu.png"; ?>" alt="" /></a></div>
-					<div class="col-xs-6 col-sm-2 logo logo-6"><a href="/work/" title="Happy WordPress Clients"><img src="<?php echo get_template_directory_uri() . "/img/logo-agov.png"; ?>" alt="" /></a></div>
-				</div>
-
-			</div><!-- .front-logos -->
 
 		</div><!-- .container -->
 
